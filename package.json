@@ -1,0 +1,31 @@
+{
+  "name": "react-native-htmlview",
+  "version": "0.1.1",
+  "description": "A component which renders HTML content as native views",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "James Friend <james@jsdf.co> (http://jsdf.co/)",
+  "license": "ISC",
+  "keywords": [
+    "react",
+    "html",
+    "react-native",
+    "react-component",
+    "react-native-component",
+    "mobile",
+    "ui"
+  ],
+  "files": [
+    "index.js",
+    "HTMLView.js",
+    "vendor/"
+  ],
+  "homepage": "https://github.com/jsdf/react-native-htmlview",
+  "bugs": "https://github.com/jsdf/react-native-htmlview/issues",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jsdf/react-native-htmlview.git"
+  }
+}
