@@ -35,7 +35,6 @@ var ContentView = React.createClass({
     )
   }
 })
-```
 
 var styles = StyleSheet.create({
   a: {
@@ -43,6 +42,7 @@ var styles = StyleSheet.create({
     color: '#FF3366', // pink links
   },
 })
+```
 
 ### screenshot
 
