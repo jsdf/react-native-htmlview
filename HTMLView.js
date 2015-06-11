@@ -9,6 +9,7 @@ var {
 
 var LINE_BREAK = '\n'
 var PARAGRAPH_BREAK = '\n\n'
+var BULLET = '  \u2022  '
 
 function htmlToElement(rawHtml, opts, done) {
   function domToElement(dom, parent) {
@@ -37,8 +38,10 @@ function htmlToElement(rawHtml, opts, done) {
         return (
           <Text key={index} onPress={linkPressHandler}>
             {node.name == 'pre' ? LINE_BREAK : null}
+            {node.name == 'li' ? BULLET : null}
             {domToElement(node.children, node)}
             {node.name == 'br' ? LINE_BREAK : null}
+            {node.name == 'li' ? LINE_BREAK : null}
             {node.name == 'p' && index < list.length-1 ? PARAGRAPH_BREAK : null}
           </Text>
         )
