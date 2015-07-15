@@ -12,6 +12,7 @@ var PARAGRAPH_BREAK = '\n\n'
 var BULLET = '  \u2022  '
 
 function htmlToElement(rawHtml, opts, done) {
+
   function domToElement(dom, parent) {
     if (!dom) return null
 
@@ -23,7 +24,7 @@ function htmlToElement(rawHtml, opts, done) {
 
       if (node.type == 'text') {
         return (
-          <Text key={index} style={parent ? opts.styles[parent.name] : null}>
+          <Text key={index} style={parent ? inheritedStyle(parent) : null}>
             {entities.decodeHTML(node.data)}
           </Text>
         )
@@ -47,6 +48,11 @@ function htmlToElement(rawHtml, opts, done) {
         )
       }
     })
+  }
+
+  function inheritedStyle(parent) {
+    var style = [opts.styles[parent.name] || {}];
+    return parent.parent ? style.concat(inheritedStyle(parent.parent)) : style;
   }
 
   var handler = new htmlparser.DomHandler(function (err, dom) {
