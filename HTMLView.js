@@ -2,7 +2,7 @@ var htmlparser = require('./vendor/htmlparser2')
 var entities = require('./vendor/entities')
 var React = require('react-native')
 var {
-  LinkingIOS,
+  Linking,
   StyleSheet,
   Text,
 } = React
@@ -64,7 +64,7 @@ var HTMLView = React.createClass({
   ],
   getDefaultProps() {
     return {
-      onLinkPress: LinkingIOS.openURL,
+      onLinkPress: Linking.openURL,
     }
   },
   getInitialState() {
