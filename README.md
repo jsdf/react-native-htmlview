@@ -25,13 +25,13 @@ var {Text, View, ListView} = React
 
 var HTMLView = require('react-native-htmlview')
 
-var ContentView = React.createClass({
+var App = React.createClass({
   render() {
+    var htmlContent = '<p><a href="http://jsdf.co">&hearts; nice job!</a></p>'
+
     return (
-      var htmlContent = '<p><a href="">&hearts; nice job!</a></p>'
       <HTMLView
         value={htmlContent}
-        onLinkPress={(url) => console.log('navigating to: ', url)}
         stylesheet={styles}
       />
     )
@@ -43,6 +43,24 @@ var styles = StyleSheet.create({
     fontWeight: '300',
     color: '#FF3366', // pink links
   },
+})
+```
+
+When a link is clicked, by default `React.Linking.openURL` is called with the 
+link url. You can customise what happens when a link is clicked with `onLinkPress`:
+
+```js
+var React = require('react-native')
+
+var ContentView = React.createClass({
+  render() {
+    return (
+      <HTMLView
+        value={this.props.html}
+        onLinkPress={(url) => console.log('clicked link: ', url)}
+      />
+    )
+  }
 })
 ```
 
