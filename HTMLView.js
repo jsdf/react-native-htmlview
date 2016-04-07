@@ -73,14 +73,15 @@ var HTMLView = React.createClass({
     }
   },
   componentWillReceiveProps(nextprops) {
-    this.props = this.nextprops
-    this.startHtmlRender()
+    if (nextprops.value) {
+      this.startHtmlRender(nextprops.value)
+    }
   },
   componentDidMount() {
-    this.startHtmlRender()
+    this.startHtmlRender(this.props.value)
   },
-  startHtmlRender() {
-    if (!this.props.value) return
+  startHtmlRender(value) {
+    if (!value) return
     if (this.renderingHtml) return
 
     var opts = {
@@ -90,7 +91,7 @@ var HTMLView = React.createClass({
     }
 
     this.renderingHtml = true
-    htmlToElement(this.props.value, opts, (err, element) => {
+    htmlToElement(value, opts, (err, element) => {
       this.renderingHtml = false
 
       if (err) return (this.props.onError || console.error)(err)
@@ -119,7 +120,7 @@ var baseStyles = StyleSheet.create({
   code: codeStyle,
   a: {
     fontWeight: '500',
-    color: '#007AFF',
+    color: '#007AFF'
   },
 })
 
