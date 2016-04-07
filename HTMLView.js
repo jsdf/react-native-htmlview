@@ -72,8 +72,8 @@ var HTMLView = React.createClass({
       element: null,
     }
   },
-  componentWillReceiveProps() {
-    if (this.state.element) return
+  componentWillReceiveProps(nextprops) {
+    this.props = this.nextprops
     this.startHtmlRender()
   },
   componentDidMount() {
