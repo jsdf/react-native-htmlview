@@ -74,6 +74,7 @@ var HTMLView = React.createClass({
   getDefaultProps() {
     return {
       onLinkPress: Linking.openURL,
+      onError: console.error.bind(console),
     }
   },
 
@@ -111,8 +112,8 @@ var HTMLView = React.createClass({
     this.renderingHtml = true
     htmlToElement(value, opts, (err, element) => {
       this.renderingHtml = false
+      if (err) return this.props.onError(err)
 
-      if (err) return (this.props.onError || console.error)(err)
 
       if (this.mounted) this.setState({element})
     })
