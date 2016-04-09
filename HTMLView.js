@@ -49,7 +49,7 @@ function htmlToElement(rawHtml, opts, done) {
     })
   }
 
-  var handler = new htmlparser.DomHandler(function (err, dom) {
+  var handler = new htmlparser.DomHandler(function(err, dom) {
     if (err) done(err)
     done(null, domToElement(dom))
   })
@@ -62,23 +62,41 @@ var HTMLView = React.createClass({
   mixins: [
     React.addons.PureRenderMixin,
   ],
+
+  propTypes: {
+    value: React.PropTypes.string,
+    stylesheet: React.PropTypes.object,
+    onLinkPress: React.PropTypes.func,
+    onError: React.PropTypes.func,
+    renderNode: React.PropTypes.func,
+  },
+
   getDefaultProps() {
     return {
       onLinkPress: Linking.openURL,
     }
   },
+
   getInitialState() {
     return {
       element: null,
     }
   },
+
   componentWillReceiveProps() {
     if (this.state.element) return
     this.startHtmlRender()
   },
+
   componentDidMount() {
     this.startHtmlRender()
+    this.mounted = true
   },
+
+  componentWillUnmount() {
+    this.mounted = false
+  },
+
   startHtmlRender() {
     if (!this.props.value) return
     if (this.renderingHtml) return
@@ -95,15 +113,16 @@ var HTMLView = React.createClass({
 
       if (err) return (this.props.onError || console.error)(err)
 
-      if (this.isMounted()) this.setState({element})
+      if (this.mounted) this.setState({element})
     })
   },
+
   render() {
     if (this.state.element) {
       return <Text children={this.state.element} />
     }
     return <Text />
-  }
+  },
 })
 
 var boldStyle = {fontWeight: '500'}

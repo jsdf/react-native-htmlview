@@ -4,7 +4,8 @@
   "description": "A component which renders HTML content as native views",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint .",
+    "test": "npm run lint"
   },
   "author": "James Friend <james@jsdf.co> (http://jsdf.co/)",
   "license": "ISC",
@@ -17,11 +18,11 @@
     "mobile",
     "ui"
   ],
-  "files": [
-    "index.js",
-    "HTMLView.js",
-    "vendor/"
-  ],
+  "devDependencies": {
+    "babel-eslint": "6.0.2",
+    "eslint": "2.7.0",
+    "eslint-plugin-react": "4.3.0"
+  },
   "homepage": "https://github.com/jsdf/react-native-htmlview",
   "bugs": "https://github.com/jsdf/react-native-htmlview/issues",
   "repository": {
