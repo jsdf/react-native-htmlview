@@ -83,22 +83,23 @@ var HTMLView = React.createClass({
     }
   },
 
-  componentWillReceiveProps() {
-    if (this.state.element) return
-    this.startHtmlRender()
-  },
-
-  componentDidMount() {
-    this.startHtmlRender()
-    this.mounted = true
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.value) {
+      this.startHtmlRender(nextProps.value)
+    }
   },
 
   componentWillUnmount() {
     this.mounted = false
   },
 
-  startHtmlRender() {
-    if (!this.props.value) return
+  componentDidMount() {
+    this.mounted = true
+    this.startHtmlRender(this.props.value)
+  },
+
+  startHtmlRender(value) {
+    if (!value) return
     if (this.renderingHtml) return
 
     var opts = {
@@ -108,7 +109,7 @@ var HTMLView = React.createClass({
     }
 
     this.renderingHtml = true
-    htmlToElement(this.props.value, opts, (err, element) => {
+    htmlToElement(value, opts, (err, element) => {
       this.renderingHtml = false
 
       if (err) return (this.props.onError || console.error)(err)
