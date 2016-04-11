@@ -74,6 +74,7 @@ In action (from [ReactNativeHackerNews](https://github.com/jsdf/ReactNativeHacke
 
  If you're getting the error "undefined is not an object (evaluating 'RCTLinkingManager.openURL’)” from the LinkingIOS API, try adding ‘RCTLinking' to the project's 'Linked Frameworks and Libraries’. You might have to find RCTLinking.xcodeproj in the react-native package dir and drag that into your main Xcode project first.
 
-![Under Construction](https://jamesfriend.com.au/files/under-construction.gif)
 
-I just wrote this... use at your own risk. Not API stable.
+### changelog
+
+- 0.4.0 - re-renders properly when html content changes
