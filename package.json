@@ -1,6 +1,6 @@
 {
   "name": "react-native-htmlview",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "A component which renders HTML content as native views",
   "main": "index.js",
   "scripts": {
@@ -16,7 +16,9 @@
       "promise",
       "source-map"
     ],
-    "preprocessorIgnorePatterns": ["/node_modules/"]
+    "preprocessorIgnorePatterns": [
+      "/node_modules/"
+    ]
   },
   "devDependencies": {
     "babel-eslint": "6.0.2",
