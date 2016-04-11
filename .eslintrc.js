@@ -2,8 +2,14 @@
 module.exports = {
   "extends": ["eslint:recommended", "plugin:react/recommended"],
   env: {
+    browser: true,
     node: true,
     es6: true,
+    jasmine: true,
+  },
+  globals: {
+    "jest": true,
+    "shallowRender": true,
   },
   parser: "babel-eslint",
   "parserOptions": {
@@ -46,5 +52,6 @@ module.exports = {
     "generator-star-spacing": 2,
     "template-curly-spacing": 2,
     "yield-star-spacing": 2,
+    "react/prop-types": 0,
   }
 };

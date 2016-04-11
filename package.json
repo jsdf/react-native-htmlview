@@ -5,7 +5,30 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
-    "test": "npm run lint"
+    "jest": "jest",
+    "test": "npm run lint && npm run jest"
+  },
+  "jest": {
+    "setupEnvScriptFile": "<rootDir>/test/support/setupTestFramework.js",
+    "unmockedModulePathPatterns": [
+      "react",
+      "react-addons-test-utils",
+      "promise",
+      "source-map"
+    ],
+    "preprocessorIgnorePatterns": ["/node_modules/"]
+  },
+  "devDependencies": {
+    "babel-eslint": "6.0.2",
+    "babel-jest": "^10.0.2",
+    "babel-preset-es2015": "^6.6.0",
+    "babel-preset-react": "^6.5.0",
+    "eslint": "2.7.0",
+    "eslint-plugin-react": "4.3.0",
+    "jest-cli": "^0.10.0",
+    "react": "^0.14.5",
+    "react-addons-test-utils": "^0.14.5",
+    "react-native": "^0.23.1"
   },
   "author": "James Friend <james@jsdf.co> (http://jsdf.co/)",
   "license": "ISC",
@@ -18,11 +41,6 @@
     "mobile",
     "ui"
   ],
-  "devDependencies": {
-    "babel-eslint": "6.0.2",
-    "eslint": "2.7.0",
-    "eslint-plugin-react": "4.3.0"
-  },
   "homepage": "https://github.com/jsdf/react-native-htmlview",
   "bugs": "https://github.com/jsdf/react-native-htmlview/issues",
   "repository": {
