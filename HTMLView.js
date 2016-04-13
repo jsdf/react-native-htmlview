@@ -59,7 +59,7 @@ var HTMLView = React.createClass({
       if (!this.mounted) return
 
       // don't update rendered element if value has subsequently changed
-      if (this.props.value === value) this.setState({element})
+      this.setState({element})
     })
   },
 
