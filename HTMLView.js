@@ -56,10 +56,9 @@ var HTMLView = React.createClass({
     htmlToElement(value, opts, (err, element) => {
       if (err) return this.props.onError(err)
 
-      if (!this.mounted) return
-
-      // don't update rendered element if value has subsequently changed
-      if (this.props.value === value) this.setState({element})
+      if (this.mounted) {
+        this.setState({element})
+      }
     })
   },
 
