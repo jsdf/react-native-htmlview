@@ -28,4 +28,37 @@ describe('HTMLView', () => {
     var second = shallowRenderer.getRenderOutput()
     expect(second.props.children[0].type).toBe(React.Text)
   })
+  it('renders the img', () => {
+    var htmlContent = '<img src="https://facebook.github.io/react-native/img/header_logo.png"/>'
+
+    var shallowRenderer = TestUtils.createRenderer()
+
+    shallowRenderer.render(
+      <HTMLView
+        value={htmlContent}
+      />
+    )
+    shallowRenderer._instance._instance.componentDidMount()
+
+    var second = shallowRenderer.getRenderOutput()
+    expect(second.props.children.length).toBe(1);
+    expect(second.props.children[0].props.style.width).toBe(0);
+    expect(second.props.children[0].props.style.height).toBe(0);
+  })
+  it('renders the img with width and height', () => {
+    var htmlContent = '<img src="https://facebook.github.io/react-native/img/header_logo.png" width="66" height="58"/>'
+
+    var shallowRenderer = TestUtils.createRenderer()
+
+    shallowRenderer.render(
+      <HTMLView
+        value={htmlContent}
+      />
+    )
+    shallowRenderer._instance._instance.componentDidMount()
+
+    var second = shallowRenderer.getRenderOutput()
+    expect(second.props.children[0].props.style.width).toBe(66);
+    expect(second.props.children[0].props.style.height).toBe(58);
+  })
 })
