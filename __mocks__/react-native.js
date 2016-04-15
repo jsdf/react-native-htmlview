@@ -13,7 +13,7 @@ var ReactNative = Object.assign({}, React, {
   },
   Dimensions: {
     get: function() {
-      return {width: 414, height: 736};
+      return {width: 414, height: 736}
     },
   },
 })

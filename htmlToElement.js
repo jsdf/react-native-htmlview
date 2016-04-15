@@ -6,7 +6,7 @@ var {
   Text,
 } = React
 
-var Image = require('./helper/Image');
+var Image = require('./helper/Image')
 
 
 var LINE_BREAK = '\n'
@@ -39,8 +39,8 @@ function htmlToElement(rawHtml, opts, done) {
 
           var img_style = {
             width: img_w,
-            height: img_h
-          };
+            height: img_h,
+          }
           return (
             <Image key={index} source={{uri: node.attribs.src}} style={img_style} />
           )
