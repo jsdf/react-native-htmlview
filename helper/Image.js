@@ -12,7 +12,9 @@ var baseStyle = {
 var ResizableImage = React.createClass({
   getInitialState: function() {
     return {
-      width: this.props.style.width || 0,
+      // set width 1 is for preventing the warning
+      // You must specify a width and height for the image %s
+      width: this.props.style.width || 1,
       height: this.props.style.height || 0,
     }
   },
