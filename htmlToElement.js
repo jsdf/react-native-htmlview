@@ -41,8 +41,13 @@ function htmlToElement(rawHtml, opts, done) {
             width: img_w,
             height: img_h,
           }
+          var source = {
+            uri: node.attribs.src,
+            width: img_w,
+            height: img_h,
+          };
           return (
-            <Image key={index} source={{uri: node.attribs.src}} style={img_style} />
+            <Image key={index} source={source} style={img_style} />
           )
         }
 

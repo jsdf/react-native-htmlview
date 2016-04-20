@@ -33,10 +33,11 @@ var ResizableImage = React.createClass({
       finalSize.height = this.state.height * ratio
     }
     var style = Object.assign(baseStyle, this.props.style, this.state, finalSize)
+    var source = Object.assign({}, this.props.source, this.state);
     return (
       <Image
         style={style}
-        source={this.props.source} />
+        source={source} />
     )
   },
 })
