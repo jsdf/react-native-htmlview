@@ -15,7 +15,7 @@ var ResizableImage = React.createClass({
       // set width 1 is for preventing the warning
       // You must specify a width and height for the image %s
       width: this.props.style.width || 1,
-      height: this.props.style.height || 0,
+      height: this.props.style.height || 1,
     }
   },
   componentDidMount: function() {
