@@ -8,7 +8,7 @@ props:
 
 - `value`: a string of HTML content to render
 - `onLinkPress`: a function which will be called with a url when a link is pressed.
-  Passing this prop will override how links are handled (defaults to calling `LinkingIOS.openURL(url)`)
+  Passing this prop will override how links are handled (defaults to calling `Linking.openURL(url)`)
 - `stylesheet`: a stylesheet object keyed by tag name, which will override the 
   styles applied to those respective tags.
 - `renderNode`: a custom function to render HTML nodes however you see fit. If 
