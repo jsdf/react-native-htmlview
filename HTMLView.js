@@ -62,9 +62,9 @@ var HTMLView = React.createClass({
 
   render() {
     if (this.state.element) {
-      return <Text children={this.state.element} />
+      return <Text children={this.state.element} {...this.props} />
     }
-    return <Text />
+    return <Text {...this.props} />
   },
 })
 
