@@ -1,10 +1,11 @@
-var React = require('react-native')
+var React = require('react')
+var ReactNative = require('react-native')
 var htmlToElement = require('./htmlToElement')
 var {
   Linking,
   StyleSheet,
   Text,
-} = React
+} = ReactNative
 
 
 var HTMLView = React.createClass({
