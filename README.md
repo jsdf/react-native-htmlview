@@ -20,8 +20,9 @@ Note: see the [troubleshooting](#troubleshooting) section below if you're having
 ### example
 
 ```js
-var React = require('react-native')
-var {Text, View, ListView} = React
+var React = require('react')
+var ReactNative = require('react-native')
+var {Text, View, ListView} = ReactNative
 
 var HTMLView = require('react-native-htmlview')
 
@@ -46,11 +47,12 @@ var styles = StyleSheet.create({
 })
 ```
 
-When a link is clicked, by default `React.Linking.openURL` is called with the 
+When a link is clicked, by default `ReactNative.Linking.openURL` is called with the 
 link url. You can customise what happens when a link is clicked with `onLinkPress`:
 
 ```js
-var React = require('react-native')
+var React = require('react')
+var ReactNative = require('react-native')
 
 var ContentView = React.createClass({
   render() {

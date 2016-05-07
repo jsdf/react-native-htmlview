@@ -1,10 +1,11 @@
-var React = require('react-native')
+var React = require('react')
+var ReactNative = require('react-native')
 var htmlparser = require('./vendor/htmlparser2')
 var entities = require('./vendor/entities')
 
 var {
   Text,
-} = React
+} = ReactNative
 
 
 var LINE_BREAK = '\n'

@@ -1,4 +1,5 @@
-var React = require('react-native')
+var React = require('react')
+var ReactNative = require('react-native')
 var TestUtils = require('react-addons-test-utils')
 var HTMLView = require('../HTMLView')
 jest.setMock('../htmlToElement', jest.fn())
@@ -26,6 +27,6 @@ describe('HTMLView', () => {
     shallowRenderer._instance._instance.componentDidMount()
 
     var second = shallowRenderer.getRenderOutput()
-    expect(second.props.children[0].type).toBe(React.Text)
+    expect(second.props.children[0].type).toBe(ReactNative.Text)
   })
 })
