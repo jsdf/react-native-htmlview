@@ -79,4 +79,6 @@ In action (from [ReactNativeHackerNews](https://github.com/jsdf/ReactNativeHacke
 
 ### changelog
 
+- 0.6.0 - onLinkPress fix ([@damusnet](https://github.com/damusnet)), headers now only have one single line break ([@crysfel](https://github.com/crysfel))
+- 0.5.0 - react-native 0.25 compat ([@damusnet](https://github.com/damusnet))
 - 0.4.0 - re-renders properly when html content changes
