@@ -1,6 +1,6 @@
 {
   "name": "react-native-htmlview",
-  "version": "0.4.2",
+  "version": "0.5.0",
   "description": "A component which renders HTML content as native views",
   "main": "index.js",
   "scripts": {
