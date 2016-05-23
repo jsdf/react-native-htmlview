@@ -7,6 +7,8 @@ var {
   Text,
 } = ReactNative
 
+var Image = require('./helper/Image')
+
 
 var LINE_BREAK = '\n'
 var PARAGRAPH_BREAK = '\n\n'
@@ -22,6 +24,7 @@ function htmlToElement(rawHtml, opts, done) {
         if (rendered || rendered === null) return rendered
       }
 
+
       if (node.type == 'text') {
         return (
           <Text key={index} style={parent ? opts.styles[parent.name] : null}>
@@ -31,6 +34,19 @@ function htmlToElement(rawHtml, opts, done) {
       }
 
       if (node.type == 'tag') {
+        if (node.name == 'img') {
+          var img_w = +node.attribs['width'] || +node.attribs['data-width'] || 0
+          var img_h = +node.attribs['height'] || +node.attribs['data-height'] || 0
+
+          var img_style = {
+            width: img_w,
+            height: img_h,
+          }
+          return (
+            <Image key={index} source={{uri: node.attribs.src}} style={img_style} />
+          )
+        }
+
         var linkPressHandler = null
         if (node.name == 'a' && node.attribs && node.attribs.href) {
           linkPressHandler = () => opts.linkHandler(entities.decodeHTML(node.attribs.href))

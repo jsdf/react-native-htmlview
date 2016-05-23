@@ -11,6 +11,11 @@ var ReactNative = Object.assign({}, React, {
   Linking: {
     openURL: jest.fn(),
   },
+  Dimensions: {
+    get: function() {
+      return {width: 414, height: 736}
+    },
+  },
 })
 
 module.exports = ReactNative
