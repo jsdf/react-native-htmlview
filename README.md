@@ -40,6 +40,10 @@ var App = React.createClass({
 })
 
 var styles = StyleSheet.create({
+  rootStyles: {
+      fontSize: 15,
+      lineHeight: 20
+  },
   a: {
     fontWeight: '300',
     color: '#FF3366', // pink links

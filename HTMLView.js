@@ -70,7 +70,7 @@ class HtmlView extends Component {
 
   render() {
     if (this.state.element) {
-      return <Text children={this.state.element} />
+      return <Text style={this.props.stylesheet && this.props.stylesheet.rootStyles} children={this.state.element} />
     }
     return <Text />
   }
