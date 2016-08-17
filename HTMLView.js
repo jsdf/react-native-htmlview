@@ -5,6 +5,7 @@ import {Linking, StyleSheet, View} from 'react-native';
 
 const boldStyle = {fontWeight: '500'};
 const italicStyle = {fontStyle: 'italic'};
+const underlineStyle = {textDecorationLine: 'underline'}
 const codeStyle = {fontFamily: 'Menlo'};
 
 const baseStyles = StyleSheet.create({
@@ -12,6 +13,7 @@ const baseStyles = StyleSheet.create({
   strong: boldStyle,
   i: italicStyle,
   em: italicStyle,
+  u: underlineStyle,
   pre: codeStyle,
   code: codeStyle,
   a: {
