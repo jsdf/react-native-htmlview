@@ -57,6 +57,16 @@ function htmlToElement(rawHtml, opts, done) {
           linkPressHandler = () => opts.linkHandler(entities.decodeHTML(node.attribs.href))
         }
 
+        if (node.name === 'font') {
+          if (node.attribs.color) {
+            return (
+              <Text key={index} style={{color: `${node.attribs.color}`}}>
+                {domToElement(node.children, node)}
+              </Text>
+            )
+          }
+        }
+
         return (
           <Text key={index} onPress={linkPressHandler}>
             {node.name == 'pre' ? LINE_BREAK : null}
