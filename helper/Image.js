@@ -1,8 +1,9 @@
-var React = require('react-native')
+var React = require('react')
+var ReactNative = require('react-native')
 var {
   Image,
   Dimensions,
-} = React
+} = ReactNative
 
 var {width} = Dimensions.get('window')
 
