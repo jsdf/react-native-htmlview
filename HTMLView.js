@@ -37,8 +37,8 @@ class HtmlView extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (this.props.value !== nextProps.value) {
-      this.startHtmlRender(nextProps.value)
+    if (this.props.value !== nextProps.value || this.props.stylesheet !== nextProps.stylesheet) {
+      this.startHtmlRender(nextProps.value, nextProps.stylesheet)
     }
   }
 
@@ -46,14 +46,14 @@ class HtmlView extends Component {
     this.mounted = false
   }
 
-  startHtmlRender(value) {
+  startHtmlRender(value, style) {
     if (!value) {
       this.setState({element: null})
     }
 
     const opts = {
       linkHandler: this.props.onLinkPress,
-      styles: Object.assign({}, baseStyles, this.props.stylesheet),
+      styles: Object.assign({}, baseStyles, this.props.stylesheet, style),
       customRenderer: this.props.renderNode,
     }
 
