@@ -59,7 +59,7 @@ function htmlToElement(rawHtml, opts, done) {
 
         return (
           <Text key={index} onPress={linkPressHandler}>
-            {node.name == 'pre' ? LINE_BREAK : null}
+            {node.name == 'pre' || node.name == 'div' ? LINE_BREAK : null}
             {node.name == 'li' ? BULLET : null}
             {domToElement(node.children, node)}
             {node.name == 'br' || node.name == 'li' ? LINE_BREAK : null}
