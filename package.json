@@ -48,5 +48,9 @@
   "repository": {
     "type": "git",
     "url": "git://github.com/jsdf/react-native-htmlview.git"
+  },
+  "dependencies": {
+    "entities": "^1.1.1",
+    "htmlparser2-without-node-native": "^3.9.0"
   }
 }
