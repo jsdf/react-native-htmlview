@@ -73,7 +73,7 @@ class HtmlView extends Component {
       if (this.props.numberOfLines) {
         return <Text children={this.state.element} numberOfLines={this.props.numberOfLines} />
       }
-      
+
       return <Text children={this.state.element} />
     }
     return <Text />
