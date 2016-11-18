@@ -9,6 +9,8 @@ import {
 const boldStyle = {fontWeight: '500'}
 const italicStyle = {fontStyle: 'italic'}
 const codeStyle = {fontFamily: 'Menlo'}
+const underlineStyle = {textDecorationLine: 'underline'}
+const strikeStyle = {textDecorationLine: 'line-through'}
 
 const baseStyles = StyleSheet.create({
   b: boldStyle,
@@ -16,6 +18,8 @@ const baseStyles = StyleSheet.create({
   i: italicStyle,
   em: italicStyle,
   pre: codeStyle,
+  u: underlineStyle,
+  strike: strikeStyle,
   code: codeStyle,
   a: {
     fontWeight: '500',
@@ -70,15 +74,15 @@ class HtmlView extends Component {
 
   render() {
     if (this.state.element) {
-      return <Text children={this.state.element} />
+      return <Text style={this.props.stylesheet} children={this.state.element} {...this.props} />
     }
-    return <Text />
+    return <Text style={this.props.stylesheet} {...this.props}/>
   }
 }
 
 HtmlView.propTypes = {
-  value: PropTypes.string,
-  stylesheet: PropTypes.object,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
+  stylesheet: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   onLinkPress: PropTypes.func,
   onError: PropTypes.func,
   renderNode: PropTypes.func,
