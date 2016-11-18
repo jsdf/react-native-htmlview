@@ -9,12 +9,15 @@ var {
 
 var Image = require('./helper/Image')
 
-
 var LINE_BREAK = '\n'
 var PARAGRAPH_BREAK = '\n\n'
 var BULLET = '\u2022 '
 
-function htmlToElement(rawHtml, opts, done) {
+import Video from 'react-native-video';
+
+import {getPathRessource} from '../../js/courses/services/download';
+
+function htmlToElement(rawHtml, opts, courseId, done) {
   function domToElement(dom, parent) {
     if (!dom) return null
 
@@ -34,6 +37,25 @@ function htmlToElement(rawHtml, opts, done) {
       }
 
       if (node.type == 'tag') {
+        if (node.name === 'video') {
+          getPathRessource(courseId, node.attribs.src)
+          .then(path => {
+            return (
+              <Video
+                source={{uri: path}}
+                rate={1}
+                volume={1}
+                resizeMode={'cover'}
+                repeat={true}
+              />
+            );
+          });
+
+          return (
+            <Text>{'Video'}</Text>
+          );
+        }
+
         if (node.name == 'img') {
           var img_w = +node.attribs['width'] || +node.attribs['data-width'] || 0
           var img_h = +node.attribs['height'] || +node.attribs['data-height'] || 0
