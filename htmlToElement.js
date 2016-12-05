@@ -1,7 +1,7 @@
 var React = require('react')
 var ReactNative = require('react-native')
-var htmlparser = require('./vendor/htmlparser2')
-var entities = require('./vendor/entities')
+var htmlparser = require('htmlparser2-without-node-native')
+var entities = require('entities')
 
 var {
   Text,
