@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactNative, {Text} from 'react-native'
+import {Text} from 'react-native'
 import htmlparser from 'htmlparser2-without-node-native'
 import entities from 'entities'
 
