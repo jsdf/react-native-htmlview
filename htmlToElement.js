@@ -1,14 +1,9 @@
-var React = require('react')
-var ReactNative = require('react-native')
-var htmlparser = require('htmlparser2-without-node-native')
-var entities = require('entities')
+import React from 'react'
+import ReactNative, {Text} from 'react-native'
+import htmlparser from 'htmlparser2-without-node-native'
+import entities from 'entities'
 
-var {
-  Text,
-} = ReactNative
-
-var Image = require('./helper/Image')
-
+import Image from './helper/Image'
 
 var LINE_BREAK = '\n'
 var PARAGRAPH_BREAK = '\n\n'
