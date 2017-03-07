@@ -70,7 +70,8 @@ class HtmlView extends Component {
 
   render() {
     if (this.state.element) {
-      return <Text children={this.state.element} />
+      return <Text style={{color: this.props.defaultTextColor}}
+									 children={this.state.element} />
     }
     return <Text />
   }
@@ -82,11 +83,13 @@ HtmlView.propTypes = {
   onLinkPress: PropTypes.func,
   onError: PropTypes.func,
   renderNode: PropTypes.func,
+	defaultTextColor: PropTypes.string,
 }
 
 HtmlView.defaultProps = {
   onLinkPress: url => Linking.openURL(url),
   onError: console.error.bind(console),
+	defaultTextColor: '#FFFFFF',
 }
 
 export default HtmlView
