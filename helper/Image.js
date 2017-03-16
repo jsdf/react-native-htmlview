@@ -2,13 +2,13 @@ var React = require('react');
 var ReactNative = require('react-native');
 var {
   Image,
-  Dimensions
+  Dimensions,
 } = ReactNative;
 
 var {width} = Dimensions.get('window');
 
 var baseStyle = {
-  backgroundColor: 'transparent'
+  backgroundColor: 'transparent',
 };
 var ResizableImage = React.createClass({
   getInitialState: function() {
@@ -16,7 +16,7 @@ var ResizableImage = React.createClass({
       // set width 1 is for preventing the warning
       // You must specify a width and height for the image %s
       width: this.props.style.width || 1,
-      height: this.props.style.height || 1
+      height: this.props.style.height || 1,
     };
   },
   componentDidMount: function() {
@@ -49,7 +49,7 @@ var ResizableImage = React.createClass({
     }
 
     return <Image style={style} source={source} />;
-  }
+  },
 });
 
 module.exports = ResizableImage;

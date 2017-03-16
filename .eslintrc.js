@@ -26,7 +26,7 @@ module.exports = {
     "no-console": 0,
     "no-shadow": 2,
     // style
-    "semi": [2, 'never'],
+    "semi": [2, 'always'],
     "comma-dangle": [2, "always-multiline"],
     "no-extra-semi": 2,
     "no-multi-spaces": 2,

@@ -2,6 +2,6 @@
 node_modules/.bin/prettier \
   $@ \
   --bracket-spacing=false \
-  --trailing-comma=none \
+  --trailing-comma=es5 \
   --single-quote=true \
   ./**/*.js

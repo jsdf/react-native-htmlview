@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
-    "test": "yarn run lint-prettier && yarn run lint && yarn run jest",
-    "lint-prettier": "./format.sh --list-different; if [ $? != 0 ]; then echo \"CODE FORMATTING: please run npm run prettier and commit the changes\"; exit 1; fi",
-    "prettier": "./format.sh --write",
+    "test": "yarn run lint-format && yarn run lint && yarn run jest",
+    "lint-format": "./format.sh --list-different; if [ $? != 0 ]; then echo \"CODE FORMATTING: please run npm run format and commit the changes\"; exit 1; fi",
+    "format": "./format.sh --write && eslint . --fix",
     "jest": "jest"
   },
   "devDependencies": {
@@ -43,5 +43,9 @@
   "repository": {
     "type": "git",
     "url": "git://github.com/jsdf/react-native-htmlview.git"
+  },
+  "dependencies": {
+    "entities": "^1.1.1",
+    "htmlparser2-without-node-native": "^3.9.0"
   }
 }

@@ -1,1 +1,1 @@
-module.exports = require('./HTMLView')
+module.exports = require('./HTMLView');
