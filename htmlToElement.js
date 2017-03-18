@@ -7,11 +7,9 @@ var {
   Text,
 } = ReactNative;
 
-var Image = require('./helper/Image');
-
+var Img = require('./Img');
 
 var LINE_BREAK = '\n';
-var PARAGRAPH_BREAK = '\n\n';
 var BULLET = '\u2022 ';
 
 function htmlToElement(rawHtml, opts, done) {
@@ -35,20 +33,20 @@ function htmlToElement(rawHtml, opts, done) {
 
       if (node.type == 'tag') {
         if (node.name == 'img') {
-          var img_w = +node.attribs['width'] || +node.attribs['data-width'] || 0;
-          var img_h = +node.attribs['height'] || +node.attribs['data-height'] || 0;
+          var imgWidth = Number(node.attribs['width']) || Number(node.attribs['data-width']) || 0;
+          var imgHeight = Number(node.attribs['height']) || Number(node.attribs['data-height']) || 0;
 
-          var img_style = {
-            width: img_w,
-            height: img_h,
+          var imgStyle = {
+            width: imgWidth,
+            height: imgHeight,
           };
           var source = {
             uri: node.attribs.src,
-            width: img_w,
-            height: img_h,
+            width: imgWidth,
+            height: imgHeight,
           };
           return (
-            <Image key={index} source={source} style={img_style} />
+            <Img key={index} source={source} style={imgStyle} />
           );
         }
 
@@ -63,7 +61,7 @@ function htmlToElement(rawHtml, opts, done) {
             {node.name == 'li' ? BULLET : null}
             {domToElement(node.children, node)}
             {node.name == 'br' || node.name == 'li' ? LINE_BREAK : null}
-            {node.name == 'p' && index < list.length - 1 ? PARAGRAPH_BREAK : null}
+            {node.name == 'p' && index < list.length - 1 ? LINE_BREAK + LINE_BREAK : null}
             {node.name == 'h1' || node.name == 'h2' || node.name == 'h3' || node.name == 'h4' || node.name == 'h5' ? LINE_BREAK : null}
           </Text>
         );

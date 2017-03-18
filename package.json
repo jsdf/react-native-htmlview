@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint .",
     "test": "yarn run lint-format && yarn run lint && yarn run jest",
-    "lint-format": "./format.sh --list-different; if [ $? != 0 ]; then echo \"CODE FORMATTING: please run npm run format and commit the changes\"; exit 1; fi",
+    "lint-format": "./format.sh --list-different; if [ $? != 0 ]; then echo \"CODE FORMATTING: please run 'yarn run format' and commit the changes\"; exit 1; fi",
     "format": "./format.sh --write && eslint . --fix",
     "jest": "jest"
   },
