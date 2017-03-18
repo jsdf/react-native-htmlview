@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<HTMLView/> can use a custom renderer 1`] = `
-<View>
+<View
+  styles={undefined}
+>
   <Text
     accessible={true}
     allowFontScaling={true}
@@ -45,7 +47,9 @@ exports[`<HTMLView/> can use a custom renderer 1`] = `
 `;
 
 exports[`<HTMLView/> should render an <Image /> with set width/height 1`] = `
-<View>
+<View
+  styles={undefined}
+>
   <Image
     source={
       Object {
@@ -66,7 +70,9 @@ exports[`<HTMLView/> should render an <Image /> with set width/height 1`] = `
 `;
 
 exports[`<HTMLView/> should render an <Image />, with default width/height of 1 1`] = `
-<View>
+<View
+  styles={undefined}
+>
   <Image
     source={
       Object {
@@ -87,7 +93,9 @@ exports[`<HTMLView/> should render an <Image />, with default width/height of 1 
 `;
 
 exports[`<HTMLView/> should render an empty <Text/> element 1`] = `
-<View>
+<View
+  styles={undefined}
+>
   <Text
     accessible={true}
     allowFontScaling={true}
@@ -119,7 +127,9 @@ exports[`<HTMLView/> should render an empty <Text/> element 1`] = `
 `;
 
 exports[`<HTMLView/> should render shoddy html including headings, links, bold, italic 1`] = `
-<View>
+<View
+  styles={undefined}
+>
   <Text
     accessible={true}
     allowFontScaling={true}
@@ -340,7 +350,9 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
 `;
 
 exports[`<HTMLView/> should render text in a (nested) <Text/> element 1`] = `
-<View>
+<View
+  styles={undefined}
+>
   <Text
     accessible={true}
     allowFontScaling={true}

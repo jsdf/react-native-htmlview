@@ -76,15 +76,16 @@ class HtmlView extends Component {
 
   render() {
     if (this.state.element) {
-      return <View children={this.state.element} />;
+      return <View children={this.state.element} styles={this.props.styles} />;
     }
-    return <View />;
+    return <View styles={this.props.styles} />;
   }
 }
 
 HtmlView.propTypes = {
   value: PropTypes.string,
   stylesheet: PropTypes.object,
+  styles: PropTypes.object,
   onLinkPress: PropTypes.func,
   onError: PropTypes.func,
   renderNode: PropTypes.func,

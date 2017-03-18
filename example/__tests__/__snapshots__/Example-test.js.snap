@@ -10,7 +10,9 @@ exports[`<Example/> should render 1`] = `
   }
 >
   <View>
-    <View>
+    <View
+      styles={undefined}
+    >
       <Text
         accessible={true}
         allowFontScaling={true}
