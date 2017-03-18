@@ -66,6 +66,41 @@ var ContentView = React.createClass({
 })
 ```
 
+### custom element rendering
+
+You can implement the `renderNode` prop to add support for unsupported element
+types,  or override the rendering for supported types.
+
+For example, here is how you might implement the `<iframe>` element:
+
+```js
+function renderNode(node, index, siblings, parent) {
+  if (node.name == 'iframe') {
+    const a = node.attribs;
+    const iframeHtml = `<iframe src="${a.src}"></iframe>`;
+    return (
+      <View key={index} style={{width: Number(a.width), height: Number(a.height)}}>
+        <WebView source={{html: iframeHtml}} />
+      </View>
+    );
+  }
+}
+
+const htmlContent = `
+  <div>
+    <iframe src="http://info.cern.ch/" width="360" height="300" />
+  </div>
+`;
+
+class App extends React.Component {
+  render() {
+    return (
+      <HTMLView value={htmlContent} renderNode={renderNode} />
+    );
+  }
+}
+```
+
 ### screenshot
 
 In action (from [ReactNativeHackerNews](https://github.com/jsdf/ReactNativeHackerNews)):

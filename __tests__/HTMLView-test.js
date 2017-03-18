@@ -2,6 +2,8 @@ import React from 'react';
 
 import renderer from 'react-test-renderer';
 
+import {Text} from 'react-native';
+
 import HTMLView from '../HTMLView';
 
 describe('<HTMLView/>', () => {
@@ -58,6 +60,26 @@ describe('<HTMLView/>', () => {
 
     expect(
       renderer.create(<HTMLView value={htmlContent} />).toJSON()
+    ).toMatchSnapshot();
+  });
+
+  it('can use a custom renderer', () => {
+    const htmlContent = `
+      <div>
+        <thing a="b" />
+    </div>
+    `;
+
+    function renderNode(node, index) {
+      if (node.name == 'thing') {
+        return <Text key={index}>{node.attribs.b}</Text>;
+      }
+    }
+
+    expect(
+      renderer.create(
+        <HTMLView value={htmlContent} renderNode={renderNode} />
+      ).toJSON()
     ).toMatchSnapshot();
   });
 });

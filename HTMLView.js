@@ -3,7 +3,7 @@ import htmlToElement from './htmlToElement';
 import {
   Linking,
   StyleSheet,
-  Text,
+  View,
 } from 'react-native';
 
 const boldStyle = {fontWeight: '500'};
@@ -21,6 +21,12 @@ const baseStyles = StyleSheet.create({
     fontWeight: '500',
     color: '#007AFF',
   },
+  h1: {fontWeight: '500', fontSize: 36},
+  h2: {fontWeight: '500', fontSize: 30},
+  h3: {fontWeight: '500', fontSize: 24},
+  h4: {fontWeight: '500', fontSize: 18},
+  h5: {fontWeight: '500', fontSize: 14},
+  h6: {fontWeight: '500', fontSize: 12},
 });
 
 class HtmlView extends Component {
@@ -70,9 +76,9 @@ class HtmlView extends Component {
 
   render() {
     if (this.state.element) {
-      return <Text children={this.state.element} />;
+      return <View children={this.state.element} />;
     }
-    return <Text />;
+    return <View />;
   }
 }
 
@@ -82,6 +88,8 @@ HtmlView.propTypes = {
   onLinkPress: PropTypes.func,
   onError: PropTypes.func,
   renderNode: PropTypes.func,
+  blockComponent: PropTypes.func,
+  inlineComponent: PropTypes.func,
 };
 
 HtmlView.defaultProps = {

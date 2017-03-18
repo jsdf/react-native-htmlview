@@ -1,11 +1,51 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<HTMLView/> can use a custom renderer 1`] = `
+<View>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={null}
+  >
+    
+          
+  </Text>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    onPress={null}
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={undefined}
+    >
+      
+              
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+    />
+  </Text>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={null}
+  >
+    
+        
+  </Text>
+</View>
+`;
+
 exports[`<HTMLView/> should render an <Image /> with set width/height 1`] = `
-<Text
-  accessible={true}
-  allowFontScaling={true}
-  ellipsizeMode="tail"
->
+<View>
   <Image
     source={
       Object {
@@ -22,15 +62,11 @@ exports[`<HTMLView/> should render an <Image /> with set width/height 1`] = `
       }
     }
   />
-</Text>
+</View>
 `;
 
 exports[`<HTMLView/> should render an <Image />, with default width/height of 1 1`] = `
-<Text
-  accessible={true}
-  allowFontScaling={true}
-  ellipsizeMode="tail"
->
+<View>
   <Image
     source={
       Object {
@@ -47,15 +83,11 @@ exports[`<HTMLView/> should render an <Image />, with default width/height of 1 
       }
     }
   />
-</Text>
+</View>
 `;
 
 exports[`<HTMLView/> should render an empty <Text/> element 1`] = `
-<Text
-  accessible={true}
-  allowFontScaling={true}
-  ellipsizeMode="tail"
->
+<View>
   <Text
     accessible={true}
     allowFontScaling={true}
@@ -83,15 +115,11 @@ exports[`<HTMLView/> should render an empty <Text/> element 1`] = `
       </Text>
     </Text>
   </Text>
-</Text>
+</View>
 `;
 
 exports[`<HTMLView/> should render shoddy html including headings, links, bold, italic 1`] = `
-<Text
-  accessible={true}
-  allowFontScaling={true}
-  ellipsizeMode="tail"
->
+<View>
   <Text
     accessible={true}
     allowFontScaling={true}
@@ -141,7 +169,12 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
           accessible={true}
           allowFontScaling={true}
           ellipsizeMode="tail"
-          style={undefined}
+          style={
+            Object {
+              "fontSize": 30,
+              "fontWeight": "500",
+            }
+          }
         >
           &gt; Dwayne’s only companion at night was a Labrador retriever named Sparky.
         </Text>
@@ -303,15 +336,11 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
     
         
   </Text>
-</Text>
+</View>
 `;
 
 exports[`<HTMLView/> should render text in a (nested) <Text/> element 1`] = `
-<Text
-  accessible={true}
-  allowFontScaling={true}
-  ellipsizeMode="tail"
->
+<View>
   <Text
     accessible={true}
     allowFontScaling={true}
@@ -320,5 +349,5 @@ exports[`<HTMLView/> should render text in a (nested) <Text/> element 1`] = `
   >
     This is some text
   </Text>
-</Text>
+</View>
 `;

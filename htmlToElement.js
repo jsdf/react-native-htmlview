@@ -12,16 +12,33 @@ var Img = require('./Img');
 var LINE_BREAK = '\n';
 var BULLET = '\u2022 ';
 
+const ImgTag = props => {
+  const width = Number(props.attribs['width']) || Number(props.attribs['data-width']) || 0;
+  const height = Number(props.attribs['height']) || Number(props.attribs['data-height']) || 0;
+
+  const imgStyle = {
+    width,
+    height,
+  };
+  const source = {
+    uri: props.attribs.src,
+    width,
+    height,
+  };
+  return (
+    <Img source={source} style={imgStyle} />
+  );
+};
+
 function htmlToElement(rawHtml, opts, done) {
   function domToElement(dom, parent) {
     if (!dom) return null;
 
     return dom.map((node, index, list) => {
       if (opts.customRenderer) {
-        var rendered = opts.customRenderer(node, index, list);
+        var rendered = opts.customRenderer(node, index, list, parent);
         if (rendered || rendered === null) return rendered;
       }
-
 
       if (node.type == 'text') {
         return (
@@ -33,24 +50,12 @@ function htmlToElement(rawHtml, opts, done) {
 
       if (node.type == 'tag') {
         if (node.name == 'img') {
-          var imgWidth = Number(node.attribs['width']) || Number(node.attribs['data-width']) || 0;
-          var imgHeight = Number(node.attribs['height']) || Number(node.attribs['data-height']) || 0;
-
-          var imgStyle = {
-            width: imgWidth,
-            height: imgHeight,
-          };
-          var source = {
-            uri: node.attribs.src,
-            width: imgWidth,
-            height: imgHeight,
-          };
           return (
-            <Img key={index} source={source} style={imgStyle} />
+            <ImgTag key={index} attribs={node.attribs} />
           );
         }
 
-        var linkPressHandler = null;
+        let linkPressHandler = null;
         if (node.name == 'a' && node.attribs && node.attribs.href) {
           linkPressHandler = () => opts.linkHandler(entities.decodeHTML(node.attribs.href));
         }
