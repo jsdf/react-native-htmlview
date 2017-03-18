@@ -1,10 +1,14 @@
 import React from 'react';
-import { StyleSheet, View, Text, ScrollView } from 'react-native';
-import HTMLView from 'react-native-htmlview';
+import {StyleSheet, View, Text, ScrollView} from 'react-native';
+import HTMLView from '../';
 
 function renderNode(node, index) {
   if (node.name == 'iframe') {
-    return <View key={index} style={{width: 200, height: 200}}><Text>{node.attribs.src}</Text></View>;
+    return (
+      <View key={index} style={{width: 200, height: 200}}>
+        <Text>{node.attribs.src}</Text>
+      </View>
+    );
   }
 }
 
@@ -34,7 +38,6 @@ const htmlContent = `
   </span>
 </div>
 `;
-
 
 export default class App extends React.Component {
   render() {

@@ -1,18 +1,16 @@
-var React = require('react');
-var ReactNative = require('react-native');
-var htmlparser = require('htmlparser2-without-node-native');
-var entities = require('entities');
-
-var {
+import React from 'react';
+import {
   Text,
-} = ReactNative;
+} from 'react-native';
+import htmlparser from 'htmlparser2-without-node-native';
+import entities from 'entities';
 
-var Img = require('./Img');
+import AutoSizedImage from './AutoSizedImage';
 
-var LINE_BREAK = '\n';
-var BULLET = '\u2022 ';
+const LINE_BREAK = '\n';
+const BULLET = '\u2022 ';
 
-const ImgTag = props => {
+const Img = props => {
   const width = Number(props.attribs['width']) || Number(props.attribs['data-width']) || 0;
   const height = Number(props.attribs['height']) || Number(props.attribs['data-height']) || 0;
 
@@ -26,17 +24,17 @@ const ImgTag = props => {
     height,
   };
   return (
-    <Img source={source} style={imgStyle} />
+    <AutoSizedImage source={source} style={imgStyle} />
   );
 };
 
-function htmlToElement(rawHtml, opts, done) {
+export default function htmlToElement(rawHtml, opts, done) {
   function domToElement(dom, parent) {
     if (!dom) return null;
 
     return dom.map((node, index, list) => {
       if (opts.customRenderer) {
-        var rendered = opts.customRenderer(node, index, list, parent);
+        const rendered = opts.customRenderer(node, index, list, parent);
         if (rendered || rendered === null) return rendered;
       }
 
@@ -51,7 +49,7 @@ function htmlToElement(rawHtml, opts, done) {
       if (node.type == 'tag') {
         if (node.name == 'img') {
           return (
-            <ImgTag key={index} attribs={node.attribs} />
+            <Img key={index} attribs={node.attribs} />
           );
         }
 
@@ -74,13 +72,12 @@ function htmlToElement(rawHtml, opts, done) {
     });
   }
 
-  var handler = new htmlparser.DomHandler(function(err, dom) {
+  const handler = new htmlparser.DomHandler(function(err, dom) {
     if (err) done(err);
     done(null, domToElement(dom));
   });
-  var parser = new htmlparser.Parser(handler);
+  const parser = new htmlparser.Parser(handler);
   parser.write(rawHtml);
   parser.done();
 }
 
-module.exports = htmlToElement;

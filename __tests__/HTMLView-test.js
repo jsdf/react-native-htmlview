@@ -77,9 +77,9 @@ describe('<HTMLView/>', () => {
     }
 
     expect(
-      renderer.create(
-        <HTMLView value={htmlContent} renderNode={renderNode} />
-      ).toJSON()
+      renderer
+        .create(<HTMLView value={htmlContent} renderNode={renderNode} />)
+        .toJSON()
     ).toMatchSnapshot();
   });
 });
