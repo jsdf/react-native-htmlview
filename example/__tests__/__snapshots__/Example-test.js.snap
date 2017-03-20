@@ -11,7 +11,7 @@ exports[`<Example/> should render 1`] = `
 >
   <View>
     <View
-      styles={undefined}
+      style={undefined}
     >
       <Text
         accessible={true}

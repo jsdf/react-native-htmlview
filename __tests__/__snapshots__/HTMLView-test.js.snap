@@ -2,7 +2,7 @@
 
 exports[`<HTMLView/> can use a custom renderer 1`] = `
 <View
-  styles={undefined}
+  style={undefined}
 >
   <Text
     accessible={true}
@@ -48,7 +48,7 @@ exports[`<HTMLView/> can use a custom renderer 1`] = `
 
 exports[`<HTMLView/> should render an <Image /> with set width/height 1`] = `
 <View
-  styles={undefined}
+  style={undefined}
 >
   <Image
     source={
@@ -71,7 +71,7 @@ exports[`<HTMLView/> should render an <Image /> with set width/height 1`] = `
 
 exports[`<HTMLView/> should render an <Image />, with default width/height of 1 1`] = `
 <View
-  styles={undefined}
+  style={undefined}
 >
   <Image
     source={
@@ -94,7 +94,7 @@ exports[`<HTMLView/> should render an <Image />, with default width/height of 1 
 
 exports[`<HTMLView/> should render an empty <Text/> element 1`] = `
 <View
-  styles={undefined}
+  style={undefined}
 >
   <Text
     accessible={true}
@@ -128,7 +128,7 @@ exports[`<HTMLView/> should render an empty <Text/> element 1`] = `
 
 exports[`<HTMLView/> should render shoddy html including headings, links, bold, italic 1`] = `
 <View
-  styles={undefined}
+  style={undefined}
 >
   <Text
     accessible={true}
@@ -351,7 +351,7 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
 
 exports[`<HTMLView/> should render text in a (nested) <Text/> element 1`] = `
 <View
-  styles={undefined}
+  style={undefined}
 >
   <Text
     accessible={true}
