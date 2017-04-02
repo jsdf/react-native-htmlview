@@ -58,6 +58,7 @@ class HtmlView extends Component {
     }
 
     const opts = {
+      addLineBreaks: this.props.addLineBreaks,
       linkHandler: this.props.onLinkPress,
       styles: Object.assign({}, baseStyles, this.props.stylesheet),
       customRenderer: this.props.renderNode,
@@ -83,6 +84,7 @@ class HtmlView extends Component {
 }
 
 HtmlView.propTypes = {
+  addLineBreaks: PropTypes.bool,
   value: PropTypes.string,
   stylesheet: PropTypes.object,
   style: View.propTypes.style,
@@ -94,6 +96,7 @@ HtmlView.propTypes = {
 };
 
 HtmlView.defaultProps = {
+  addLineBreaks: true,
   onLinkPress: url => Linking.openURL(url),
   onError: console.error.bind(console),
 };

@@ -8,6 +8,7 @@ import entities from 'entities';
 import AutoSizedImage from './AutoSizedImage';
 
 const LINE_BREAK = '\n';
+const PARAGRAPH_BREAK = '\n\n';
 const BULLET = '\u2022 ';
 
 const Img = props => {
@@ -58,14 +59,35 @@ export default function htmlToElement(rawHtml, opts, done) {
           linkPressHandler = () => opts.linkHandler(entities.decodeHTML(node.attribs.href));
         }
 
+        let linebreakBefore = null;
+        let linebreakAfter = null;
+        if (opts.addLineBreaks) {
+          switch (node.name) {
+          case 'pre':
+            linebreakBefore = LINE_BREAK;
+            break;
+          case 'p':
+            if (index < list.length - 1) {
+              linebreakAfter = PARAGRAPH_BREAK;
+            }
+            break;
+          case 'br':
+          case 'h1':
+          case 'h2':
+          case 'h3':
+          case 'h4':
+          case 'h5':
+            linebreakAfter = LINE_BREAK;
+            break;
+          }
+        }
+
         return (
           <Text key={index} onPress={linkPressHandler}>
-            {node.name == 'pre' ? LINE_BREAK : null}
+            {linebreakBefore}
             {node.name == 'li' ? BULLET : null}
             {domToElement(node.children, node)}
-            {node.name == 'br' || node.name == 'li' ? LINE_BREAK : null}
-            {node.name == 'p' && index < list.length - 1 ? LINE_BREAK + LINE_BREAK : null}
-            {node.name == 'h1' || node.name == 'h2' || node.name == 'h3' || node.name == 'h4' || node.name == 'h5' ? LINE_BREAK : null}
+            {linebreakAfter}
           </Text>
         );
       }
