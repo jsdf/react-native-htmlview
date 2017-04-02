@@ -126,6 +126,52 @@ exports[`<HTMLView/> should render an empty <Text/> element 1`] = `
 </View>
 `;
 
+exports[`<HTMLView/> should render ol numbers 1`] = `
+<View
+  style={undefined}
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    onPress={null}
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      onPress={null}
+    >
+      1. 
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={undefined}
+      >
+         a 
+      </Text>
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      onPress={null}
+    >
+      2. 
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={undefined}
+      >
+         b 
+      </Text>
+    </Text>
+  </Text>
+</View>
+`;
+
 exports[`<HTMLView/> should render shoddy html including headings, links, bold, italic 1`] = `
 <View
   style={undefined}
@@ -360,6 +406,52 @@ exports[`<HTMLView/> should render text in a (nested) <Text/> element 1`] = `
     style={null}
   >
     This is some text
+  </Text>
+</View>
+`;
+
+exports[`<HTMLView/> should render ul bullets 1`] = `
+<View
+  style={undefined}
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    onPress={null}
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      onPress={null}
+    >
+      • 
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={undefined}
+      >
+         a 
+      </Text>
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      onPress={null}
+    >
+      • 
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={undefined}
+      >
+         b 
+      </Text>
+    </Text>
   </Text>
 </View>
 `;

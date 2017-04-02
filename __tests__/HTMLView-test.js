@@ -23,6 +23,22 @@ describe('<HTMLView/>', () => {
     ).toMatchSnapshot();
   });
 
+  it('should render ul bullets', () => {
+    const htmlContent = '<ul><li> a </li><li> b </li></ul>';
+
+    expect(
+      renderer.create(<HTMLView value={htmlContent} />).toJSON()
+    ).toMatchSnapshot();
+  });
+
+  it('should render ol numbers', () => {
+    const htmlContent = '<ol><li> a </li><li> b </li></ol>';
+
+    expect(
+      renderer.create(<HTMLView value={htmlContent} />).toJSON()
+    ).toMatchSnapshot();
+  });
+
   it('should render an <Image />, with default width/height of 1', () => {
     const imgSrc = 'https://facebook.github.io/react-native/img/header_logo.png';
     const htmlContent = `<img src="${imgSrc}"/>`;

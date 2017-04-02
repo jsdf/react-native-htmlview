@@ -82,10 +82,19 @@ export default function htmlToElement(rawHtml, opts, done) {
           }
         }
 
+        let listItemPrefix = null;
+        if (node.name == 'li') {
+          if (parent.name == 'ol') {
+            listItemPrefix = `${index + 1}. `;
+          } else if (parent.name == 'ul') {
+            listItemPrefix = BULLET;
+          }
+        }
+
         return (
           <Text key={index} onPress={linkPressHandler}>
             {linebreakBefore}
-            {node.name == 'li' ? (parent.name == 'ul' ? BULLET : (index+1) + ". ") : null}
+            {listItemPrefix}
             {domToElement(node.children, node)}
             {linebreakAfter}
           </Text>
