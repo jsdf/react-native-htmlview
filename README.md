@@ -2,12 +2,14 @@
 A component which takes HTML content and renders it as native views, with
 customisable style and handling of links, etc.
 
+In action (from [ReactNativeHackerNews](https://github.com/jsdf/ReactNativeHackerNews)):
+
+![React Native Hacker News Comments](http://i.imgur.com/FYOgBYc.png)
+
 ## Table of contents
 - [Install](#install)
 - [Usage](#usage)
 - [Example](#example)
-- [Screenshot](#screenshot)
-- [Troubleshooting](#troubleshooting)
 - [Changelog](#changelog)
 
 ### Install
@@ -26,39 +28,43 @@ props:
   styles applied to those respective tags.
 - `renderNode`: a custom function to render HTML nodes however you see fit. If
   the function returns `undefined` (not `null`), the default renderer will be
-  used for that node.
-
-Note: see the [troubleshooting](#troubleshooting) section below if you're having problems with links not working.
+  used for that node. The function takes the following arguments:
+  - `node` the html node as parsed by [htmlparser2](https://github.com/fb55/htmlparser2)
+  - `index` position of the node in parent node's children
+  - `siblings` parent node's children (including current node)
+  - `parent` parent node
+  - `defaultRenderer` the default rendering implementation, so you can use the normal rendering logic for some subtree. `defaultRenderer` takes the following arguments:
+    - `node` the node to render with the default rendering logic
+    - `parent` the parent of node of `node`
 
 ### Example
 
 ```js
-var React = require('react')
-var ReactNative = require('react-native')
-var {Text, View, ListView} = ReactNative
+import React from 'react';
+import HTMLView from 'react-native-htmlview';
 
-var HTMLView = require('react-native-htmlview')
-
-var App = React.createClass({
+class App extends React.Component {
   render() {
-    var htmlContent = '<p><a href="http://jsdf.co">&hearts; nice job!</a></p>'
+    const htmlContent = `<p><a href="http://jsdf.co">&hearts; nice job!</a></p>`;
 
     return (
       <HTMLView
         value={htmlContent}
         stylesheet={styles}
       />
-    )
+    );
   }
-})
+}
 
 var styles = StyleSheet.create({
   a: {
     fontWeight: '300',
-    color: '#FF3366', // pink links
+    color: '#FF3366', // make links coloured pink
   },
 })
 ```
+
+### Custom Link Handling
 
 When a link is clicked, by default `ReactNative.Linking.openURL` is called with the
 link url. You can customise what happens when a link is clicked with `onLinkPress`:
@@ -79,6 +85,9 @@ var ContentView = React.createClass({
 })
 ```
 
+
+ If you're getting the error "undefined is not an object (evaluating 'RCTLinkingManager.openURL’)” from the LinkingIOS API, try adding ‘RCTLinking' to the project's 'Linked Frameworks and Libraries’. You might have to find RCTLinking.xcodeproj in the react-native package dir and drag that into your main Xcode project first.
+
 ### Custom Element Rendering
 
 You can implement the `renderNode` prop to add support for unsupported element
@@ -87,7 +96,7 @@ types,  or override the rendering for supported types.
 For example, here is how you might implement the `<iframe>` element:
 
 ```js
-function renderNode(node, index, siblings, parent) {
+function renderNode(node, index, siblings, parent, defaultRenderer) {
   if (node.name == 'iframe') {
     const a = node.attribs;
     const iframeHtml = `<iframe src="${a.src}"></iframe>`;
@@ -114,20 +123,13 @@ class App extends React.Component {
 }
 ```
 
-### Screenshot
-
-In action (from [ReactNativeHackerNews](https://github.com/jsdf/ReactNativeHackerNews)):
-
-![React Native Hacker News Comments](http://i.imgur.com/FYOgBYc.png)
-
-### Troubleshooting
-
- If you're getting the error "undefined is not an object (evaluating 'RCTLinkingManager.openURL’)” from the LinkingIOS API, try adding ‘RCTLinking' to the project's 'Linked Frameworks and Libraries’. You might have to find RCTLinking.xcodeproj in the react-native package dir and drag that into your main Xcode project first.
-
-
 ### Changelog
 
+- 0.9.0
+  - exposed `styles` prop
+  - exposed `defaultRenderer` in `renderNode` (@brandonreavis, @koenpunt)
+  - added `addLineBreaks` (@jmacedoit)
 - 0.7.0 - fixed for recent versions of react-native
-- 0.6.0 - onLinkPress fix ([@damusnet](https://github.com/damusnet)), headers now only have one single line break ([@crysfel](https://github.com/crysfel))
-- 0.5.0 - react-native 0.25 compat ([@damusnet](https://github.com/damusnet))
+- 0.6.0 - onLinkPress fix (@damusnet), headers now only have one single line break (@crysfel)
+- 0.5.0 - react-native 0.25 compat (@damusnet)
 - 0.4.0 - re-renders properly when html content changes
