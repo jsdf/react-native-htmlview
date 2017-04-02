@@ -56,12 +56,12 @@ class App extends React.Component {
   }
 }
 
-var styles = StyleSheet.create({
+const styles = StyleSheet.create({
   a: {
     fontWeight: '300',
     color: '#FF3366', // make links coloured pink
   },
-})
+});
 ```
 
 ### Custom Link Handling
@@ -70,19 +70,16 @@ When a link is clicked, by default `ReactNative.Linking.openURL` is called with 
 link url. You can customise what happens when a link is clicked with `onLinkPress`:
 
 ```js
-var React = require('react')
-var ReactNative = require('react-native')
-
-var ContentView = React.createClass({
+class App extends React.Component {
   render() {
     return (
       <HTMLView
         value={this.props.html}
         onLinkPress={(url) => console.log('clicked link: ', url)}
       />
-    )
+    );
   }
-})
+}
 ```
 
 
