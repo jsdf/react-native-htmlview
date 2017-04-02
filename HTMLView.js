@@ -1,14 +1,14 @@
-import React, {Component, PropTypes} from 'react'
-import htmlToElement from './htmlToElement'
+import React, {Component, PropTypes} from 'react';
+import htmlToElement from './htmlToElement';
 import {
   Linking,
   StyleSheet,
-  Text,
-} from 'react-native'
+  View,
+} from 'react-native';
 
-const boldStyle = {fontWeight: '500'}
-const italicStyle = {fontStyle: 'italic'}
-const codeStyle = {fontFamily: 'Menlo'}
+const boldStyle = {fontWeight: '500'};
+const italicStyle = {fontStyle: 'italic'};
+const codeStyle = {fontFamily: 'Menlo'};
 
 const baseStyles = StyleSheet.create({
   b: boldStyle,
@@ -21,72 +21,81 @@ const baseStyles = StyleSheet.create({
     fontWeight: '500',
     color: '#007AFF',
   },
-})
+  h1: {fontWeight: '500', fontSize: 36},
+  h2: {fontWeight: '500', fontSize: 30},
+  h3: {fontWeight: '500', fontSize: 24},
+  h4: {fontWeight: '500', fontSize: 18},
+  h5: {fontWeight: '500', fontSize: 14},
+  h6: {fontWeight: '500', fontSize: 12},
+});
 
 class HtmlView extends Component {
   constructor() {
-    super()
+    super();
     this.state = {
       element: null,
-    }
+    };
   }
 
   componentDidMount() {
-    this.mounted = true
-    this.startHtmlRender(this.props.value)
+    this.mounted = true;
+    this.startHtmlRender(this.props.value);
   }
 
   componentWillReceiveProps(nextProps) {
     if (this.props.value !== nextProps.value) {
-      this.startHtmlRender(nextProps.value)
+      this.startHtmlRender(nextProps.value);
     }
   }
 
   componentWillUnmount() {
-    this.mounted = false
+    this.mounted = false;
   }
 
   startHtmlRender(value) {
     if (!value) {
-      this.setState({element: null})
+      this.setState({element: null});
     }
 
     const opts = {
       linkHandler: this.props.onLinkPress,
       styles: Object.assign({}, baseStyles, this.props.stylesheet),
       customRenderer: this.props.renderNode,
-    }
+    };
 
     htmlToElement(value, opts, (err, element) => {
       if (err) {
-        this.props.onError(err)
+        this.props.onError(err);
       }
 
       if (this.mounted) {
-        this.setState({element})
+        this.setState({element});
       }
-    })
+    });
   }
 
   render() {
     if (this.state.element) {
-      return <Text children={this.state.element} />
+      return <View children={this.state.element} style={this.props.style} />;
     }
-    return <Text />
+    return <View style={this.props.style} />;
   }
 }
 
 HtmlView.propTypes = {
   value: PropTypes.string,
   stylesheet: PropTypes.object,
+  style: View.propTypes.style,
   onLinkPress: PropTypes.func,
   onError: PropTypes.func,
   renderNode: PropTypes.func,
-}
+  blockComponent: PropTypes.func,
+  inlineComponent: PropTypes.func,
+};
 
 HtmlView.defaultProps = {
   onLinkPress: url => Linking.openURL(url),
   onError: console.error.bind(console),
-}
+};
 
-export default HtmlView
+export default HtmlView;

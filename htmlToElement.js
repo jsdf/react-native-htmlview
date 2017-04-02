@@ -1,60 +1,61 @@
-var React = require('react')
-var ReactNative = require('react-native')
-var htmlparser = require('htmlparser2-without-node-native')
-var entities = require('entities')
-
-var {
+import React from 'react';
+import {
   Text,
-} = ReactNative
+} from 'react-native';
+import htmlparser from 'htmlparser2-without-node-native';
+import entities from 'entities';
 
-var Image = require('./helper/Image')
+import AutoSizedImage from './AutoSizedImage';
 
+const LINE_BREAK = '\n';
+const BULLET = '\u2022 ';
 
-var LINE_BREAK = '\n'
-var PARAGRAPH_BREAK = '\n\n'
-var BULLET = '\u2022 '
+const Img = props => {
+  const width = Number(props.attribs['width']) || Number(props.attribs['data-width']) || 0;
+  const height = Number(props.attribs['height']) || Number(props.attribs['data-height']) || 0;
 
-function htmlToElement(rawHtml, opts, done) {
+  const imgStyle = {
+    width,
+    height,
+  };
+  const source = {
+    uri: props.attribs.src,
+    width,
+    height,
+  };
+  return (
+    <AutoSizedImage source={source} style={imgStyle} />
+  );
+};
+
+export default function htmlToElement(rawHtml, opts, done) {
   function domToElement(dom, parent) {
-    if (!dom) return null
+    if (!dom) return null;
 
     return dom.map((node, index, list) => {
       if (opts.customRenderer) {
-        var rendered = opts.customRenderer(node, index, list)
-        if (rendered || rendered === null) return rendered
+        const rendered = opts.customRenderer(node, index, list, parent, domToElement);
+        if (rendered || rendered === null) return rendered;
       }
-
 
       if (node.type == 'text') {
         return (
           <Text key={index} style={parent ? opts.styles[parent.name] : null}>
             {entities.decodeHTML(node.data)}
           </Text>
-        )
+        );
       }
 
       if (node.type == 'tag') {
         if (node.name == 'img') {
-          var img_w = +node.attribs['width'] || +node.attribs['data-width'] || 0
-          var img_h = +node.attribs['height'] || +node.attribs['data-height'] || 0
-
-          var img_style = {
-            width: img_w,
-            height: img_h,
-          }
-          var source = {
-            uri: node.attribs.src,
-            width: img_w,
-            height: img_h,
-          }
           return (
-            <Image key={index} source={source} style={img_style} />
-          )
+            <Img key={index} attribs={node.attribs} />
+          );
         }
 
-        var linkPressHandler = null
+        let linkPressHandler = null;
         if (node.name == 'a' && node.attribs && node.attribs.href) {
-          linkPressHandler = () => opts.linkHandler(entities.decodeHTML(node.attribs.href))
+          linkPressHandler = () => opts.linkHandler(entities.decodeHTML(node.attribs.href));
         }
 
         return (
@@ -63,21 +64,20 @@ function htmlToElement(rawHtml, opts, done) {
             {node.name == 'li' ? BULLET : null}
             {domToElement(node.children, node)}
             {node.name == 'br' || node.name == 'li' ? LINE_BREAK : null}
-            {node.name == 'p' && index < list.length - 1 ? PARAGRAPH_BREAK : null}
+            {node.name == 'p' && index < list.length - 1 ? LINE_BREAK + LINE_BREAK : null}
             {node.name == 'h1' || node.name == 'h2' || node.name == 'h3' || node.name == 'h4' || node.name == 'h5' ? LINE_BREAK : null}
           </Text>
-        )
+        );
       }
-    })
+    });
   }
 
-  var handler = new htmlparser.DomHandler(function(err, dom) {
-    if (err) done(err)
-    done(null, domToElement(dom))
-  })
-  var parser = new htmlparser.Parser(handler)
-  parser.write(rawHtml)
-  parser.done()
+  const handler = new htmlparser.DomHandler(function(err, dom) {
+    if (err) done(err);
+    done(null, domToElement(dom));
+  });
+  const parser = new htmlparser.Parser(handler);
+  parser.write(rawHtml);
+  parser.done();
 }
 
-module.exports = htmlToElement
