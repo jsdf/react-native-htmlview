@@ -79,6 +79,24 @@ describe('<HTMLView/>', () => {
     ).toMatchSnapshot();
   });
 
+  it('should not render extra linebreaks if configured not to', () => {
+    const htmlContent = `
+      <div>
+          <h2>Dwayne’s only companion at night was a Labrador retriever named Sparky.</h2>
+        <p>
+        Sparky could not wag his tail-because of an automobile accident many years ago, so he had no way of telling other dogs how friendly he was.<br>
+        He opened the door of the cage, something Bill couldn’t have done in a thousand years. Bill flew over to a windowsill.
+        </p>
+      </div>
+    `;
+
+    expect(
+      renderer
+        .create(<HTMLView value={htmlContent} addLineBreaks={false} />)
+        .toJSON()
+    ).toMatchSnapshot();
+  });
+
   it('can use a custom renderer', () => {
     const htmlContent = `
       <div>
