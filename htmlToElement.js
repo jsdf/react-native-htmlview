@@ -34,7 +34,7 @@ export default function htmlToElement(rawHtml, opts, done) {
 
     return dom.map((node, index, list) => {
       if (opts.customRenderer) {
-        const rendered = opts.customRenderer(node, index, list, parent);
+        const rendered = opts.customRenderer(node, index, list, parent, domToElement);
         if (rendered || rendered === null) return rendered;
       }
 
