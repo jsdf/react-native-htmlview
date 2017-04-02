@@ -85,7 +85,7 @@ export default function htmlToElement(rawHtml, opts, done) {
         return (
           <Text key={index} onPress={linkPressHandler}>
             {linebreakBefore}
-            {node.name == 'li' ? BULLET : null}
+            {node.name == 'li' ? (parent.name == 'ul' ? BULLET : (index+1) + ". ") : null}
             {domToElement(node.children, node)}
             {linebreakAfter}
           </Text>
