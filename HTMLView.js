@@ -91,8 +91,6 @@ HtmlView.propTypes = {
   onLinkPress: PropTypes.func,
   onError: PropTypes.func,
   renderNode: PropTypes.func,
-  blockComponent: PropTypes.func,
-  inlineComponent: PropTypes.func,
 };
 
 HtmlView.defaultProps = {
