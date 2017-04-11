@@ -30,6 +30,11 @@ const Img = props => {
 };
 
 export default function htmlToElement(rawHtml, opts, done) {
+  function getInheritedStyles(parent) {
+    let style = [opts.styles[parent.name] || {}];
+    return parent.parent ? style.concat(getInheritedStyles(parent.parent)) : style;
+  }
+
   function domToElement(dom, parent) {
     if (!dom) return null;
 
@@ -41,7 +46,7 @@ export default function htmlToElement(rawHtml, opts, done) {
 
       if (node.type == 'text') {
         return (
-          <Text key={index} style={parent ? opts.styles[parent.name] : null}>
+          <Text key={index} style={parent ? getInheritedStyles(parent) : null}>
             {entities.decodeHTML(node.data)}
           </Text>
         );
@@ -111,4 +116,3 @@ export default function htmlToElement(rawHtml, opts, done) {
   parser.write(rawHtml);
   parser.done();
 }
-
