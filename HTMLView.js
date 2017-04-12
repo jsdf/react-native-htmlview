@@ -1,6 +1,4 @@
 import React, {Component, PropTypes} from 'react';
-import _ from 'lodash/';
-import transform from 'css-to-react-native';
 import htmlToElement from './htmlToElement';
 import {
   Linking,
