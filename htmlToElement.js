@@ -38,17 +38,27 @@ export default function htmlToElement(rawHtml, opts, done) {
         const styleString = parent.attribs.style.trim(),
           inlineStyleRules = _.unescape(styleString).split(';').filter(String),
           inlineStyles = inlineStyleRules.map(function(rule) {
-            return rule.trim().split(':');
+            const ruleSet = rule.trim().split(':'),
+              propertyName = ruleSet[0];
+            if (opts.inlineStyleBlacklist.length > 0 && opts.inlineStyleBlacklist.includes(propertyName)) {
+              return null;
+            }
+
+            if (opts.inlineStyleWhitelist.length <= 0 || opts.inlineStyleWhitelist.includes(propertyName)) {
+              return ruleSet;
+            } else {
+              return null;
+            }
           });
 
-        inlineStyle = transform(inlineStyles, ['fontFamily']);
+        inlineStyle = transform(inlineStyles, opts.inlineStyleBlacklist);
       }
     } catch (error) {
       //console.error(error)
     }
 
-    const style = [opts.styles[parent.name] || {}, inlineStyle];
-    return parent.parent ? style.concat(getInheritedStyles(parent.parent)) : style;
+    const style = [inlineStyle, opts.styles[parent.name] || {}];
+    return parent.parent ? _.concat(getInheritedStyles(parent.parent), style) : style;
   }
 
   function domToElement(dom, parent) {
@@ -61,6 +71,7 @@ export default function htmlToElement(rawHtml, opts, done) {
       }
 
       if (node.type == 'text') {
+        const inlineStyle = parent ? getInheritedStyles(parent) : null;
         return (
           <Text key={index} style={parent ? getInheritedStyles(parent) : null}>
             {entities.decodeHTML(node.data)}
