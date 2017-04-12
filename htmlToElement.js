@@ -5,7 +5,7 @@ import {
 import htmlparser from 'htmlparser2-without-node-native';
 import entities from 'entities';
 import AutoSizedImage from './AutoSizedImage';
-import _ from 'lodash/'
+import _ from 'lodash/';
 import transform from 'css-to-react-native';
 
 const LINE_BREAK = '\n';
@@ -39,11 +39,13 @@ export default function htmlToElement(rawHtml, opts, done) {
           inlineStyleRules = _.unescape(styleString).split(';').filter(String),
           inlineStyles = inlineStyleRules.map(function(rule) {
             return rule.trim().split(':');
-          })
+          });
 
-        inlineStyle = transform(inlineStyles, ['fontFamily'])
+        inlineStyle = transform(inlineStyles, ['fontFamily']);
       }
-    } catch (error) {}
+    } catch (error) {
+      //console.error(error)
+    }
 
     const style = [opts.styles[parent.name] || {}, inlineStyle];
     return parent.parent ? style.concat(getInheritedStyles(parent.parent)) : style;
