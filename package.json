@@ -48,6 +48,7 @@
   "dependencies": {
     "css-to-react-native": "git+https://github.com/styled-components/css-to-react-native.git",
     "entities": "^1.1.1",
-    "htmlparser2-without-node-native": "^3.9.0"
+    "htmlparser2-without-node-native": "^3.9.0",
+    "lodash": "^4.17.4"
   }
 }
