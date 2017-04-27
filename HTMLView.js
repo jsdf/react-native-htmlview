@@ -92,7 +92,7 @@ HtmlView.propTypes = {
   onLinkPress: PropTypes.func,
   onError: PropTypes.func,
   renderNode: PropTypes.func,
-  singleParagraphBreak: PropTypes.bool
+  singleParagraphBreak: PropTypes.bool,
 };
 
 HtmlView.defaultProps = {
