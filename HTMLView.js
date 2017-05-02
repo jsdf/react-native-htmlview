@@ -9,6 +9,7 @@ import {
 const boldStyle = {fontWeight: '500'};
 const italicStyle = {fontStyle: 'italic'};
 const codeStyle = {fontFamily: 'Menlo'};
+const sStyle = {textDecorationLine: 'line-through'}
 
 const baseStyles = StyleSheet.create({
   b: boldStyle,
@@ -21,6 +22,7 @@ const baseStyles = StyleSheet.create({
     fontWeight: '500',
     color: '#007AFF',
   },
+  s: sStyle,
   h1: {fontWeight: '500', fontSize: 36},
   h2: {fontWeight: '500', fontSize: 30},
   h3: {fontWeight: '500', fontSize: 24},
@@ -62,6 +64,7 @@ class HtmlView extends Component {
       linkHandler: this.props.onLinkPress,
       styles: Object.assign({}, baseStyles, this.props.stylesheet),
       customRenderer: this.props.renderNode,
+      defaultTextStyle: this.props.defaultTextStyle
     };
 
     htmlToElement(value, opts, (err, element) => {

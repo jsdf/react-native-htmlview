@@ -41,7 +41,7 @@ export default function htmlToElement(rawHtml, opts, done) {
 
       if (node.type == 'text') {
         return (
-          <Text key={index} style={parent ? opts.styles[parent.name] : null}>
+          <Text key={index} style={[opts.defaultTextStyle, parent ? opts.styles[parent.name] : null]}>
             {entities.decodeHTML(node.data)}
           </Text>
         );
@@ -77,6 +77,7 @@ export default function htmlToElement(rawHtml, opts, done) {
           case 'h3':
           case 'h4':
           case 'h5':
+          case 'li':
             linebreakAfter = LINE_BREAK;
             break;
           }
