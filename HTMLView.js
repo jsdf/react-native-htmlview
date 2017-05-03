@@ -10,6 +10,7 @@ const boldStyle = {fontWeight: '500'};
 const italicStyle = {fontStyle: 'italic'};
 const codeStyle = {fontFamily: 'Menlo'};
 const sStyle = {textDecorationLine: 'line-through'}
+const underlineStyle = {textDecorationLine: 'underline'}
 
 const baseStyles = StyleSheet.create({
   b: boldStyle,
@@ -18,6 +19,7 @@ const baseStyles = StyleSheet.create({
   em: italicStyle,
   pre: codeStyle,
   code: codeStyle,
+  u: underlineStyle,
   a: {
     fontWeight: '500',
     color: '#007AFF',
@@ -90,6 +92,7 @@ HtmlView.propTypes = {
   addLineBreaks: PropTypes.bool,
   value: PropTypes.string,
   stylesheet: PropTypes.object,
+  defaultTextStyle: PropTypes.object,
   style: View.propTypes.style,
   onLinkPress: PropTypes.func,
   onError: PropTypes.func,
