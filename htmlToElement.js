@@ -41,7 +41,7 @@ export default function htmlToElement(rawHtml, opts, done) {
 
       if (node.type == 'text') {
         return (
-          <Text key={index} style={[opts.defaultTextStyle, parent ? opts.styles[parent.name] : null]}>
+          <Text key={index} style={Object.assign({}, opts.defaultTextStyle, parent ? opts.styles[parent.name] : null )}>
             {entities.decodeHTML(node.data)}
           </Text>
         );
