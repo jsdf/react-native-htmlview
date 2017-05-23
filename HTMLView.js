@@ -4,6 +4,7 @@ import {
   Linking,
   StyleSheet,
   View,
+  ViewPropTypes,
 } from 'react-native';
 
 const boldStyle = {fontWeight: '500'};
@@ -87,7 +88,7 @@ HtmlView.propTypes = {
   addLineBreaks: PropTypes.bool,
   value: PropTypes.string,
   stylesheet: PropTypes.object,
-  style: View.propTypes.style,
+  style: ViewPropTypes.style,
   onLinkPress: PropTypes.func,
   onError: PropTypes.func,
   renderNode: PropTypes.func,
