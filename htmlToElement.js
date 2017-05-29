@@ -91,6 +91,16 @@ export default function htmlToElement(rawHtml, opts, done) {
           }
         }
 
+        if (node.name === 'font') {
+          if (node.attribs.color) {
+            return (
+              <Text key={index} style={{color: `${node.attribs.color}`}}>
+                {domToElement(node.children, node)}
+              </Text>
+            )
+          }
+        }
+
         return (
           <Text key={index} onPress={linkPressHandler}>
             {linebreakBefore}
