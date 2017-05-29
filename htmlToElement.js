@@ -92,7 +92,7 @@ export default function htmlToElement(rawHtml, opts, done) {
         }
 
         return (
-          <Text key={index} onPress={linkPressHandler}>
+          <Text key={index} onPress={linkPressHandler} numberOfLines={opts.numberOfLines}>
             {linebreakBefore}
             {listItemPrefix}
             {domToElement(node.children, node)}
@@ -111,4 +111,3 @@ export default function htmlToElement(rawHtml, opts, done) {
   parser.write(rawHtml);
   parser.done();
 }
-

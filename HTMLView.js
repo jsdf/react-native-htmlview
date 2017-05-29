@@ -54,6 +54,7 @@ class HtmlView extends Component {
     }
 
     const opts = {
+      numberOfLines: this.props.numberOfLines,
       addLineBreaks: this.props.addLineBreaks,
       linkHandler: this.props.onLinkPress,
       styles: Object.assign({}, baseStyles, this.props.stylesheet),
@@ -80,6 +81,7 @@ class HtmlView extends Component {
 }
 
 HtmlView.propTypes = {
+  numberOfLines: PropTypes.string,
   addLineBreaks: PropTypes.bool,
   value: PropTypes.string,
   stylesheet: PropTypes.object,
