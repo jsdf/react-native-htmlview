@@ -4,8 +4,9 @@ import {
 } from 'react-native';
 import htmlparser from 'htmlparser2-without-node-native';
 import entities from 'entities';
-
 import AutoSizedImage from './AutoSizedImage';
+import _ from 'lodash/';
+import transform from 'css-to-react-native';
 
 const LINE_BREAK = '\n';
 const PARAGRAPH_BREAK = '\n\n';
@@ -30,6 +31,26 @@ const Img = props => {
 };
 
 export default function htmlToElement(rawHtml, opts, done) {
+  function getInheritedStyles(parent) {
+    let inlineStyle = {};
+    try {
+      if (parent.attribs && parent.attribs.hasOwnProperty('style')) {
+        const styleString = parent.attribs.style.trim(),
+          inlineStyleRules = _.unescape(styleString).split(';').filter(String),
+          inlineStyles = inlineStyleRules.map(function(rule) {
+            return rule.trim().split(':');
+          });
+
+        inlineStyle = transform(inlineStyles, ['fontFamily']);
+      }
+    } catch (error) {
+      //console.error(error)
+    }
+
+    const style = [opts.styles[parent.name] || {}, inlineStyle];
+    return parent.parent ? style.concat(getInheritedStyles(parent.parent)) : style;
+  }
+
   function domToElement(dom, parent) {
     if (!dom) return null;
 
@@ -41,7 +62,7 @@ export default function htmlToElement(rawHtml, opts, done) {
 
       if (node.type == 'text') {
         return (
-          <Text key={index} style={parent ? opts.styles[parent.name] : null}>
+          <Text key={index} style={parent ? getInheritedStyles(parent) : null}>
             {entities.decodeHTML(node.data)}
           </Text>
         );
@@ -111,4 +132,3 @@ export default function htmlToElement(rawHtml, opts, done) {
   parser.write(rawHtml);
   parser.done();
 }
-
