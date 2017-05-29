@@ -4,6 +4,7 @@ import renderer from 'react-test-renderer';
 
 import Example from '../Example';
 
+
 describe('<Example/>', () => {
   it('should render', () => {
     expect(

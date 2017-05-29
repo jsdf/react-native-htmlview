@@ -4,8 +4,9 @@ import {
 } from 'react-native';
 import htmlparser from 'htmlparser2-without-node-native';
 import entities from 'entities';
-
 import AutoSizedImage from './AutoSizedImage';
+import _ from 'lodash/';
+import transform from 'css-to-react-native';
 
 const LINE_BREAK = '\n';
 const PARAGRAPH_BREAK = '\n\n';
@@ -30,6 +31,36 @@ const Img = props => {
 };
 
 export default function htmlToElement(rawHtml, opts, done) {
+  function getInheritedStyles(parent) {
+    let inlineStyle = {};
+    try {
+      if (parent.attribs && parent.attribs.hasOwnProperty('style')) {
+        const styleString = parent.attribs.style.trim(),
+          inlineStyleRules = _.unescape(styleString).split(';').filter(String),
+          inlineStyles = inlineStyleRules.map(function(rule) {
+            const ruleSet = rule.trim().split(':'),
+              propertyName = ruleSet[0];
+            if (opts.inlineStyleBlacklist.length > 0 && opts.inlineStyleBlacklist.includes(propertyName)) {
+              return null;
+            }
+
+            if (opts.inlineStyleWhitelist.length <= 0 || opts.inlineStyleWhitelist.includes(propertyName)) {
+              return ruleSet;
+            } else {
+              return null;
+            }
+          });
+
+        inlineStyle = transform(inlineStyles, opts.inlineStyleBlacklist);
+      }
+    } catch (error) {
+      //console.error(error)
+    }
+
+    const style = [inlineStyle, opts.styles[parent.name] || {}];
+    return parent.parent ? _.concat(getInheritedStyles(parent.parent), style) : style;
+  }
+
   function domToElement(dom, parent) {
     if (!dom) return null;
 
@@ -40,8 +71,9 @@ export default function htmlToElement(rawHtml, opts, done) {
       }
 
       if (node.type == 'text') {
+        const inlineStyle = parent ? getInheritedStyles(parent) : null;
         return (
-          <Text key={index} style={parent ? opts.styles[parent.name] : null}>
+          <Text key={index} style={parent ? getInheritedStyles(parent) : null}>
             {entities.decodeHTML(node.data)}
           </Text>
         );
@@ -111,4 +143,3 @@ export default function htmlToElement(rawHtml, opts, done) {
   parser.write(rawHtml);
   parser.done();
 }
-

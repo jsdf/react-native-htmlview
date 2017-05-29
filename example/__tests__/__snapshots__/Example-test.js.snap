@@ -32,7 +32,12 @@ exports[`<Example/> should render 1`] = `
           accessible={true}
           allowFontScaling={true}
           ellipsizeMode="tail"
-          style={undefined}
+          style={
+            Array [
+              Object {},
+              Object {},
+            ]
+          }
         >
           
               
@@ -47,7 +52,14 @@ exports[`<Example/> should render 1`] = `
             accessible={true}
             allowFontScaling={true}
             ellipsizeMode="tail"
-            style={undefined}
+            style={
+              Array [
+                Object {},
+                Object {},
+                Object {},
+                Object {},
+              ]
+            }
           >
             
                   
@@ -69,9 +81,20 @@ exports[`<Example/> should render 1`] = `
                 allowFontScaling={true}
                 ellipsizeMode="tail"
                 style={
-                  Object {
-                    "fontStyle": "italic",
-                  }
+                  Array [
+                    Object {},
+                    Object {},
+                    Object {},
+                    Object {},
+                    Object {},
+                    Object {
+                      "fontWeight": "500",
+                    },
+                    Object {},
+                    Object {
+                      "fontStyle": "italic",
+                    },
+                  ]
                 }
               >
                 &gt; Dwayne’s only companion at night was a Labrador retriever named Sparky.
@@ -82,7 +105,14 @@ exports[`<Example/> should render 1`] = `
             accessible={true}
             allowFontScaling={true}
             ellipsizeMode="tail"
-            style={undefined}
+            style={
+              Array [
+                Object {},
+                Object {},
+                Object {},
+                Object {},
+              ]
+            }
           >
             
                 
@@ -97,7 +127,16 @@ exports[`<Example/> should render 1`] = `
               accessible={true}
               allowFontScaling={true}
               ellipsizeMode="tail"
-              style={undefined}
+              style={
+                Array [
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                ]
+              }
             >
               
                   
@@ -113,9 +152,18 @@ exports[`<Example/> should render 1`] = `
                 allowFontScaling={true}
                 ellipsizeMode="tail"
                 style={
-                  Object {
-                    "fontStyle": "italic",
-                  }
+                  Array [
+                    Object {},
+                    Object {},
+                    Object {},
+                    Object {},
+                    Object {},
+                    Object {},
+                    Object {},
+                    Object {
+                      "fontStyle": "italic",
+                    },
+                  ]
                 }
               >
                 Sparky could not wag his tail-because of an automobile accident many years ago, so he had no way of telling other dogs how friendly he was.
@@ -133,9 +181,22 @@ exports[`<Example/> should render 1`] = `
                   allowFontScaling={true}
                   ellipsizeMode="tail"
                   style={
-                    Object {
-                      "fontWeight": "500",
-                    }
+                    Array [
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {
+                        "fontStyle": "italic",
+                      },
+                      Object {},
+                      Object {
+                        "fontWeight": "500",
+                      },
+                    ]
                   }
                 >
                   The undippable flag was a beauty, and the anthem and the vacant motto might not have mattered much, if it weren’t for this: a lot of citizens were so ignored and cheated and insulted that they thought they might be in the wrong country, or even on the wrong planet, that some terrible mistake had been made.
@@ -151,7 +212,14 @@ exports[`<Example/> should render 1`] = `
             accessible={true}
             allowFontScaling={true}
             ellipsizeMode="tail"
-            style={undefined}
+            style={
+              Array [
+                Object {},
+                Object {},
+                Object {},
+                Object {},
+              ]
+            }
           >
             
                 
@@ -166,7 +234,16 @@ exports[`<Example/> should render 1`] = `
               accessible={true}
               allowFontScaling={true}
               ellipsizeMode="tail"
-              style={undefined}
+              style={
+                Array [
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                ]
+              }
             >
               
                     [1] 
@@ -182,10 +259,19 @@ exports[`<Example/> should render 1`] = `
                 allowFontScaling={true}
                 ellipsizeMode="tail"
                 style={
-                  Object {
-                    "color": "#007AFF",
-                    "fontWeight": "500",
-                  }
+                  Array [
+                    Object {},
+                    Object {},
+                    Object {},
+                    Object {},
+                    Object {},
+                    Object {},
+                    Object {},
+                    Object {
+                      "color": "#007AFF",
+                      "fontWeight": "500",
+                    },
+                  ]
                 }
               >
                 https://code.facebook.com/posts/1505962329687926/flow-a-new-...
@@ -195,7 +281,16 @@ exports[`<Example/> should render 1`] = `
               accessible={true}
               allowFontScaling={true}
               ellipsizeMode="tail"
-              style={undefined}
+              style={
+                Array [
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                ]
+              }
             >
               
                   
@@ -208,7 +303,14 @@ exports[`<Example/> should render 1`] = `
             accessible={true}
             allowFontScaling={true}
             ellipsizeMode="tail"
-            style={undefined}
+            style={
+              Array [
+                Object {},
+                Object {},
+                Object {},
+                Object {},
+              ]
+            }
           >
             
                 
@@ -233,7 +335,14 @@ exports[`<Example/> should render 1`] = `
             accessible={true}
             allowFontScaling={true}
             ellipsizeMode="tail"
-            style={undefined}
+            style={
+              Array [
+                Object {},
+                Object {},
+                Object {},
+                Object {},
+              ]
+            }
           >
             
             
@@ -250,10 +359,17 @@ exports[`<Example/> should render 1`] = `
               allowFontScaling={true}
               ellipsizeMode="tail"
               style={
-                Object {
-                  "fontSize": 36,
-                  "fontWeight": "500",
-                }
+                Array [
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {
+                    "fontSize": 36,
+                    "fontWeight": "500",
+                  },
+                ]
               }
             >
               Dwayne’s only companion at night
@@ -265,7 +381,14 @@ exports[`<Example/> should render 1`] = `
             accessible={true}
             allowFontScaling={true}
             ellipsizeMode="tail"
-            style={undefined}
+            style={
+              Array [
+                Object {},
+                Object {},
+                Object {},
+                Object {},
+              ]
+            }
           >
             
                 
@@ -281,10 +404,17 @@ exports[`<Example/> should render 1`] = `
               allowFontScaling={true}
               ellipsizeMode="tail"
               style={
-                Object {
-                  "fontSize": 30,
-                  "fontWeight": "500",
-                }
+                Array [
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {
+                    "fontSize": 30,
+                    "fontWeight": "500",
+                  },
+                ]
               }
             >
               Dwayne’s only companion at night
@@ -296,7 +426,14 @@ exports[`<Example/> should render 1`] = `
             accessible={true}
             allowFontScaling={true}
             ellipsizeMode="tail"
-            style={undefined}
+            style={
+              Array [
+                Object {},
+                Object {},
+                Object {},
+                Object {},
+              ]
+            }
           >
             
                 
@@ -312,10 +449,17 @@ exports[`<Example/> should render 1`] = `
               allowFontScaling={true}
               ellipsizeMode="tail"
               style={
-                Object {
-                  "fontSize": 24,
-                  "fontWeight": "500",
-                }
+                Array [
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {
+                    "fontSize": 24,
+                    "fontWeight": "500",
+                  },
+                ]
               }
             >
               Dwayne’s only companion at night
@@ -327,7 +471,14 @@ exports[`<Example/> should render 1`] = `
             accessible={true}
             allowFontScaling={true}
             ellipsizeMode="tail"
-            style={undefined}
+            style={
+              Array [
+                Object {},
+                Object {},
+                Object {},
+                Object {},
+              ]
+            }
           >
             
                 
@@ -343,10 +494,17 @@ exports[`<Example/> should render 1`] = `
               allowFontScaling={true}
               ellipsizeMode="tail"
               style={
-                Object {
-                  "fontSize": 18,
-                  "fontWeight": "500",
-                }
+                Array [
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {
+                    "fontSize": 18,
+                    "fontWeight": "500",
+                  },
+                ]
               }
             >
               Dwayne’s only companion at night
@@ -358,7 +516,14 @@ exports[`<Example/> should render 1`] = `
             accessible={true}
             allowFontScaling={true}
             ellipsizeMode="tail"
-            style={undefined}
+            style={
+              Array [
+                Object {},
+                Object {},
+                Object {},
+                Object {},
+              ]
+            }
           >
             
                 
@@ -374,10 +539,17 @@ exports[`<Example/> should render 1`] = `
               allowFontScaling={true}
               ellipsizeMode="tail"
               style={
-                Object {
-                  "fontSize": 14,
-                  "fontWeight": "500",
-                }
+                Array [
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {
+                    "fontSize": 14,
+                    "fontWeight": "500",
+                  },
+                ]
               }
             >
               Dwayne’s only companion at night
@@ -389,7 +561,14 @@ exports[`<Example/> should render 1`] = `
             accessible={true}
             allowFontScaling={true}
             ellipsizeMode="tail"
-            style={undefined}
+            style={
+              Array [
+                Object {},
+                Object {},
+                Object {},
+                Object {},
+              ]
+            }
           >
             
                 
@@ -405,10 +584,17 @@ exports[`<Example/> should render 1`] = `
               allowFontScaling={true}
               ellipsizeMode="tail"
               style={
-                Object {
-                  "fontSize": 12,
-                  "fontWeight": "500",
-                }
+                Array [
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {
+                    "fontSize": 12,
+                    "fontWeight": "500",
+                  },
+                ]
               }
             >
               Dwayne’s only companion at night
@@ -418,7 +604,14 @@ exports[`<Example/> should render 1`] = `
             accessible={true}
             allowFontScaling={true}
             ellipsizeMode="tail"
-            style={undefined}
+            style={
+              Array [
+                Object {},
+                Object {},
+                Object {},
+                Object {},
+              ]
+            }
           >
             
                 ayyy
@@ -446,7 +639,12 @@ exports[`<Example/> should render 1`] = `
           accessible={true}
           allowFontScaling={true}
           ellipsizeMode="tail"
-          style={undefined}
+          style={
+            Array [
+              Object {},
+              Object {},
+            ]
+          }
         >
           
           

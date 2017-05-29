@@ -58,6 +58,8 @@ class HtmlView extends Component {
       linkHandler: this.props.onLinkPress,
       styles: Object.assign({}, baseStyles, this.props.stylesheet),
       customRenderer: this.props.renderNode,
+      inlineStyleWhitelist: this.props.inlineStyleWhitelist,
+      inlineStyleBlacklist: this.props.inlineStyleBlacklist
     };
 
     htmlToElement(value, opts, (err, element) => {
@@ -87,12 +89,16 @@ HtmlView.propTypes = {
   onLinkPress: PropTypes.func,
   onError: PropTypes.func,
   renderNode: PropTypes.func,
+  inlineStyleWhitelist: PropTypes.array,
+  inlineStyleBlacklist: PropTypes.array,
 };
 
 HtmlView.defaultProps = {
   addLineBreaks: true,
   onLinkPress: url => Linking.openURL(url),
   onError: console.error.bind(console),
+  inlineStyleWhitelist: [],
+  inlineStyleBlacklist: [],
 };
 
 export default HtmlView;

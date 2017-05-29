@@ -23,7 +23,12 @@ exports[`<HTMLView/> can use a custom renderer 1`] = `
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
-      style={undefined}
+      style={
+        Array [
+          Object {},
+          Object {},
+        ]
+      }
     >
       
               
@@ -69,7 +74,12 @@ exports[`<HTMLView/> should not render extra linebreaks if configured not to 1`]
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
-      style={undefined}
+      style={
+        Array [
+          Object {},
+          Object {},
+        ]
+      }
     >
       
                 
@@ -85,10 +95,15 @@ exports[`<HTMLView/> should not render extra linebreaks if configured not to 1`]
         allowFontScaling={true}
         ellipsizeMode="tail"
         style={
-          Object {
-            "fontSize": 30,
-            "fontWeight": "500",
-          }
+          Array [
+            Object {},
+            Object {},
+            Object {},
+            Object {
+              "fontSize": 30,
+              "fontWeight": "500",
+            },
+          ]
         }
       >
         Dwayne’s only companion at night was a Labrador retriever named Sparky.
@@ -98,7 +113,12 @@ exports[`<HTMLView/> should not render extra linebreaks if configured not to 1`]
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
-      style={undefined}
+      style={
+        Array [
+          Object {},
+          Object {},
+        ]
+      }
     >
       
               
@@ -113,7 +133,14 @@ exports[`<HTMLView/> should not render extra linebreaks if configured not to 1`]
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
-        style={undefined}
+        style={
+          Array [
+            Object {},
+            Object {},
+            Object {},
+            Object {},
+          ]
+        }
       >
         
                 Sparky could not wag his tail-because of an automobile accident many years ago, so he had no way of telling other dogs how friendly he was.
@@ -128,7 +155,14 @@ exports[`<HTMLView/> should not render extra linebreaks if configured not to 1`]
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
-        style={undefined}
+        style={
+          Array [
+            Object {},
+            Object {},
+            Object {},
+            Object {},
+          ]
+        }
       >
         
                 He opened the door of the cage, something Bill couldn’t have done in a thousand years. Bill flew over to a windowsill.
@@ -139,7 +173,12 @@ exports[`<HTMLView/> should not render extra linebreaks if configured not to 1`]
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
-      style={undefined}
+      style={
+        Array [
+          Object {},
+          Object {},
+        ]
+      }
     >
       
             
@@ -224,10 +263,15 @@ exports[`<HTMLView/> should render an empty <Text/> element 1`] = `
         allowFontScaling={true}
         ellipsizeMode="tail"
         style={
-          Object {
-            "color": "#007AFF",
-            "fontWeight": "500",
-          }
+          Array [
+            Object {},
+            Object {},
+            Object {},
+            Object {
+              "color": "#007AFF",
+              "fontWeight": "500",
+            },
+          ]
         }
       >
         &hearts nice job!
@@ -258,7 +302,14 @@ exports[`<HTMLView/> should render ol numbers 1`] = `
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
-        style={undefined}
+        style={
+          Array [
+            Object {},
+            Object {},
+            Object {},
+            Object {},
+          ]
+        }
       >
          a 
       </Text>
@@ -274,7 +325,14 @@ exports[`<HTMLView/> should render ol numbers 1`] = `
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
-        style={undefined}
+        style={
+          Array [
+            Object {},
+            Object {},
+            Object {},
+            Object {},
+          ]
+        }
       >
          b 
       </Text>
@@ -306,7 +364,12 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
-      style={undefined}
+      style={
+        Array [
+          Object {},
+          Object {},
+        ]
+      }
     >
       
               
@@ -321,7 +384,14 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
-        style={undefined}
+        style={
+          Array [
+            Object {},
+            Object {},
+            Object {},
+            Object {},
+          ]
+        }
       >
         
                   
@@ -337,10 +407,17 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
           allowFontScaling={true}
           ellipsizeMode="tail"
           style={
-            Object {
-              "fontSize": 30,
-              "fontWeight": "500",
-            }
+            Array [
+              Object {},
+              Object {},
+              Object {},
+              Object {},
+              Object {},
+              Object {
+                "fontSize": 30,
+                "fontWeight": "500",
+              },
+            ]
           }
         >
           &gt; Dwayne’s only companion at night was a Labrador retriever named Sparky.
@@ -352,7 +429,14 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
-        style={undefined}
+        style={
+          Array [
+            Object {},
+            Object {},
+            Object {},
+            Object {},
+          ]
+        }
       >
         
                 
@@ -367,7 +451,16 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
           accessible={true}
           allowFontScaling={true}
           ellipsizeMode="tail"
-          style={undefined}
+          style={
+            Array [
+              Object {},
+              Object {},
+              Object {},
+              Object {},
+              Object {},
+              Object {},
+            ]
+          }
         >
           
                   
@@ -383,9 +476,18 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
             allowFontScaling={true}
             ellipsizeMode="tail"
             style={
-              Object {
-                "fontStyle": "italic",
-              }
+              Array [
+                Object {},
+                Object {},
+                Object {},
+                Object {},
+                Object {},
+                Object {},
+                Object {},
+                Object {
+                  "fontStyle": "italic",
+                },
+              ]
             }
           >
             Sparky could not wag his tail-because of an automobile accident many years ago, so he had no way of telling other dogs how friendly he was.
@@ -403,9 +505,22 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
               allowFontScaling={true}
               ellipsizeMode="tail"
               style={
-                Object {
-                  "fontWeight": "500",
-                }
+                Array [
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {
+                    "fontStyle": "italic",
+                  },
+                  Object {},
+                  Object {
+                    "fontWeight": "500",
+                  },
+                ]
               }
             >
               The undippable flag was a beauty, and the anthem and the vacant motto might not have mattered much, if it weren’t for this: a lot of citizens were so ignored and cheated and insulted that they thought they might be in the wrong country, or even on the wrong planet, that some terrible mistake had been made.
@@ -421,7 +536,14 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
-        style={undefined}
+        style={
+          Array [
+            Object {},
+            Object {},
+            Object {},
+            Object {},
+          ]
+        }
       >
         
                 
@@ -436,7 +558,16 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
           accessible={true}
           allowFontScaling={true}
           ellipsizeMode="tail"
-          style={undefined}
+          style={
+            Array [
+              Object {},
+              Object {},
+              Object {},
+              Object {},
+              Object {},
+              Object {},
+            ]
+          }
         >
           
                     [1] 
@@ -452,10 +583,19 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
             allowFontScaling={true}
             ellipsizeMode="tail"
             style={
-              Object {
-                "color": "#007AFF",
-                "fontWeight": "500",
-              }
+              Array [
+                Object {},
+                Object {},
+                Object {},
+                Object {},
+                Object {},
+                Object {},
+                Object {},
+                Object {
+                  "color": "#007AFF",
+                  "fontWeight": "500",
+                },
+              ]
             }
           >
             https://code.facebook.com/posts/1505962329687926/flow-a-new-...
@@ -465,7 +605,16 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
           accessible={true}
           allowFontScaling={true}
           ellipsizeMode="tail"
-          style={undefined}
+          style={
+            Array [
+              Object {},
+              Object {},
+              Object {},
+              Object {},
+              Object {},
+              Object {},
+            ]
+          }
         >
           
                   
@@ -478,7 +627,14 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
-        style={undefined}
+        style={
+          Array [
+            Object {},
+            Object {},
+            Object {},
+            Object {},
+          ]
+        }
       >
         
               
@@ -488,7 +644,12 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
-      style={undefined}
+      style={
+        Array [
+          Object {},
+          Object {},
+        ]
+      }
     >
       
           
@@ -542,7 +703,14 @@ exports[`<HTMLView/> should render ul bullets 1`] = `
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
-        style={undefined}
+        style={
+          Array [
+            Object {},
+            Object {},
+            Object {},
+            Object {},
+          ]
+        }
       >
          a 
       </Text>
@@ -558,7 +726,14 @@ exports[`<HTMLView/> should render ul bullets 1`] = `
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
-        style={undefined}
+        style={
+          Array [
+            Object {},
+            Object {},
+            Object {},
+            Object {},
+          ]
+        }
       >
          b 
       </Text>
