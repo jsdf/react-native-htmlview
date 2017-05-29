@@ -68,7 +68,7 @@ export default function htmlToElement(rawHtml, opts, done) {
             break;
           case 'p':
             if (index < list.length - 1) {
-              linebreakAfter = PARAGRAPH_BREAK;
+              linebreakAfter = opts.singleParagraphBreak ? LINE_BREAK : PARAGRAPH_BREAK;
             }
             break;
           case 'br':

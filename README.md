@@ -36,6 +36,7 @@ props:
   - `defaultRenderer` the default rendering implementation, so you can use the normal rendering logic for some subtree. `defaultRenderer` takes the following arguments:
     - `node` the node to render with the default rendering logic
     - `parent` the parent of node of `node`
+- `singleParagraphBreak`: changes the paragraph break from the defualt of two lines to one line.
 
 ### Example
 
