@@ -81,7 +81,7 @@ class HtmlView extends Component {
 }
 
 HtmlView.propTypes = {
-  numberOfLines: PropTypes.string,
+  numberOfLines: PropTypes.number,
   addLineBreaks: PropTypes.bool,
   value: PropTypes.string,
   stylesheet: PropTypes.object,
