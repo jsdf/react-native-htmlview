@@ -1,6 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 import htmlToElement from './htmlToElement';
-import {Linking, StyleSheet, View} from 'react-native';
+import {Linking, StyleSheet, View, ViewPropTypes} from 'react-native';
 
 const boldStyle = {fontWeight: '500'};
 const italicStyle = {fontStyle: 'italic'};
@@ -83,7 +83,7 @@ HtmlView.propTypes = {
   addLineBreaks: PropTypes.bool,
   value: PropTypes.string,
   stylesheet: PropTypes.object,
-  style: View.propTypes.style,
+  style: ViewPropTypes.style,
   onLinkPress: PropTypes.func,
   onError: PropTypes.func,
   renderNode: PropTypes.func,
