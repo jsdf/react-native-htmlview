@@ -40,7 +40,8 @@ describe('<HTMLView/>', () => {
   });
 
   it('should render an <Image />, with default width/height of 1', () => {
-    const imgSrc = 'https://facebook.github.io/react-native/img/header_logo.png';
+    const imgSrc =
+      'https://facebook.github.io/react-native/img/header_logo.png';
     const htmlContent = `<img src="${imgSrc}"/>`;
 
     expect(
@@ -49,7 +50,8 @@ describe('<HTMLView/>', () => {
   });
 
   it('should render an <Image /> with set width/height', () => {
-    const imgSrc = 'https://facebook.github.io/react-native/img/header_logo.png';
+    const imgSrc =
+      'https://facebook.github.io/react-native/img/header_logo.png';
     const htmlContent = `<img src="${imgSrc}" width="66" height="58"/>`;
 
     expect(
