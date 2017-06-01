@@ -63,9 +63,9 @@ var HTMLView = React.createClass({
 
   render() {
     if (this.state.element) {
-      return <Text children={this.state.element} />
+      return <Text children={this.state.element} allowFontScaling={false} />
     }
-    return <Text />
+    return <Text allowFontScaling={false} />
   },
 })
 

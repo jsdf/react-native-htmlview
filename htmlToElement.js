@@ -24,7 +24,7 @@ function htmlToElement(rawHtml, opts, done) {
 
       if (node.type == 'text') {
         return (
-          <Text key={index} style={parent ? opts.styles[parent.name] : null}>
+          <Text key={index} style={parent ? opts.styles[parent.name] : null} allowFontScaling={false}>
             {entities.decodeHTML(node.data)}
           </Text>
         )
@@ -37,7 +37,7 @@ function htmlToElement(rawHtml, opts, done) {
         }
 
         return (
-          <Text key={index} onPress={linkPressHandler}>
+          <Text key={index} onPress={linkPressHandler} allowFontScaling={false}>
             {node.name == 'pre' ? LINE_BREAK : null}
             {node.name == 'li' ? BULLET : null}
             {domToElement(node.children, node)}
