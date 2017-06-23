@@ -1,6 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 import htmlToElement from './htmlToElement';
-import {Linking, StyleSheet, View, ViewPropTypes} from 'react-native';
+import {Linking, StyleSheet, View, Text} from 'react-native';
 
 const boldStyle = {fontWeight: '500'};
 const italicStyle = {fontStyle: 'italic'};

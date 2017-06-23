@@ -18,6 +18,7 @@ exports[`<HTMLView/> can use a custom renderer 1`] = `
     allowFontScaling={true}
     ellipsizeMode="tail"
     onPress={null}
+    style={undefined}
   >
     <Text
       accessible={true}
@@ -64,6 +65,7 @@ exports[`<HTMLView/> should not render extra linebreaks if configured not to 1`]
     allowFontScaling={true}
     ellipsizeMode="tail"
     onPress={null}
+    style={undefined}
   >
     <Text
       accessible={true}
@@ -79,6 +81,7 @@ exports[`<HTMLView/> should not render extra linebreaks if configured not to 1`]
       allowFontScaling={true}
       ellipsizeMode="tail"
       onPress={null}
+      style={undefined}
     >
       <Text
         accessible={true}
@@ -108,6 +111,7 @@ exports[`<HTMLView/> should not render extra linebreaks if configured not to 1`]
       allowFontScaling={true}
       ellipsizeMode="tail"
       onPress={null}
+      style={undefined}
     >
       <Text
         accessible={true}
@@ -123,6 +127,7 @@ exports[`<HTMLView/> should not render extra linebreaks if configured not to 1`]
         allowFontScaling={true}
         ellipsizeMode="tail"
         onPress={null}
+        style={undefined}
       />
       <Text
         accessible={true}
@@ -212,12 +217,14 @@ exports[`<HTMLView/> should render an empty <Text/> element 1`] = `
     allowFontScaling={true}
     ellipsizeMode="tail"
     onPress={null}
+    style={undefined}
   >
     <Text
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
       onPress={[Function]}
+      style={undefined}
     >
       <Text
         accessible={true}
@@ -246,12 +253,14 @@ exports[`<HTMLView/> should render ol numbers 1`] = `
     allowFontScaling={true}
     ellipsizeMode="tail"
     onPress={null}
+    style={undefined}
   >
     <Text
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
       onPress={null}
+      style={undefined}
     >
       1. 
       <Text
@@ -268,6 +277,7 @@ exports[`<HTMLView/> should render ol numbers 1`] = `
       allowFontScaling={true}
       ellipsizeMode="tail"
       onPress={null}
+      style={undefined}
     >
       2. 
       <Text
@@ -301,6 +311,7 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
     allowFontScaling={true}
     ellipsizeMode="tail"
     onPress={null}
+    style={undefined}
   >
     <Text
       accessible={true}
@@ -316,6 +327,7 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
       allowFontScaling={true}
       ellipsizeMode="tail"
       onPress={null}
+      style={undefined}
     >
       <Text
         accessible={true}
@@ -331,6 +343,7 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
         allowFontScaling={true}
         ellipsizeMode="tail"
         onPress={null}
+        style={undefined}
       >
         <Text
           accessible={true}
@@ -362,6 +375,7 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
         allowFontScaling={true}
         ellipsizeMode="tail"
         onPress={null}
+        style={undefined}
       >
         <Text
           accessible={true}
@@ -377,6 +391,7 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
           allowFontScaling={true}
           ellipsizeMode="tail"
           onPress={null}
+          style={undefined}
         >
           <Text
             accessible={true}
@@ -397,6 +412,7 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
             allowFontScaling={true}
             ellipsizeMode="tail"
             onPress={null}
+            style={undefined}
           >
             <Text
               accessible={true}
@@ -431,6 +447,7 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
         allowFontScaling={true}
         ellipsizeMode="tail"
         onPress={null}
+        style={undefined}
       >
         <Text
           accessible={true}
@@ -446,6 +463,7 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
           allowFontScaling={true}
           ellipsizeMode="tail"
           onPress={[Function]}
+          style={undefined}
         >
           <Text
             accessible={true}
@@ -530,12 +548,14 @@ exports[`<HTMLView/> should render ul bullets 1`] = `
     allowFontScaling={true}
     ellipsizeMode="tail"
     onPress={null}
+    style={undefined}
   >
     <Text
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
       onPress={null}
+      style={undefined}
     >
       • 
       <Text
@@ -552,6 +572,7 @@ exports[`<HTMLView/> should render ul bullets 1`] = `
       allowFontScaling={true}
       ellipsizeMode="tail"
       onPress={null}
+      style={undefined}
     >
       • 
       <Text
