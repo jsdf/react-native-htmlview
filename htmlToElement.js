@@ -41,7 +41,7 @@ export default function htmlToElement(rawHtml, opts, done) {
 
       if (node.type == 'text') {
         return (
-          <Text key={index} style={parent ? opts.styles[parent.name] : null}>
+          <Text key={index}>
             {entities.decodeHTML(node.data)}
           </Text>
         );
@@ -91,8 +91,10 @@ export default function htmlToElement(rawHtml, opts, done) {
           }
         }
 
+        const tagStyle = typeof opts.styles[node.name] === 'object' ? opts.styles[node.name] : null;
+
         return (
-          <Text key={index} onPress={linkPressHandler} style={opts.defaultTextStyle}>
+          <Text key={index} onPress={linkPressHandler} style={tagStyle}>
             {linebreakBefore}
             {listItemPrefix}
             {domToElement(node.children, node)}
