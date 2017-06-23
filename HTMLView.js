@@ -57,6 +57,7 @@ class HtmlView extends Component {
       addLineBreaks: this.props.addLineBreaks,
       linkHandler: this.props.onLinkPress,
       styles: Object.assign({}, baseStyles, this.props.stylesheet),
+      defaultTextStyle: this.props.defaultTextStyle,
       customRenderer: this.props.renderNode,
     };
 
@@ -84,6 +85,7 @@ HtmlView.propTypes = {
   value: PropTypes.string,
   stylesheet: PropTypes.object,
   style: ViewPropTypes.style,
+  defaultTextStyle: ViewPropTypes.style,
   onLinkPress: PropTypes.func,
   onError: PropTypes.func,
   renderNode: PropTypes.func,

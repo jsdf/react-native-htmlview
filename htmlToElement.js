@@ -92,7 +92,7 @@ export default function htmlToElement(rawHtml, opts, done) {
         }
 
         return (
-          <Text key={index} onPress={linkPressHandler}>
+          <Text key={index} onPress={linkPressHandler} style={opts.defaultTextStyle}>
             {linebreakBefore}
             {listItemPrefix}
             {domToElement(node.children, node)}
