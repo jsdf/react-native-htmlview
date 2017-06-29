@@ -113,6 +113,7 @@ export default function htmlToElement(rawHtml, customOpts = {}, done) {
           } else if (parent.name == 'ul') {
             listItemPrefix = opts.bullet;
           }
+          linebreakAfter = opts.lineBreak;
         }
 
         const {NodeComponent} = opts;
