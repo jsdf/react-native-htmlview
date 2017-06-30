@@ -84,9 +84,9 @@ export default function htmlToElement(rawHtml, opts, done) {
 
         let listItemPrefix = null;
         if (node.name == 'li') {
-        	if(!parent) {
-        		listItemPrefix = BULLET;
-        	} else if (parent.name == 'ol') {
+          if (!parent) {
+            listItemPrefix = BULLET;
+          } else if (parent.name == 'ol') {
             listItemPrefix = `${index + 1}. `;
           } else if (parent.name == 'ul') {
             listItemPrefix = BULLET;
