@@ -1,19 +1,27 @@
 import React from 'react';
-import {
-  Text,
-} from 'react-native';
+import {Text} from 'react-native';
 import htmlparser from 'htmlparser2-without-node-native';
 import entities from 'entities';
 
 import AutoSizedImage from './AutoSizedImage';
 
-const LINE_BREAK = '\n';
-const PARAGRAPH_BREAK = '\n\n';
-const BULLET = '\u2022 ';
+const defaultOpts = {
+  lineBreak: '\n',
+  paragraphBreak: '\n\n',
+  bullet: '\u2022 ',
+  TextComponent: Text,
+  textComponentProps: null,
+  NodeComponent: Text,
+  nodeComponentProps: null,
+};
 
 const Img = props => {
-  const width = Number(props.attribs['width']) || Number(props.attribs['data-width']) || 0;
-  const height = Number(props.attribs['height']) || Number(props.attribs['data-height']) || 0;
+  const width =
+    Number(props.attribs['width']) || Number(props.attribs['data-width']) || 0;
+  const height =
+    Number(props.attribs['height']) ||
+    Number(props.attribs['data-height']) ||
+    0;
 
   const imgStyle = {
     width,
@@ -24,39 +32,55 @@ const Img = props => {
     width,
     height,
   };
-  return (
-    <AutoSizedImage source={source} style={imgStyle} />
-  );
+  return <AutoSizedImage source={source} style={imgStyle} />;
 };
 
-export default function htmlToElement(rawHtml, opts, done) {
+export default function htmlToElement(rawHtml, customOpts = {}, done) {
+  const opts = {
+    ...defaultOpts,
+    ...customOpts,
+  };
+
   function domToElement(dom, parent) {
     if (!dom) return null;
 
+    const renderNode = opts.customRenderer;
+
     return dom.map((node, index, list) => {
-      if (opts.customRenderer) {
-        const rendered = opts.customRenderer(node, index, list, parent, domToElement);
+      if (renderNode) {
+        const rendered = renderNode(
+          node,
+          index,
+          list,
+          parent,
+          domToElement
+        );
         if (rendered || rendered === null) return rendered;
       }
 
+      const {TextComponent} = opts;
+
       if (node.type == 'text') {
         return (
-          <Text key={index} style={parent ? opts.styles[parent.name] : null}>
+          <TextComponent
+            {...opts.textComponentProps}
+            key={index}
+            style={parent ? opts.styles[parent.name] : null}
+          >
             {entities.decodeHTML(node.data)}
-          </Text>
+          </TextComponent>
         );
       }
 
       if (node.type == 'tag') {
         if (node.name == 'img') {
-          return (
-            <Img key={index} attribs={node.attribs} />
-          );
+          return <Img key={index} attribs={node.attribs} />;
         }
 
         let linkPressHandler = null;
         if (node.name == 'a' && node.attribs && node.attribs.href) {
-          linkPressHandler = () => opts.linkHandler(entities.decodeHTML(node.attribs.href));
+          linkPressHandler = () =>
+            opts.linkHandler(entities.decodeHTML(node.attribs.href));
         }
 
         let linebreakBefore = null;
@@ -64,11 +88,11 @@ export default function htmlToElement(rawHtml, opts, done) {
         if (opts.addLineBreaks) {
           switch (node.name) {
           case 'pre':
-            linebreakBefore = LINE_BREAK;
+            linebreakBefore = opts.lineBreak;
             break;
           case 'p':
             if (index < list.length - 1) {
-              linebreakAfter = PARAGRAPH_BREAK;
+              linebreakAfter = opts.paragraphBreak;
             }
             break;
           case 'br':
@@ -77,7 +101,7 @@ export default function htmlToElement(rawHtml, opts, done) {
           case 'h3':
           case 'h4':
           case 'h5':
-            linebreakAfter = LINE_BREAK;
+            linebreakAfter = opts.lineBreak;
             break;
           }
         }
@@ -87,17 +111,23 @@ export default function htmlToElement(rawHtml, opts, done) {
           if (parent.name == 'ol') {
             listItemPrefix = `${index + 1}. `;
           } else if (parent.name == 'ul') {
-            listItemPrefix = BULLET;
+            listItemPrefix = opts.bullet;
           }
         }
 
+        const {NodeComponent} = opts;
+
         return (
-          <Text key={index} onPress={linkPressHandler}>
+          <NodeComponent
+            {...opts.nodeComponentProps}
+            key={index}
+            onPress={linkPressHandler}
+          >
             {linebreakBefore}
             {listItemPrefix}
             {domToElement(node.children, node)}
             {linebreakAfter}
-          </Text>
+          </NodeComponent>
         );
       }
     });
@@ -111,4 +141,3 @@ export default function htmlToElement(rawHtml, opts, done) {
   parser.write(rawHtml);
   parser.done();
 }
-
