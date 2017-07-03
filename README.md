@@ -120,6 +120,30 @@ class App extends React.Component {
 }
 ```
 
+Alternatively, this example shows how you could disallow the `<iframe>` element:
+
+```js
+function renderNode(node, index, siblings, parent, defaultRenderer) {
+  if (node.name == 'iframe') {
+    return null;
+  }
+}
+
+const htmlContent = `
+  <div>
+    <iframe src="http://info.cern.ch/" width="360" height="300" />
+  </div>
+`;
+
+class App extends React.Component {
+  render() {
+    return (
+      <HTMLView value={htmlContent} renderNode={renderNode} />
+    );
+  }
+}
+```
+
 ### Changelog
 
 - 0.9.0
