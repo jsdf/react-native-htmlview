@@ -157,7 +157,8 @@ For further understanding of the possiblities of the `renderNode` prop, read thr
 In addition to supplying a custom `renderNode` function, you can customize what is rendered by the built in `renderNode` function. Read through [htmlToElement.js](https://github.com/jsdf/react-native-htmlview/blob/master/htmlToElement.js) and note the usage of NodeComponent (for rendering HTML element nodes) and TextComponent (for rendering text strings in the HTML). Both of these components can be injected as the `NodeComponent` and `TextComponent` props to HTMLView, or alternatively they can be given extra props by passing an object as the `nodeComponentProps` and `textComponentProps` props. Finally you can also use the props `RootComponent` and `rootComponentProps` to customize the root wrapper `View` element that is rendered by the HTMLView in [HTMLView.js](https://github.com/jsdf/react-native-htmlview/blob/master/HTMLView.js).
 
 ### Changelog
-
+- 0.10.0
+  - added props: `bullet`, `paragraphBreak`, `lineBreak`, `NodeComponent`, `nodeComponentProps`, `RootComponent`, `rootComponentProps`, `TextComponent`, `textComponentProps`
 - 0.9.0
   - exposed `styles` prop
   - exposed `defaultRenderer` in `renderNode` (@brandonreavis, @koenpunt)
