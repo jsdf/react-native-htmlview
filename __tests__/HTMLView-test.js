@@ -126,9 +126,7 @@ describe('<HTMLView/>', () => {
   it('can use a custom node class', () => {
     class Node extends React.Component {
       render() {
-        return (
-          <Text {...this.props} selectable={false} />
-        )
+        return <Text {...this.props} selectable={false} />;
       }
     }
 
@@ -145,9 +143,7 @@ describe('<HTMLView/>', () => {
     ).toMatchSnapshot();
   });
 
-
   it('can use custom node props', () => {
-
     const htmlContent = `
       <div>
         <div a="b" />
@@ -156,7 +152,12 @@ describe('<HTMLView/>', () => {
 
     expect(
       renderer
-        .create(<HTMLView value={htmlContent} nodeComponentProps={{selectable: false}} />)
+        .create(
+          <HTMLView
+            value={htmlContent}
+            nodeComponentProps={{selectable: false}}
+          />
+        )
         .toJSON()
     ).toMatchSnapshot();
   });
