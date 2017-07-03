@@ -46,6 +46,7 @@ props:
 
 ```js
 import React from 'react';
+import {StyleSheet} from 'react-native';
 import HTMLView from 'react-native-htmlview';
 
 class App extends React.Component {
