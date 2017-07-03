@@ -1,4 +1,4 @@
-# React Native HTMLView
+# React Native HTMLView ![Build status](https://api.travis-ci.org/jsdf/react-native-htmlview.svg?branch=master)
 A component which takes HTML content and renders it as native views, with
 customisable style and handling of links, etc.
 
@@ -36,12 +36,11 @@ props:
   - `defaultRenderer` the default rendering implementation, so you can use the normal rendering logic for some subtree. `defaultRenderer` takes the following arguments:
     - `node` the node to render with the default rendering logic
     - `parent` the parent of node of `node`
-
-  - `bullet`: text which is rendered before every `li` inside a `ul`
-  - `paragraphBreak`: text which appears after every `p` element
-  - `lineBreak`: text which appears after text elements which create a new line (`br`, headings)
-
-  - `NodeComponent`, `nodeComponentProps`, `RootComponent`, `rootComponentProps`, `TextComponent`, `textComponentProps`: see the heading **Customizing things even further** below.
+- `bullet`: text which is rendered before every `li` inside a `ul`
+- `paragraphBreak`: text which appears after every `p` element
+- `lineBreak`: text which appears after text elements which create a new line (`br`, headings)
+- `addLineBreaks`: when explicitly `false`, effectively sets `paragraphBreak` and `lineBreak` to `null`
+- `NodeComponent`, `nodeComponentProps`, `RootComponent`, `rootComponentProps`, `TextComponent`, `textComponentProps`: see the heading **Customizing things even further** below.
 
 ### Example
 
