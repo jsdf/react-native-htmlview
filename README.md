@@ -1,4 +1,4 @@
-# React Native HTMLView ![Build status](https://api.travis-ci.org/jsdf/react-native-htmlview.svg?branch=master)
+# React Native HTMLView [![Build status](https://api.travis-ci.org/jsdf/react-native-htmlview.svg?branch=master)](https://travis-ci.org/jsdf/react-native-htmlview)
 A component which takes HTML content and renders it as native views, with
 customisable style and handling of links, etc.
 
