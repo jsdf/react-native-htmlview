@@ -150,6 +150,36 @@ class App extends React.Component {
 }
 ```
 
+If you want to reuse the default renderer, you need to call it passing an array of nodes. This example shows how to replace a specific HTML tag with something different, but still process the children.
+```js
+function renderNode(node, index, siblings, parent, defaultRenderer) {
+  if (node.name == 'mytag') {
+      const specialSyle = node.attribs.style
+      return (
+        <Text key={index} style={specialSyle}>
+          {defaultRenderer(node.children, parent)}
+        </Text>
+      )
+    }
+}
+
+const htmlContent = `
+  <div>
+    <mytag>
+      <div>some content processed normally by the engine</div>
+    </mytag>
+  </div>
+`;
+
+class App extends React.Component {
+  render() {
+    return (
+      <HTMLView value={htmlContent} renderNode={renderNode} />
+    );
+  }
+}
+```
+
 For further understanding of the possiblities of the `renderNode` prop, read through [htmlToElement.js](https://github.com/jsdf/react-native-htmlview/blob/master/htmlToElement.js). Particularly look at where `renderNode` is called to see how it can override what sort of React element is created in place of an element in the input HTML.
 
 ### Customizing things even further
