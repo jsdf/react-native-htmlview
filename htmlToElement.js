@@ -17,16 +17,17 @@ const defaultOpts = {
 
 const Img = props => {
   const width =
-    Number(props.attribs['width']) || Number(props.attribs['data-width']) || 0;
+    parseInt(props.attribs['width'], 10) || parseInt(props.attribs['data-width'], 10) || 0;
   const height =
-    Number(props.attribs['height']) ||
-    Number(props.attribs['data-height']) ||
+    parseInt(props.attribs['height'], 10) ||
+    parseInt(props.attribs['data-height'], 10) ||
     0;
 
   const imgStyle = {
     width,
     height,
   };
+
   const source = {
     uri: props.attribs.src,
     width,
@@ -60,7 +61,7 @@ export default function htmlToElement(rawHtml, customOpts = {}, done) {
 
       const {TextComponent} = opts;
 
-      if (node.type == 'text') {
+      if (node.type === 'text') {
         return (
           <TextComponent
             {...opts.textComponentProps}
@@ -72,13 +73,13 @@ export default function htmlToElement(rawHtml, customOpts = {}, done) {
         );
       }
 
-      if (node.type == 'tag') {
-        if (node.name == 'img') {
+      if (node.type === 'tag') {
+        if (node.name === 'img') {
           return <Img key={index} attribs={node.attribs} />;
         }
 
         let linkPressHandler = null;
-        if (node.name == 'a' && node.attribs && node.attribs.href) {
+        if (node.name === 'a' && node.attribs && node.attribs.href) {
           linkPressHandler = () =>
             opts.linkHandler(entities.decodeHTML(node.attribs.href));
         }
@@ -107,10 +108,10 @@ export default function htmlToElement(rawHtml, customOpts = {}, done) {
         }
 
         let listItemPrefix = null;
-        if (node.name == 'li') {
-          if (parent.name == 'ol') {
+        if (node.name === 'li') {
+          if (parent.name === 'ol') {
             listItemPrefix = `${index + 1}. `;
-          } else if (parent.name == 'ul') {
+          } else if (parent.name === 'ul') {
             listItemPrefix = opts.bullet;
           }
         }
