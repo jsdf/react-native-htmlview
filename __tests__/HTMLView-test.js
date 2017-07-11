@@ -108,13 +108,56 @@ describe('<HTMLView/>', () => {
 
     function renderNode(node, index) {
       if (node.name == 'thing') {
-        return <Text key={index}>{node.attribs.b}</Text>;
+        return (
+          <Text key={index}>
+            {node.attribs.b}
+          </Text>
+        );
       }
     }
 
     expect(
       renderer
         .create(<HTMLView value={htmlContent} renderNode={renderNode} />)
+        .toJSON()
+    ).toMatchSnapshot();
+  });
+
+  it('can use a custom node class', () => {
+    class Node extends React.Component {
+      render() {
+        return <Text {...this.props} selectable={false} />;
+      }
+    }
+
+    const htmlContent = `
+      <div>
+        <div a="b" />
+      </div>
+    `;
+
+    expect(
+      renderer
+        .create(<HTMLView value={htmlContent} NodeComponent={Node} />)
+        .toJSON()
+    ).toMatchSnapshot();
+  });
+
+  it('can use custom node props', () => {
+    const htmlContent = `
+      <div>
+        <div a="b" />
+      </div>
+    `;
+
+    expect(
+      renderer
+        .create(
+          <HTMLView
+            value={htmlContent}
+            nodeComponentProps={{selectable: false}}
+          />
+        )
         .toJSON()
     ).toMatchSnapshot();
   });

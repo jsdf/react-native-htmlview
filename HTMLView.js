@@ -1,4 +1,5 @@
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import htmlToElement from './htmlToElement';
 import {Linking, StyleSheet, View} from 'react-native';
 
@@ -24,6 +25,16 @@ const baseStyles = StyleSheet.create({
   h5: {fontWeight: '500', fontSize: 14},
   h6: {fontWeight: '500', fontSize: 12},
 });
+
+const htmlToElementOptKeys = [
+  'lineBreak',
+  'paragraphBreak',
+  'bullet',
+  'TextComponent',
+  'textComponentProps',
+  'NodeComponent',
+  'nodeComponentProps',
+];
 
 class HtmlView extends Component {
   constructor() {
@@ -60,6 +71,12 @@ class HtmlView extends Component {
       customRenderer: this.props.renderNode,
     };
 
+    htmlToElementOptKeys.forEach(key => {
+      if (typeof this.props[key] != 'undefined') {
+        opts[key] = this.props[key];
+      }
+    });
+
     htmlToElement(value, opts, (err, element) => {
       if (err) {
         this.props.onError(err);
@@ -72,27 +89,49 @@ class HtmlView extends Component {
   }
 
   render() {
+    const {RootComponent} = this.props;
     if (this.state.element) {
-      return <View children={this.state.element} style={this.props.style} />;
+      return (
+        <RootComponent
+          {...this.props.rootComponentProps}
+          children={this.state.element}
+          style={this.props.style}
+        />
+      );
     }
-    return <View style={this.props.style} />;
+    return (
+      <RootComponent
+        {...this.props.rootComponentProps}
+        style={this.props.style}
+      />
+    );
   }
 }
 
 HtmlView.propTypes = {
   addLineBreaks: PropTypes.bool,
-  value: PropTypes.string,
-  stylesheet: PropTypes.object,
-  style: View.propTypes.style,
-  onLinkPress: PropTypes.func,
+  bullet: PropTypes.string,
+  lineBreak: PropTypes.string,
+  NodeComponent: PropTypes.func,
+  nodeComponentProps: PropTypes.object,
   onError: PropTypes.func,
+  onLinkPress: PropTypes.func,
+  paragraphBreak: PropTypes.string,
   renderNode: PropTypes.func,
+  RootComponent: PropTypes.func,
+  rootComponentProps: PropTypes.object,
+  style: View.propTypes.style,
+  stylesheet: PropTypes.object,
+  TextComponent: PropTypes.func,
+  textComponentProps: PropTypes.object,
+  value: PropTypes.string,
 };
 
 HtmlView.defaultProps = {
   addLineBreaks: true,
   onLinkPress: url => Linking.openURL(url),
   onError: console.error.bind(console),
+  RootComponent: View,
 };
 
 export default HtmlView;
