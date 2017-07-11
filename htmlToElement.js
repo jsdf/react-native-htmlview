@@ -62,7 +62,7 @@ export default function htmlToElement(rawHtml, customOpts = {}, done) {
 
       if (node.type == 'text') {
 
-        const defaultStyle = opts.textComponentProps.style;
+        const defaultStyle = opts.textComponentProps ? opts.textComponentProps.style : null;
         const customStyle = parent ? opts.styles[parent.name] : null;
 
         return (
