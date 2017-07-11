@@ -114,8 +114,8 @@ export default function htmlToElement(rawHtml, customOpts = {}, done) {
           }
         }
 
-        const {NodeComponent} = opts;
-        const tagStyle = typeof opts.styles[node.name] === 'object' ? opts.styles[node.name] : null;
+        const {NodeComponent, styles} = opts;
+        const tagStyle = typeof styles[node.name] === 'object' ? styles[node.name] : null;
 
         return (
           <NodeComponent
