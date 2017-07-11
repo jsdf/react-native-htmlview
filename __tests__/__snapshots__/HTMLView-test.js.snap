@@ -8,7 +8,6 @@ exports[`<HTMLView/> can use a custom node class 1`] = `
     accessible={true}
     allowFontScaling={true}
     ellipsizeMode="tail"
-    style={null}
   >
     
           
@@ -19,12 +18,12 @@ exports[`<HTMLView/> can use a custom node class 1`] = `
     ellipsizeMode="tail"
     onPress={null}
     selectable={false}
+    style={null}
   >
     <Text
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
-      style={undefined}
     >
       
               
@@ -35,12 +34,12 @@ exports[`<HTMLView/> can use a custom node class 1`] = `
       ellipsizeMode="tail"
       onPress={null}
       selectable={false}
+      style={null}
     >
       <Text
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
-        style={undefined}
       >
         
               
@@ -50,7 +49,6 @@ exports[`<HTMLView/> can use a custom node class 1`] = `
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
-      style={undefined}
     >
       
           
@@ -111,7 +109,6 @@ exports[`<HTMLView/> can use custom node props 1`] = `
     accessible={true}
     allowFontScaling={true}
     ellipsizeMode="tail"
-    style={null}
   >
     
           
@@ -122,12 +119,12 @@ exports[`<HTMLView/> can use custom node props 1`] = `
     ellipsizeMode="tail"
     onPress={null}
     selectable={false}
+    style={null}
   >
     <Text
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
-      style={undefined}
     >
       
               
@@ -138,12 +135,12 @@ exports[`<HTMLView/> can use custom node props 1`] = `
       ellipsizeMode="tail"
       onPress={null}
       selectable={false}
+      style={null}
     >
       <Text
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
-        style={undefined}
       >
         
               
@@ -153,7 +150,6 @@ exports[`<HTMLView/> can use custom node props 1`] = `
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
-      style={undefined}
     >
       
           
