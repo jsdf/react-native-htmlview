@@ -61,11 +61,15 @@ export default function htmlToElement(rawHtml, customOpts = {}, done) {
       const {TextComponent} = opts;
 
       if (node.type == 'text') {
+
+        const defaultStyle = opts.textComponentProps.style;
+        const customStyle = parent ? opts.styles[parent.name] : null;
+
         return (
           <TextComponent
             {...opts.textComponentProps}
             key={index}
-            style={parent ? opts.styles[parent.name] : null}
+            style={[defaultStyle, customStyle]}
           >
             {entities.decodeHTML(node.data)}
           </TextComponent>
