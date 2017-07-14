@@ -68,11 +68,14 @@ export default function htmlToElement(rawHtml, customOpts = {}, done) {
       const {TextComponent} = opts;
 
       if (node.type === 'text') {
+        const defaultStyle = opts.textComponentProps ? opts.textComponentProps.style : null;
+        const customStyle = inheritedStyle(parent);
+
         return (
           <TextComponent
             {...opts.textComponentProps}
             key={index}
-            style={inheritedStyle(parent)}
+            style={[defaultStyle, customStyle]}
           >
             {entities.decodeHTML(node.data)}
           </TextComponent>

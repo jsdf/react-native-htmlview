@@ -8,7 +8,12 @@ exports[`<HTMLView/> can use a custom node class 1`] = `
     accessible={true}
     allowFontScaling={true}
     ellipsizeMode="tail"
-    style={null}
+    style={
+      Array [
+        null,
+        null,
+      ]
+    }
   >
     
           
@@ -26,7 +31,10 @@ exports[`<HTMLView/> can use a custom node class 1`] = `
       ellipsizeMode="tail"
       style={
         Array [
-          Object {},
+          null,
+          Array [
+            Object {},
+          ],
         ]
       }
     >
@@ -46,8 +54,11 @@ exports[`<HTMLView/> can use a custom node class 1`] = `
         ellipsizeMode="tail"
         style={
           Array [
-            Object {},
-            Object {},
+            null,
+            Array [
+              Object {},
+              Object {},
+            ],
           ]
         }
       >
@@ -61,7 +72,10 @@ exports[`<HTMLView/> can use a custom node class 1`] = `
       ellipsizeMode="tail"
       style={
         Array [
-          Object {},
+          null,
+          Array [
+            Object {},
+          ],
         ]
       }
     >
@@ -80,7 +94,12 @@ exports[`<HTMLView/> can use a custom renderer 1`] = `
     accessible={true}
     allowFontScaling={true}
     ellipsizeMode="tail"
-    style={null}
+    style={
+      Array [
+        null,
+        null,
+      ]
+    }
   >
     
           
@@ -97,7 +116,10 @@ exports[`<HTMLView/> can use a custom renderer 1`] = `
       ellipsizeMode="tail"
       style={
         Array [
-          Object {},
+          null,
+          Array [
+            Object {},
+          ],
         ]
       }
     >
@@ -114,7 +136,12 @@ exports[`<HTMLView/> can use a custom renderer 1`] = `
     accessible={true}
     allowFontScaling={true}
     ellipsizeMode="tail"
-    style={null}
+    style={
+      Array [
+        null,
+        null,
+      ]
+    }
   >
     
         
@@ -130,7 +157,12 @@ exports[`<HTMLView/> can use custom node props 1`] = `
     accessible={true}
     allowFontScaling={true}
     ellipsizeMode="tail"
-    style={null}
+    style={
+      Array [
+        null,
+        null,
+      ]
+    }
   >
     
           
@@ -148,7 +180,10 @@ exports[`<HTMLView/> can use custom node props 1`] = `
       ellipsizeMode="tail"
       style={
         Array [
-          Object {},
+          null,
+          Array [
+            Object {},
+          ],
         ]
       }
     >
@@ -168,8 +203,11 @@ exports[`<HTMLView/> can use custom node props 1`] = `
         ellipsizeMode="tail"
         style={
           Array [
-            Object {},
-            Object {},
+            null,
+            Array [
+              Object {},
+              Object {},
+            ],
           ]
         }
       >
@@ -183,7 +221,10 @@ exports[`<HTMLView/> can use custom node props 1`] = `
       ellipsizeMode="tail"
       style={
         Array [
-          Object {},
+          null,
+          Array [
+            Object {},
+          ],
         ]
       }
     >
@@ -202,7 +243,12 @@ exports[`<HTMLView/> should not render extra linebreaks if configured not to 1`]
     accessible={true}
     allowFontScaling={true}
     ellipsizeMode="tail"
-    style={null}
+    style={
+      Array [
+        null,
+        null,
+      ]
+    }
   >
     
           
@@ -219,7 +265,10 @@ exports[`<HTMLView/> should not render extra linebreaks if configured not to 1`]
       ellipsizeMode="tail"
       style={
         Array [
-          Object {},
+          null,
+          Array [
+            Object {},
+          ],
         ]
       }
     >
@@ -238,11 +287,14 @@ exports[`<HTMLView/> should not render extra linebreaks if configured not to 1`]
         ellipsizeMode="tail"
         style={
           Array [
-            Object {
-              "fontSize": 30,
-              "fontWeight": "500",
-            },
-            Object {},
+            null,
+            Array [
+              Object {
+                "fontSize": 30,
+                "fontWeight": "500",
+              },
+              Object {},
+            ],
           ]
         }
       >
@@ -255,7 +307,10 @@ exports[`<HTMLView/> should not render extra linebreaks if configured not to 1`]
       ellipsizeMode="tail"
       style={
         Array [
-          Object {},
+          null,
+          Array [
+            Object {},
+          ],
         ]
       }
     >
@@ -274,8 +329,11 @@ exports[`<HTMLView/> should not render extra linebreaks if configured not to 1`]
         ellipsizeMode="tail"
         style={
           Array [
-            Object {},
-            Object {},
+            null,
+            Array [
+              Object {},
+              Object {},
+            ],
           ]
         }
       >
@@ -294,8 +352,11 @@ exports[`<HTMLView/> should not render extra linebreaks if configured not to 1`]
         ellipsizeMode="tail"
         style={
           Array [
-            Object {},
-            Object {},
+            null,
+            Array [
+              Object {},
+              Object {},
+            ],
           ]
         }
       >
@@ -310,7 +371,10 @@ exports[`<HTMLView/> should not render extra linebreaks if configured not to 1`]
       ellipsizeMode="tail"
       style={
         Array [
-          Object {},
+          null,
+          Array [
+            Object {},
+          ],
         ]
       }
     >
@@ -322,7 +386,12 @@ exports[`<HTMLView/> should not render extra linebreaks if configured not to 1`]
     accessible={true}
     allowFontScaling={true}
     ellipsizeMode="tail"
-    style={null}
+    style={
+      Array [
+        null,
+        null,
+      ]
+    }
   >
     
         
@@ -398,11 +467,14 @@ exports[`<HTMLView/> should render an empty <Text/> element 1`] = `
         ellipsizeMode="tail"
         style={
           Array [
-            Object {
-              "color": "#007AFF",
-              "fontWeight": "500",
-            },
-            Object {},
+            null,
+            Array [
+              Object {
+                "color": "#007AFF",
+                "fontWeight": "500",
+              },
+              Object {},
+            ],
           ]
         }
       >
@@ -436,8 +508,11 @@ exports[`<HTMLView/> should render ol numbers 1`] = `
         ellipsizeMode="tail"
         style={
           Array [
-            Object {},
-            Object {},
+            null,
+            Array [
+              Object {},
+              Object {},
+            ],
           ]
         }
       >
@@ -459,8 +534,11 @@ exports[`<HTMLView/> should render ol numbers 1`] = `
         ellipsizeMode="tail"
         style={
           Array [
-            Object {},
-            Object {},
+            null,
+            Array [
+              Object {},
+              Object {},
+            ],
           ]
         }
       >
@@ -481,7 +559,12 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
     accessible={true}
     allowFontScaling={true}
     ellipsizeMode="tail"
-    style={null}
+    style={
+      Array [
+        null,
+        null,
+      ]
+    }
   >
     
           
@@ -498,7 +581,10 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
       ellipsizeMode="tail"
       style={
         Array [
-          Object {},
+          null,
+          Array [
+            Object {},
+          ],
         ]
       }
     >
@@ -517,8 +603,11 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
         ellipsizeMode="tail"
         style={
           Array [
-            Object {},
-            Object {},
+            null,
+            Array [
+              Object {},
+              Object {},
+            ],
           ]
         }
       >
@@ -537,12 +626,15 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
           ellipsizeMode="tail"
           style={
             Array [
-              Object {
-                "fontSize": 30,
-                "fontWeight": "500",
-              },
-              Object {},
-              Object {},
+              null,
+              Array [
+                Object {
+                  "fontSize": 30,
+                  "fontWeight": "500",
+                },
+                Object {},
+                Object {},
+              ],
             ]
           }
         >
@@ -557,8 +649,11 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
         ellipsizeMode="tail"
         style={
           Array [
-            Object {},
-            Object {},
+            null,
+            Array [
+              Object {},
+              Object {},
+            ],
           ]
         }
       >
@@ -577,9 +672,12 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
           ellipsizeMode="tail"
           style={
             Array [
-              Object {},
-              Object {},
-              Object {},
+              null,
+              Array [
+                Object {},
+                Object {},
+                Object {},
+              ],
             ]
           }
         >
@@ -598,12 +696,15 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
             ellipsizeMode="tail"
             style={
               Array [
-                Object {
-                  "fontStyle": "italic",
-                },
-                Object {},
-                Object {},
-                Object {},
+                null,
+                Array [
+                  Object {
+                    "fontStyle": "italic",
+                  },
+                  Object {},
+                  Object {},
+                  Object {},
+                ],
               ]
             }
           >
@@ -623,15 +724,18 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
               ellipsizeMode="tail"
               style={
                 Array [
-                  Object {
-                    "fontWeight": "500",
-                  },
-                  Object {
-                    "fontStyle": "italic",
-                  },
-                  Object {},
-                  Object {},
-                  Object {},
+                  null,
+                  Array [
+                    Object {
+                      "fontWeight": "500",
+                    },
+                    Object {
+                      "fontStyle": "italic",
+                    },
+                    Object {},
+                    Object {},
+                    Object {},
+                  ],
                 ]
               }
             >
@@ -650,8 +754,11 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
         ellipsizeMode="tail"
         style={
           Array [
-            Object {},
-            Object {},
+            null,
+            Array [
+              Object {},
+              Object {},
+            ],
           ]
         }
       >
@@ -670,9 +777,12 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
           ellipsizeMode="tail"
           style={
             Array [
-              Object {},
-              Object {},
-              Object {},
+              null,
+              Array [
+                Object {},
+                Object {},
+                Object {},
+              ],
             ]
           }
         >
@@ -691,13 +801,16 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
             ellipsizeMode="tail"
             style={
               Array [
-                Object {
-                  "color": "#007AFF",
-                  "fontWeight": "500",
-                },
-                Object {},
-                Object {},
-                Object {},
+                null,
+                Array [
+                  Object {
+                    "color": "#007AFF",
+                    "fontWeight": "500",
+                  },
+                  Object {},
+                  Object {},
+                  Object {},
+                ],
               ]
             }
           >
@@ -710,9 +823,12 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
           ellipsizeMode="tail"
           style={
             Array [
-              Object {},
-              Object {},
-              Object {},
+              null,
+              Array [
+                Object {},
+                Object {},
+                Object {},
+              ],
             ]
           }
         >
@@ -729,8 +845,11 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
         ellipsizeMode="tail"
         style={
           Array [
-            Object {},
-            Object {},
+            null,
+            Array [
+              Object {},
+              Object {},
+            ],
           ]
         }
       >
@@ -744,7 +863,10 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
       ellipsizeMode="tail"
       style={
         Array [
-          Object {},
+          null,
+          Array [
+            Object {},
+          ],
         ]
       }
     >
@@ -756,7 +878,12 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
     accessible={true}
     allowFontScaling={true}
     ellipsizeMode="tail"
-    style={null}
+    style={
+      Array [
+        null,
+        null,
+      ]
+    }
   >
     
         
@@ -772,7 +899,12 @@ exports[`<HTMLView/> should render text in a (nested) <Text/> element 1`] = `
     accessible={true}
     allowFontScaling={true}
     ellipsizeMode="tail"
-    style={null}
+    style={
+      Array [
+        null,
+        null,
+      ]
+    }
   >
     This is some text
   </Text>
@@ -802,8 +934,11 @@ exports[`<HTMLView/> should render ul bullets 1`] = `
         ellipsizeMode="tail"
         style={
           Array [
-            Object {},
-            Object {},
+            null,
+            Array [
+              Object {},
+              Object {},
+            ],
           ]
         }
       >
@@ -825,8 +960,11 @@ exports[`<HTMLView/> should render ul bullets 1`] = `
         ellipsizeMode="tail"
         style={
           Array [
-            Object {},
-            Object {},
+            null,
+            Array [
+              Object {},
+              Object {},
+            ],
           ]
         }
       >

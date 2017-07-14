@@ -17,7 +17,12 @@ exports[`<Example/> should render 1`] = `
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
-        style={null}
+        style={
+          Array [
+            null,
+            null,
+          ]
+        }
       >
         
           
@@ -34,7 +39,10 @@ exports[`<Example/> should render 1`] = `
           ellipsizeMode="tail"
           style={
             Array [
-              Object {},
+              null,
+              Array [
+                Object {},
+              ],
             ]
           }
         >
@@ -53,8 +61,11 @@ exports[`<Example/> should render 1`] = `
             ellipsizeMode="tail"
             style={
               Array [
-                Object {},
-                Object {},
+                null,
+                Array [
+                  Object {},
+                  Object {},
+                ],
               ]
             }
           >
@@ -79,14 +90,17 @@ exports[`<Example/> should render 1`] = `
                 ellipsizeMode="tail"
                 style={
                   Array [
-                    Object {
-                      "fontStyle": "italic",
-                    },
-                    Object {
-                      "fontWeight": "500",
-                    },
-                    Object {},
-                    Object {},
+                    null,
+                    Array [
+                      Object {
+                        "fontStyle": "italic",
+                      },
+                      Object {
+                        "fontWeight": "500",
+                      },
+                      Object {},
+                      Object {},
+                    ],
                   ]
                 }
               >
@@ -100,8 +114,11 @@ exports[`<Example/> should render 1`] = `
             ellipsizeMode="tail"
             style={
               Array [
-                Object {},
-                Object {},
+                null,
+                Array [
+                  Object {},
+                  Object {},
+                ],
               ]
             }
           >
@@ -120,9 +137,12 @@ exports[`<Example/> should render 1`] = `
               ellipsizeMode="tail"
               style={
                 Array [
-                  Object {},
-                  Object {},
-                  Object {},
+                  null,
+                  Array [
+                    Object {},
+                    Object {},
+                    Object {},
+                  ],
                 ]
               }
             >
@@ -141,12 +161,15 @@ exports[`<Example/> should render 1`] = `
                 ellipsizeMode="tail"
                 style={
                   Array [
-                    Object {
-                      "fontStyle": "italic",
-                    },
-                    Object {},
-                    Object {},
-                    Object {},
+                    null,
+                    Array [
+                      Object {
+                        "fontStyle": "italic",
+                      },
+                      Object {},
+                      Object {},
+                      Object {},
+                    ],
                   ]
                 }
               >
@@ -166,15 +189,18 @@ exports[`<Example/> should render 1`] = `
                   ellipsizeMode="tail"
                   style={
                     Array [
-                      Object {
-                        "fontWeight": "500",
-                      },
-                      Object {
-                        "fontStyle": "italic",
-                      },
-                      Object {},
-                      Object {},
-                      Object {},
+                      null,
+                      Array [
+                        Object {
+                          "fontWeight": "500",
+                        },
+                        Object {
+                          "fontStyle": "italic",
+                        },
+                        Object {},
+                        Object {},
+                        Object {},
+                      ],
                     ]
                   }
                 >
@@ -193,8 +219,11 @@ exports[`<Example/> should render 1`] = `
             ellipsizeMode="tail"
             style={
               Array [
-                Object {},
-                Object {},
+                null,
+                Array [
+                  Object {},
+                  Object {},
+                ],
               ]
             }
           >
@@ -213,9 +242,12 @@ exports[`<Example/> should render 1`] = `
               ellipsizeMode="tail"
               style={
                 Array [
-                  Object {},
-                  Object {},
-                  Object {},
+                  null,
+                  Array [
+                    Object {},
+                    Object {},
+                    Object {},
+                  ],
                 ]
               }
             >
@@ -234,13 +266,16 @@ exports[`<Example/> should render 1`] = `
                 ellipsizeMode="tail"
                 style={
                   Array [
-                    Object {
-                      "color": "#007AFF",
-                      "fontWeight": "500",
-                    },
-                    Object {},
-                    Object {},
-                    Object {},
+                    null,
+                    Array [
+                      Object {
+                        "color": "#007AFF",
+                        "fontWeight": "500",
+                      },
+                      Object {},
+                      Object {},
+                      Object {},
+                    ],
                   ]
                 }
               >
@@ -253,9 +288,12 @@ exports[`<Example/> should render 1`] = `
               ellipsizeMode="tail"
               style={
                 Array [
-                  Object {},
-                  Object {},
-                  Object {},
+                  null,
+                  Array [
+                    Object {},
+                    Object {},
+                    Object {},
+                  ],
                 ]
               }
             >
@@ -272,8 +310,11 @@ exports[`<Example/> should render 1`] = `
             ellipsizeMode="tail"
             style={
               Array [
-                Object {},
-                Object {},
+                null,
+                Array [
+                  Object {},
+                  Object {},
+                ],
               ]
             }
           >
@@ -302,8 +343,11 @@ exports[`<Example/> should render 1`] = `
             ellipsizeMode="tail"
             style={
               Array [
-                Object {},
-                Object {},
+                null,
+                Array [
+                  Object {},
+                  Object {},
+                ],
               ]
             }
           >
@@ -323,12 +367,15 @@ exports[`<Example/> should render 1`] = `
               ellipsizeMode="tail"
               style={
                 Array [
-                  Object {
-                    "fontSize": 36,
-                    "fontWeight": "500",
-                  },
-                  Object {},
-                  Object {},
+                  null,
+                  Array [
+                    Object {
+                      "fontSize": 36,
+                      "fontWeight": "500",
+                    },
+                    Object {},
+                    Object {},
+                  ],
                 ]
               }
             >
@@ -343,8 +390,11 @@ exports[`<Example/> should render 1`] = `
             ellipsizeMode="tail"
             style={
               Array [
-                Object {},
-                Object {},
+                null,
+                Array [
+                  Object {},
+                  Object {},
+                ],
               ]
             }
           >
@@ -363,12 +413,15 @@ exports[`<Example/> should render 1`] = `
               ellipsizeMode="tail"
               style={
                 Array [
-                  Object {
-                    "fontSize": 30,
-                    "fontWeight": "500",
-                  },
-                  Object {},
-                  Object {},
+                  null,
+                  Array [
+                    Object {
+                      "fontSize": 30,
+                      "fontWeight": "500",
+                    },
+                    Object {},
+                    Object {},
+                  ],
                 ]
               }
             >
@@ -383,8 +436,11 @@ exports[`<Example/> should render 1`] = `
             ellipsizeMode="tail"
             style={
               Array [
-                Object {},
-                Object {},
+                null,
+                Array [
+                  Object {},
+                  Object {},
+                ],
               ]
             }
           >
@@ -403,12 +459,15 @@ exports[`<Example/> should render 1`] = `
               ellipsizeMode="tail"
               style={
                 Array [
-                  Object {
-                    "fontSize": 24,
-                    "fontWeight": "500",
-                  },
-                  Object {},
-                  Object {},
+                  null,
+                  Array [
+                    Object {
+                      "fontSize": 24,
+                      "fontWeight": "500",
+                    },
+                    Object {},
+                    Object {},
+                  ],
                 ]
               }
             >
@@ -423,8 +482,11 @@ exports[`<Example/> should render 1`] = `
             ellipsizeMode="tail"
             style={
               Array [
-                Object {},
-                Object {},
+                null,
+                Array [
+                  Object {},
+                  Object {},
+                ],
               ]
             }
           >
@@ -443,12 +505,15 @@ exports[`<Example/> should render 1`] = `
               ellipsizeMode="tail"
               style={
                 Array [
-                  Object {
-                    "fontSize": 18,
-                    "fontWeight": "500",
-                  },
-                  Object {},
-                  Object {},
+                  null,
+                  Array [
+                    Object {
+                      "fontSize": 18,
+                      "fontWeight": "500",
+                    },
+                    Object {},
+                    Object {},
+                  ],
                 ]
               }
             >
@@ -463,8 +528,11 @@ exports[`<Example/> should render 1`] = `
             ellipsizeMode="tail"
             style={
               Array [
-                Object {},
-                Object {},
+                null,
+                Array [
+                  Object {},
+                  Object {},
+                ],
               ]
             }
           >
@@ -483,12 +551,15 @@ exports[`<Example/> should render 1`] = `
               ellipsizeMode="tail"
               style={
                 Array [
-                  Object {
-                    "fontSize": 14,
-                    "fontWeight": "500",
-                  },
-                  Object {},
-                  Object {},
+                  null,
+                  Array [
+                    Object {
+                      "fontSize": 14,
+                      "fontWeight": "500",
+                    },
+                    Object {},
+                    Object {},
+                  ],
                 ]
               }
             >
@@ -503,8 +574,11 @@ exports[`<Example/> should render 1`] = `
             ellipsizeMode="tail"
             style={
               Array [
-                Object {},
-                Object {},
+                null,
+                Array [
+                  Object {},
+                  Object {},
+                ],
               ]
             }
           >
@@ -523,12 +597,15 @@ exports[`<Example/> should render 1`] = `
               ellipsizeMode="tail"
               style={
                 Array [
-                  Object {
-                    "fontSize": 12,
-                    "fontWeight": "500",
-                  },
-                  Object {},
-                  Object {},
+                  null,
+                  Array [
+                    Object {
+                      "fontSize": 12,
+                      "fontWeight": "500",
+                    },
+                    Object {},
+                    Object {},
+                  ],
                 ]
               }
             >
@@ -541,8 +618,11 @@ exports[`<Example/> should render 1`] = `
             ellipsizeMode="tail"
             style={
               Array [
-                Object {},
-                Object {},
+                null,
+                Array [
+                  Object {},
+                  Object {},
+                ],
               ]
             }
           >
@@ -574,7 +654,10 @@ exports[`<Example/> should render 1`] = `
           ellipsizeMode="tail"
           style={
             Array [
-              Object {},
+              null,
+              Array [
+                Object {},
+              ],
             ]
           }
         >
@@ -586,7 +669,12 @@ exports[`<Example/> should render 1`] = `
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
-        style={null}
+        style={
+          Array [
+            null,
+            null,
+          ]
+        }
       >
         
         
