@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PureComponent} from 'react';
 import {
   Image,
   Dimensions,
@@ -10,7 +10,7 @@ const baseStyle = {
   backgroundColor: 'transparent',
 };
 
-export default class AutoSizedImage extends React.Component {
+export default class AutoSizedImage extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
