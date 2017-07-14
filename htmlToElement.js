@@ -41,6 +41,12 @@ export default function htmlToElement(rawHtml, customOpts = {}, done) {
     ...customOpts,
   };
 
+  function inheritedStyle(parent) {
+    if (!parent) { return null; }
+    const style = [opts.styles[parent.name] || {}];
+    return parent.parent ? style.concat(inheritedStyle(parent.parent)) : style;
+  }
+
   function domToElement(dom, parent) {
     if (!dom) return null;
 
@@ -65,7 +71,7 @@ export default function htmlToElement(rawHtml, customOpts = {}, done) {
           <TextComponent
             {...opts.textComponentProps}
             key={index}
-            style={parent ? opts.styles[parent.name] : null}
+            style={inheritedStyle(parent)}
           >
             {entities.decodeHTML(node.data)}
           </TextComponent>
@@ -113,6 +119,7 @@ export default function htmlToElement(rawHtml, customOpts = {}, done) {
           } else if (parent.name == 'ul') {
             listItemPrefix = opts.bullet;
           }
+          linebreakAfter = opts.lineBreak;
         }
 
         const {NodeComponent} = opts;
