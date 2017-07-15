@@ -17,6 +17,12 @@ exports[`<Example/> should render 1`] = `
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
+        style={
+          Array [
+            null,
+            null,
+          ]
+        }
       >
         
           
@@ -32,6 +38,14 @@ exports[`<Example/> should render 1`] = `
           accessible={true}
           allowFontScaling={true}
           ellipsizeMode="tail"
+          style={
+            Array [
+              null,
+              Array [
+                Object {},
+              ],
+            ]
+          }
         >
           
               
@@ -47,6 +61,15 @@ exports[`<Example/> should render 1`] = `
             accessible={true}
             allowFontScaling={true}
             ellipsizeMode="tail"
+            style={
+              Array [
+                null,
+                Array [
+                  Object {},
+                  Object {},
+                ],
+              ]
+            }
           >
             
                   
@@ -77,6 +100,21 @@ exports[`<Example/> should render 1`] = `
                 accessible={true}
                 allowFontScaling={true}
                 ellipsizeMode="tail"
+                style={
+                  Array [
+                    null,
+                    Array [
+                      Object {
+                        "fontStyle": "italic",
+                      },
+                      Object {
+                        "fontWeight": "500",
+                      },
+                      Object {},
+                      Object {},
+                    ],
+                  ]
+                }
               >
                 &gt; Dwayne’s only companion at night was a Labrador retriever named Sparky.
               </Text>
@@ -86,6 +124,15 @@ exports[`<Example/> should render 1`] = `
             accessible={true}
             allowFontScaling={true}
             ellipsizeMode="tail"
+            style={
+              Array [
+                null,
+                Array [
+                  Object {},
+                  Object {},
+                ],
+              ]
+            }
           >
             
                 
@@ -101,6 +148,16 @@ exports[`<Example/> should render 1`] = `
               accessible={true}
               allowFontScaling={true}
               ellipsizeMode="tail"
+              style={
+                Array [
+                  null,
+                  Array [
+                    Object {},
+                    Object {},
+                    Object {},
+                  ],
+                ]
+              }
             >
               
                   
@@ -120,6 +177,19 @@ exports[`<Example/> should render 1`] = `
                 accessible={true}
                 allowFontScaling={true}
                 ellipsizeMode="tail"
+                style={
+                  Array [
+                    null,
+                    Array [
+                      Object {
+                        "fontStyle": "italic",
+                      },
+                      Object {},
+                      Object {},
+                      Object {},
+                    ],
+                  ]
+                }
               >
                 Sparky could not wag his tail-because of an automobile accident many years ago, so he had no way of telling other dogs how friendly he was.
                     He opened the door of the cage, something Bill couldn’t have done in a thousand years. Bill flew over to a windowsill.
@@ -140,6 +210,22 @@ exports[`<Example/> should render 1`] = `
                   accessible={true}
                   allowFontScaling={true}
                   ellipsizeMode="tail"
+                  style={
+                    Array [
+                      null,
+                      Array [
+                        Object {
+                          "fontWeight": "500",
+                        },
+                        Object {
+                          "fontStyle": "italic",
+                        },
+                        Object {},
+                        Object {},
+                        Object {},
+                      ],
+                    ]
+                  }
                 >
                   The undippable flag was a beauty, and the anthem and the vacant motto might not have mattered much, if it weren’t for this: a lot of citizens were so ignored and cheated and insulted that they thought they might be in the wrong country, or even on the wrong planet, that some terrible mistake had been made.
                       
@@ -154,6 +240,15 @@ exports[`<Example/> should render 1`] = `
             accessible={true}
             allowFontScaling={true}
             ellipsizeMode="tail"
+            style={
+              Array [
+                null,
+                Array [
+                  Object {},
+                  Object {},
+                ],
+              ]
+            }
           >
             
                 
@@ -169,6 +264,16 @@ exports[`<Example/> should render 1`] = `
               accessible={true}
               allowFontScaling={true}
               ellipsizeMode="tail"
+              style={
+                Array [
+                  null,
+                  Array [
+                    Object {},
+                    Object {},
+                    Object {},
+                  ],
+                ]
+              }
             >
               
                     [1] 
@@ -189,6 +294,20 @@ exports[`<Example/> should render 1`] = `
                 accessible={true}
                 allowFontScaling={true}
                 ellipsizeMode="tail"
+                style={
+                  Array [
+                    null,
+                    Array [
+                      Object {
+                        "color": "#007AFF",
+                        "fontWeight": "500",
+                      },
+                      Object {},
+                      Object {},
+                      Object {},
+                    ],
+                  ]
+                }
               >
                 https://code.facebook.com/posts/1505962329687926/flow-a-new-...
               </Text>
@@ -197,6 +316,16 @@ exports[`<Example/> should render 1`] = `
               accessible={true}
               allowFontScaling={true}
               ellipsizeMode="tail"
+              style={
+                Array [
+                  null,
+                  Array [
+                    Object {},
+                    Object {},
+                    Object {},
+                  ],
+                ]
+              }
             >
               
                   
@@ -209,6 +338,15 @@ exports[`<Example/> should render 1`] = `
             accessible={true}
             allowFontScaling={true}
             ellipsizeMode="tail"
+            style={
+              Array [
+                null,
+                Array [
+                  Object {},
+                  Object {},
+                ],
+              ]
+            }
           >
             
                 
@@ -233,6 +371,15 @@ exports[`<Example/> should render 1`] = `
             accessible={true}
             allowFontScaling={true}
             ellipsizeMode="tail"
+            style={
+              Array [
+                null,
+                Array [
+                  Object {},
+                  Object {},
+                ],
+              ]
+            }
           >
             
             
@@ -254,6 +401,19 @@ exports[`<Example/> should render 1`] = `
               accessible={true}
               allowFontScaling={true}
               ellipsizeMode="tail"
+              style={
+                Array [
+                  null,
+                  Array [
+                    Object {
+                      "fontSize": 36,
+                      "fontWeight": "500",
+                    },
+                    Object {},
+                    Object {},
+                  ],
+                ]
+              }
             >
               Dwayne’s only companion at night
             </Text>
@@ -264,6 +424,15 @@ exports[`<Example/> should render 1`] = `
             accessible={true}
             allowFontScaling={true}
             ellipsizeMode="tail"
+            style={
+              Array [
+                null,
+                Array [
+                  Object {},
+                  Object {},
+                ],
+              ]
+            }
           >
             
                 
@@ -284,6 +453,19 @@ exports[`<Example/> should render 1`] = `
               accessible={true}
               allowFontScaling={true}
               ellipsizeMode="tail"
+              style={
+                Array [
+                  null,
+                  Array [
+                    Object {
+                      "fontSize": 30,
+                      "fontWeight": "500",
+                    },
+                    Object {},
+                    Object {},
+                  ],
+                ]
+              }
             >
               Dwayne’s only companion at night
             </Text>
@@ -294,6 +476,15 @@ exports[`<Example/> should render 1`] = `
             accessible={true}
             allowFontScaling={true}
             ellipsizeMode="tail"
+            style={
+              Array [
+                null,
+                Array [
+                  Object {},
+                  Object {},
+                ],
+              ]
+            }
           >
             
                 
@@ -314,6 +505,19 @@ exports[`<Example/> should render 1`] = `
               accessible={true}
               allowFontScaling={true}
               ellipsizeMode="tail"
+              style={
+                Array [
+                  null,
+                  Array [
+                    Object {
+                      "fontSize": 24,
+                      "fontWeight": "500",
+                    },
+                    Object {},
+                    Object {},
+                  ],
+                ]
+              }
             >
               Dwayne’s only companion at night
             </Text>
@@ -324,6 +528,15 @@ exports[`<Example/> should render 1`] = `
             accessible={true}
             allowFontScaling={true}
             ellipsizeMode="tail"
+            style={
+              Array [
+                null,
+                Array [
+                  Object {},
+                  Object {},
+                ],
+              ]
+            }
           >
             
                 
@@ -344,6 +557,19 @@ exports[`<Example/> should render 1`] = `
               accessible={true}
               allowFontScaling={true}
               ellipsizeMode="tail"
+              style={
+                Array [
+                  null,
+                  Array [
+                    Object {
+                      "fontSize": 18,
+                      "fontWeight": "500",
+                    },
+                    Object {},
+                    Object {},
+                  ],
+                ]
+              }
             >
               Dwayne’s only companion at night
             </Text>
@@ -354,6 +580,15 @@ exports[`<Example/> should render 1`] = `
             accessible={true}
             allowFontScaling={true}
             ellipsizeMode="tail"
+            style={
+              Array [
+                null,
+                Array [
+                  Object {},
+                  Object {},
+                ],
+              ]
+            }
           >
             
                 
@@ -374,6 +609,19 @@ exports[`<Example/> should render 1`] = `
               accessible={true}
               allowFontScaling={true}
               ellipsizeMode="tail"
+              style={
+                Array [
+                  null,
+                  Array [
+                    Object {
+                      "fontSize": 14,
+                      "fontWeight": "500",
+                    },
+                    Object {},
+                    Object {},
+                  ],
+                ]
+              }
             >
               Dwayne’s only companion at night
             </Text>
@@ -384,6 +632,15 @@ exports[`<Example/> should render 1`] = `
             accessible={true}
             allowFontScaling={true}
             ellipsizeMode="tail"
+            style={
+              Array [
+                null,
+                Array [
+                  Object {},
+                  Object {},
+                ],
+              ]
+            }
           >
             
                 
@@ -404,6 +661,19 @@ exports[`<Example/> should render 1`] = `
               accessible={true}
               allowFontScaling={true}
               ellipsizeMode="tail"
+              style={
+                Array [
+                  null,
+                  Array [
+                    Object {
+                      "fontSize": 12,
+                      "fontWeight": "500",
+                    },
+                    Object {},
+                    Object {},
+                  ],
+                ]
+              }
             >
               Dwayne’s only companion at night
             </Text>
@@ -412,6 +682,15 @@ exports[`<Example/> should render 1`] = `
             accessible={true}
             allowFontScaling={true}
             ellipsizeMode="tail"
+            style={
+              Array [
+                null,
+                Array [
+                  Object {},
+                  Object {},
+                ],
+              ]
+            }
           >
             
                 ayyy
@@ -439,6 +718,14 @@ exports[`<Example/> should render 1`] = `
           accessible={true}
           allowFontScaling={true}
           ellipsizeMode="tail"
+          style={
+            Array [
+              null,
+              Array [
+                Object {},
+              ],
+            ]
+          }
         >
           
           
@@ -448,6 +735,12 @@ exports[`<Example/> should render 1`] = `
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
+        style={
+          Array [
+            null,
+            null,
+          ]
+        }
       >
         
         
