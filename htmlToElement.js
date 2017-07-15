@@ -17,16 +17,17 @@ const defaultOpts = {
 
 const Img = props => {
   const width =
-    Number(props.attribs['width']) || Number(props.attribs['data-width']) || 0;
+    parseInt(props.attribs['width'], 10) || parseInt(props.attribs['data-width'], 10) || 0;
   const height =
-    Number(props.attribs['height']) ||
-    Number(props.attribs['data-height']) ||
+    parseInt(props.attribs['height'], 10) ||
+    parseInt(props.attribs['data-height'], 10) ||
     0;
 
   const imgStyle = {
     width,
     height,
   };
+
   const source = {
     uri: props.attribs.src,
     width,
@@ -40,6 +41,12 @@ export default function htmlToElement(rawHtml, customOpts = {}, done) {
     ...defaultOpts,
     ...customOpts,
   };
+
+  function inheritedStyle(parent) {
+    if (!parent) { return null; }
+    const style = [opts.styles[parent.name] || {}];
+    return parent.parent ? style.concat(inheritedStyle(parent.parent)) : style;
+  }
 
   function domToElement(dom, parent) {
     if (!dom) return null;
@@ -60,24 +67,28 @@ export default function htmlToElement(rawHtml, customOpts = {}, done) {
 
       const {TextComponent} = opts;
 
-      if (node.type == 'text') {
+      if (node.type === 'text') {
+        const defaultStyle = opts.textComponentProps ? opts.textComponentProps.style : null;
+        const customStyle = inheritedStyle(parent);
+
         return (
           <TextComponent
             {...opts.textComponentProps}
             key={index}
+            style={[defaultStyle, customStyle]}
           >
             {entities.decodeHTML(node.data)}
           </TextComponent>
         );
       }
 
-      if (node.type == 'tag') {
-        if (node.name == 'img') {
+      if (node.type === 'tag') {
+        if (node.name === 'img') {
           return <Img key={index} attribs={node.attribs} />;
         }
 
         let linkPressHandler = null;
-        if (node.name == 'a' && node.attribs && node.attribs.href) {
+        if (node.name === 'a' && node.attribs && node.attribs.href) {
           linkPressHandler = () =>
             opts.linkHandler(entities.decodeHTML(node.attribs.href));
         }
@@ -106,23 +117,23 @@ export default function htmlToElement(rawHtml, customOpts = {}, done) {
         }
 
         let listItemPrefix = null;
-        if (node.name == 'li') {
-          if (parent.name == 'ol') {
+        if (node.name === 'li') {
+          if (parent.name === 'ol') {
             listItemPrefix = `${index + 1}. `;
-          } else if (parent.name == 'ul') {
+          } else if (parent.name === 'ul') {
             listItemPrefix = opts.bullet;
           }
+          linebreakAfter = opts.lineBreak;
         }
 
         const {NodeComponent, styles} = opts;
-        const tagStyle = typeof styles[node.name] === 'object' ? styles[node.name] : null;
 
         return (
           <NodeComponent
             {...opts.nodeComponentProps}
             key={index}
             onPress={linkPressHandler}
-            style={tagStyle}
+            style={!node.parent ? styles[node.name] : null}
           >
             {linebreakBefore}
             {listItemPrefix}
