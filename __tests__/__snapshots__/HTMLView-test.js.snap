@@ -554,7 +554,7 @@ exports[`<HTMLView/> should render ol numbers 1`] = `
           ]
         }
       >
-        1. 
+        2. 
       </Text>
       <Text
         accessible={true}
