@@ -501,7 +501,21 @@ exports[`<HTMLView/> should render ol numbers 1`] = `
       ellipsizeMode="tail"
       onPress={null}
     >
-      1. 
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            null,
+            Array [
+              Object {},
+            ],
+          ]
+        }
+      >
+        1. 
+      </Text>
       <Text
         accessible={true}
         allowFontScaling={true}
@@ -527,7 +541,21 @@ exports[`<HTMLView/> should render ol numbers 1`] = `
       ellipsizeMode="tail"
       onPress={null}
     >
-      2. 
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            null,
+            Array [
+              Object {},
+            ],
+          ]
+        }
+      >
+        1. 
+      </Text>
       <Text
         accessible={true}
         allowFontScaling={true}
@@ -927,7 +955,21 @@ exports[`<HTMLView/> should render ul bullets 1`] = `
       ellipsizeMode="tail"
       onPress={null}
     >
-      • 
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            null,
+            Array [
+              Object {},
+            ],
+          ]
+        }
+      >
+        • 
+      </Text>
       <Text
         accessible={true}
         allowFontScaling={true}
@@ -953,7 +995,21 @@ exports[`<HTMLView/> should render ul bullets 1`] = `
       ellipsizeMode="tail"
       onPress={null}
     >
-      • 
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            null,
+            Array [
+              Object {},
+            ],
+          ]
+        }
+      >
+        • 
+      </Text>
       <Text
         accessible={true}
         allowFontScaling={true}
