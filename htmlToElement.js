@@ -43,9 +43,10 @@ export default function htmlToElement(rawHtml, customOpts = {}, done) {
   };
 
   function inheritedStyle(parent) {
-    if (!parent) { return null; }
+    if (!parent) return null;
     const style = [opts.styles[parent.name] || {}];
-    return parent.parent ? style.concat(inheritedStyle(parent.parent)) : style;
+    const parentStyle = inheritedStyle(parent.parent) || [{}];
+    return parentStyle.concat(style);
   }
 
   function domToElement(dom, parent) {
