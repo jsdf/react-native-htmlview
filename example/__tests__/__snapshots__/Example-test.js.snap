@@ -40,10 +40,7 @@ exports[`<Example/> should render 1`] = `
           style={
             Array [
               null,
-              Array [
-                Object {},
-                Object {},
-              ],
+              Object {},
             ]
           }
         >
@@ -63,11 +60,7 @@ exports[`<Example/> should render 1`] = `
             style={
               Array [
                 null,
-                Array [
-                  Object {},
-                  Object {},
-                  Object {},
-                ],
+                Object {},
               ]
             }
           >
@@ -93,17 +86,10 @@ exports[`<Example/> should render 1`] = `
                 style={
                   Array [
                     null,
-                    Array [
-                      Object {},
-                      Object {},
-                      Object {},
-                      Object {
-                        "fontWeight": "500",
-                      },
-                      Object {
-                        "fontStyle": "italic",
-                      },
-                    ],
+                    Object {
+                      "fontStyle": "italic",
+                      "fontWeight": "500",
+                    },
                   ]
                 }
               >
@@ -118,11 +104,7 @@ exports[`<Example/> should render 1`] = `
             style={
               Array [
                 null,
-                Array [
-                  Object {},
-                  Object {},
-                  Object {},
-                ],
+                Object {},
               ]
             }
           >
@@ -142,12 +124,7 @@ exports[`<Example/> should render 1`] = `
               style={
                 Array [
                   null,
-                  Array [
-                    Object {},
-                    Object {},
-                    Object {},
-                    Object {},
-                  ],
+                  Object {},
                 ]
               }
             >
@@ -167,15 +144,9 @@ exports[`<Example/> should render 1`] = `
                 style={
                   Array [
                     null,
-                    Array [
-                      Object {},
-                      Object {},
-                      Object {},
-                      Object {},
-                      Object {
-                        "fontStyle": "italic",
-                      },
-                    ],
+                    Object {
+                      "fontStyle": "italic",
+                    },
                   ]
                 }
               >
@@ -196,18 +167,10 @@ exports[`<Example/> should render 1`] = `
                   style={
                     Array [
                       null,
-                      Array [
-                        Object {},
-                        Object {},
-                        Object {},
-                        Object {},
-                        Object {
-                          "fontStyle": "italic",
-                        },
-                        Object {
-                          "fontWeight": "500",
-                        },
-                      ],
+                      Object {
+                        "fontStyle": "italic",
+                        "fontWeight": "500",
+                      },
                     ]
                   }
                 >
@@ -227,11 +190,7 @@ exports[`<Example/> should render 1`] = `
             style={
               Array [
                 null,
-                Array [
-                  Object {},
-                  Object {},
-                  Object {},
-                ],
+                Object {},
               ]
             }
           >
@@ -251,12 +210,7 @@ exports[`<Example/> should render 1`] = `
               style={
                 Array [
                   null,
-                  Array [
-                    Object {},
-                    Object {},
-                    Object {},
-                    Object {},
-                  ],
+                  Object {},
                 ]
               }
             >
@@ -276,16 +230,10 @@ exports[`<Example/> should render 1`] = `
                 style={
                   Array [
                     null,
-                    Array [
-                      Object {},
-                      Object {},
-                      Object {},
-                      Object {},
-                      Object {
-                        "color": "#007AFF",
-                        "fontWeight": "500",
-                      },
-                    ],
+                    Object {
+                      "color": "#007AFF",
+                      "fontWeight": "500",
+                    },
                   ]
                 }
               >
@@ -299,12 +247,7 @@ exports[`<Example/> should render 1`] = `
               style={
                 Array [
                   null,
-                  Array [
-                    Object {},
-                    Object {},
-                    Object {},
-                    Object {},
-                  ],
+                  Object {},
                 ]
               }
             >
@@ -322,11 +265,7 @@ exports[`<Example/> should render 1`] = `
             style={
               Array [
                 null,
-                Array [
-                  Object {},
-                  Object {},
-                  Object {},
-                ],
+                Object {},
               ]
             }
           >
@@ -356,11 +295,7 @@ exports[`<Example/> should render 1`] = `
             style={
               Array [
                 null,
-                Array [
-                  Object {},
-                  Object {},
-                  Object {},
-                ],
+                Object {},
               ]
             }
           >
@@ -381,15 +316,10 @@ exports[`<Example/> should render 1`] = `
               style={
                 Array [
                   null,
-                  Array [
-                    Object {},
-                    Object {},
-                    Object {},
-                    Object {
-                      "fontSize": 36,
-                      "fontWeight": "500",
-                    },
-                  ],
+                  Object {
+                    "fontSize": 36,
+                    "fontWeight": "500",
+                  },
                 ]
               }
             >
@@ -405,11 +335,7 @@ exports[`<Example/> should render 1`] = `
             style={
               Array [
                 null,
-                Array [
-                  Object {},
-                  Object {},
-                  Object {},
-                ],
+                Object {},
               ]
             }
           >
@@ -429,15 +355,10 @@ exports[`<Example/> should render 1`] = `
               style={
                 Array [
                   null,
-                  Array [
-                    Object {},
-                    Object {},
-                    Object {},
-                    Object {
-                      "fontSize": 30,
-                      "fontWeight": "500",
-                    },
-                  ],
+                  Object {
+                    "fontSize": 30,
+                    "fontWeight": "500",
+                  },
                 ]
               }
             >
@@ -453,11 +374,7 @@ exports[`<Example/> should render 1`] = `
             style={
               Array [
                 null,
-                Array [
-                  Object {},
-                  Object {},
-                  Object {},
-                ],
+                Object {},
               ]
             }
           >
@@ -477,15 +394,10 @@ exports[`<Example/> should render 1`] = `
               style={
                 Array [
                   null,
-                  Array [
-                    Object {},
-                    Object {},
-                    Object {},
-                    Object {
-                      "fontSize": 24,
-                      "fontWeight": "500",
-                    },
-                  ],
+                  Object {
+                    "fontSize": 24,
+                    "fontWeight": "500",
+                  },
                 ]
               }
             >
@@ -501,11 +413,7 @@ exports[`<Example/> should render 1`] = `
             style={
               Array [
                 null,
-                Array [
-                  Object {},
-                  Object {},
-                  Object {},
-                ],
+                Object {},
               ]
             }
           >
@@ -525,15 +433,10 @@ exports[`<Example/> should render 1`] = `
               style={
                 Array [
                   null,
-                  Array [
-                    Object {},
-                    Object {},
-                    Object {},
-                    Object {
-                      "fontSize": 18,
-                      "fontWeight": "500",
-                    },
-                  ],
+                  Object {
+                    "fontSize": 18,
+                    "fontWeight": "500",
+                  },
                 ]
               }
             >
@@ -549,11 +452,7 @@ exports[`<Example/> should render 1`] = `
             style={
               Array [
                 null,
-                Array [
-                  Object {},
-                  Object {},
-                  Object {},
-                ],
+                Object {},
               ]
             }
           >
@@ -573,15 +472,10 @@ exports[`<Example/> should render 1`] = `
               style={
                 Array [
                   null,
-                  Array [
-                    Object {},
-                    Object {},
-                    Object {},
-                    Object {
-                      "fontSize": 14,
-                      "fontWeight": "500",
-                    },
-                  ],
+                  Object {
+                    "fontSize": 14,
+                    "fontWeight": "500",
+                  },
                 ]
               }
             >
@@ -597,11 +491,7 @@ exports[`<Example/> should render 1`] = `
             style={
               Array [
                 null,
-                Array [
-                  Object {},
-                  Object {},
-                  Object {},
-                ],
+                Object {},
               ]
             }
           >
@@ -621,15 +511,10 @@ exports[`<Example/> should render 1`] = `
               style={
                 Array [
                   null,
-                  Array [
-                    Object {},
-                    Object {},
-                    Object {},
-                    Object {
-                      "fontSize": 12,
-                      "fontWeight": "500",
-                    },
-                  ],
+                  Object {
+                    "fontSize": 12,
+                    "fontWeight": "500",
+                  },
                 ]
               }
             >
@@ -643,11 +528,7 @@ exports[`<Example/> should render 1`] = `
             style={
               Array [
                 null,
-                Array [
-                  Object {},
-                  Object {},
-                  Object {},
-                ],
+                Object {},
               ]
             }
           >
@@ -680,10 +561,7 @@ exports[`<Example/> should render 1`] = `
           style={
             Array [
               null,
-              Array [
-                Object {},
-                Object {},
-              ],
+              Object {},
             ]
           }
         >
