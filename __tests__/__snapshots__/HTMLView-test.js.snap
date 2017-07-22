@@ -22,6 +22,7 @@ exports[`<HTMLView/> can use a custom node class 1`] = `
     accessible={true}
     allowFontScaling={true}
     ellipsizeMode="tail"
+    onLongPress={null}
     onPress={null}
     selectable={false}
   >
@@ -43,6 +44,7 @@ exports[`<HTMLView/> can use a custom node class 1`] = `
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
+      onLongPress={null}
       onPress={null}
       selectable={false}
     >
@@ -101,6 +103,7 @@ exports[`<HTMLView/> can use a custom renderer 1`] = `
     accessible={true}
     allowFontScaling={true}
     ellipsizeMode="tail"
+    onLongPress={null}
     onPress={null}
   >
     <Text
@@ -162,6 +165,7 @@ exports[`<HTMLView/> can use custom node props 1`] = `
     accessible={true}
     allowFontScaling={true}
     ellipsizeMode="tail"
+    onLongPress={null}
     onPress={null}
     selectable={false}
   >
@@ -183,6 +187,7 @@ exports[`<HTMLView/> can use custom node props 1`] = `
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
+      onLongPress={null}
       onPress={null}
       selectable={false}
     >
@@ -219,6 +224,123 @@ exports[`<HTMLView/> can use custom node props 1`] = `
 </View>
 `;
 
+exports[`<HTMLView/> should handle additional text nodes between list items 1`] = `
+<View
+  style={undefined}
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    onLongPress={null}
+    onPress={null}
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          null,
+          Array [
+            Object {},
+          ],
+        ]
+      }
+    >
+      
+            
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      onLongPress={null}
+      onPress={null}
+    >
+      1. 
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            null,
+            Array [
+              Object {},
+              Object {},
+            ],
+          ]
+        }
+      >
+         a 
+      </Text>
+      
+      
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          null,
+          Array [
+            Object {},
+          ],
+        ]
+      }
+    >
+      
+            
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      onLongPress={null}
+      onPress={null}
+    >
+      2. 
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            null,
+            Array [
+              Object {},
+              Object {},
+            ],
+          ]
+        }
+      >
+         b 
+      </Text>
+      
+      
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          null,
+          Array [
+            Object {},
+          ],
+        ]
+      }
+    >
+      
+          
+    </Text>
+  </Text>
+</View>
+`;
+
 exports[`<HTMLView/> should not render extra linebreaks if configured not to 1`] = `
 <View
   style={undefined}
@@ -241,6 +363,7 @@ exports[`<HTMLView/> should not render extra linebreaks if configured not to 1`]
     accessible={true}
     allowFontScaling={true}
     ellipsizeMode="tail"
+    onLongPress={null}
     onPress={null}
   >
     <Text
@@ -261,6 +384,7 @@ exports[`<HTMLView/> should not render extra linebreaks if configured not to 1`]
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
+      onLongPress={null}
       onPress={null}
     >
       <Text
@@ -298,6 +422,7 @@ exports[`<HTMLView/> should not render extra linebreaks if configured not to 1`]
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
+      onLongPress={null}
       onPress={null}
     >
       <Text
@@ -318,6 +443,7 @@ exports[`<HTMLView/> should not render extra linebreaks if configured not to 1`]
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
+        onLongPress={null}
         onPress={null}
       />
       <Text
@@ -422,12 +548,14 @@ exports[`<HTMLView/> should render an empty <Text/> element 1`] = `
     accessible={true}
     allowFontScaling={true}
     ellipsizeMode="tail"
+    onLongPress={null}
     onPress={null}
   >
     <Text
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
+      onLongPress={null}
       onPress={[Function]}
     >
       <Text
@@ -459,12 +587,14 @@ exports[`<HTMLView/> should render ol numbers 1`] = `
     accessible={true}
     allowFontScaling={true}
     ellipsizeMode="tail"
+    onLongPress={null}
     onPress={null}
   >
     <Text
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
+      onLongPress={null}
       onPress={null}
     >
       1. 
@@ -488,6 +618,7 @@ exports[`<HTMLView/> should render ol numbers 1`] = `
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
+      onLongPress={null}
       onPress={null}
     >
       2. 
@@ -533,6 +664,7 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
     accessible={true}
     allowFontScaling={true}
     ellipsizeMode="tail"
+    onLongPress={null}
     onPress={null}
   >
     <Text
@@ -553,6 +685,7 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
+      onLongPress={null}
       onPress={null}
     >
       <Text
@@ -573,6 +706,7 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
+        onLongPress={null}
         onPress={null}
       >
         <Text
@@ -612,6 +746,7 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
+        onLongPress={null}
         onPress={null}
       >
         <Text
@@ -632,6 +767,7 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
           accessible={true}
           allowFontScaling={true}
           ellipsizeMode="tail"
+          onLongPress={null}
           onPress={null}
         >
           <Text
@@ -655,6 +791,7 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
             accessible={true}
             allowFontScaling={true}
             ellipsizeMode="tail"
+            onLongPress={null}
             onPress={null}
           >
             <Text
@@ -698,6 +835,7 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
+        onLongPress={null}
         onPress={null}
       >
         <Text
@@ -718,6 +856,7 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
           accessible={true}
           allowFontScaling={true}
           ellipsizeMode="tail"
+          onLongPress={null}
           onPress={[Function]}
         >
           <Text
@@ -830,12 +969,14 @@ exports[`<HTMLView/> should render ul bullets 1`] = `
     accessible={true}
     allowFontScaling={true}
     ellipsizeMode="tail"
+    onLongPress={null}
     onPress={null}
   >
     <Text
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
+      onLongPress={null}
       onPress={null}
     >
       • 
@@ -859,6 +1000,7 @@ exports[`<HTMLView/> should render ul bullets 1`] = `
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
+      onLongPress={null}
       onPress={null}
     >
       • 

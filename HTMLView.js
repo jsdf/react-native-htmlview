@@ -65,6 +65,7 @@ class HtmlView extends PureComponent {
     const {
       addLineBreaks,
       onLinkPress,
+      onLinkLongPress,
       stylesheet,
       renderNode,
       onError,
@@ -77,6 +78,7 @@ class HtmlView extends PureComponent {
     const opts = {
       addLineBreaks,
       linkHandler: onLinkPress,
+      linkLongPressHandler: onLinkLongPress,
       styles: {...baseStyles, ...stylesheet},
       customRenderer: renderNode,
     };
@@ -128,6 +130,7 @@ HtmlView.propTypes = {
   nodeComponentProps: PropTypes.object,
   onError: PropTypes.func,
   onLinkPress: PropTypes.func,
+  onLinkLongPress: PropTypes.func,
   paragraphBreak: PropTypes.string,
   renderNode: PropTypes.func,
   RootComponent: PropTypes.func,
@@ -142,6 +145,7 @@ HtmlView.propTypes = {
 HtmlView.defaultProps = {
   addLineBreaks: true,
   onLinkPress: url => Linking.openURL(url),
+  onLinkLongPress: null,
   onError: console.error.bind(console),
   RootComponent: View,
 };

@@ -39,6 +39,17 @@ describe('<HTMLView/>', () => {
     ).toMatchSnapshot();
   });
 
+  it('should handle additional text nodes between list items', () => {
+    const htmlContent = `<ol>
+      <li> a </li>
+      <li> b </li>
+    </ol>`;
+
+    expect(
+      renderer.create(<HTMLView value={htmlContent} />).toJSON()
+    ).toMatchSnapshot();
+  });
+
   it('should render an <Image />, with default width/height of 1', () => {
     const imgSrc =
       'https://facebook.github.io/react-native/img/header_logo.png';
