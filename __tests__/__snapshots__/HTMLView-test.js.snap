@@ -242,9 +242,7 @@ exports[`<HTMLView/> should handle additional text nodes between list items 1`] 
       style={
         Array [
           null,
-          Array [
-            Object {},
-          ],
+          Object {},
         ]
       }
     >
@@ -266,10 +264,7 @@ exports[`<HTMLView/> should handle additional text nodes between list items 1`] 
         style={
           Array [
             null,
-            Array [
-              Object {},
-              Object {},
-            ],
+            Object {},
           ]
         }
       >
@@ -285,9 +280,7 @@ exports[`<HTMLView/> should handle additional text nodes between list items 1`] 
       style={
         Array [
           null,
-          Array [
-            Object {},
-          ],
+          Object {},
         ]
       }
     >
@@ -309,10 +302,7 @@ exports[`<HTMLView/> should handle additional text nodes between list items 1`] 
         style={
           Array [
             null,
-            Array [
-              Object {},
-              Object {},
-            ],
+            Object {},
           ]
         }
       >
@@ -328,9 +318,7 @@ exports[`<HTMLView/> should handle additional text nodes between list items 1`] 
       style={
         Array [
           null,
-          Array [
-            Object {},
-          ],
+          Object {},
         ]
       }
     >
