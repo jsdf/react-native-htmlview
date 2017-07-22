@@ -33,9 +33,7 @@ exports[`<HTMLView/> can use a custom node class 1`] = `
       style={
         Array [
           null,
-          Array [
-            Object {},
-          ],
+          Object {},
         ]
       }
     >
@@ -57,10 +55,7 @@ exports[`<HTMLView/> can use a custom node class 1`] = `
         style={
           Array [
             null,
-            Array [
-              Object {},
-              Object {},
-            ],
+            Object {},
           ]
         }
       >
@@ -75,9 +70,7 @@ exports[`<HTMLView/> can use a custom node class 1`] = `
       style={
         Array [
           null,
-          Array [
-            Object {},
-          ],
+          Object {},
         ]
       }
     >
@@ -120,9 +113,7 @@ exports[`<HTMLView/> can use a custom renderer 1`] = `
       style={
         Array [
           null,
-          Array [
-            Object {},
-          ],
+          Object {},
         ]
       }
     >
@@ -185,9 +176,7 @@ exports[`<HTMLView/> can use custom node props 1`] = `
       style={
         Array [
           null,
-          Array [
-            Object {},
-          ],
+          Object {},
         ]
       }
     >
@@ -209,10 +198,7 @@ exports[`<HTMLView/> can use custom node props 1`] = `
         style={
           Array [
             null,
-            Array [
-              Object {},
-              Object {},
-            ],
+            Object {},
           ]
         }
       >
@@ -227,9 +213,7 @@ exports[`<HTMLView/> can use custom node props 1`] = `
       style={
         Array [
           null,
-          Array [
-            Object {},
-          ],
+          Object {},
         ]
       }
     >
@@ -258,9 +242,7 @@ exports[`<HTMLView/> should handle additional text nodes between list items 1`] 
       style={
         Array [
           null,
-          Array [
-            Object {},
-          ],
+          Object {},
         ]
       }
     >
@@ -296,10 +278,7 @@ exports[`<HTMLView/> should handle additional text nodes between list items 1`] 
         style={
           Array [
             null,
-            Array [
-              Object {},
-              Object {},
-            ],
+            Object {},
           ]
         }
       >
@@ -315,9 +294,7 @@ exports[`<HTMLView/> should handle additional text nodes between list items 1`] 
       style={
         Array [
           null,
-          Array [
-            Object {},
-          ],
+          Object {},
         ]
       }
     >
@@ -353,10 +330,7 @@ exports[`<HTMLView/> should handle additional text nodes between list items 1`] 
         style={
           Array [
             null,
-            Array [
-              Object {},
-              Object {},
-            ],
+            Object {},
           ]
         }
       >
@@ -372,9 +346,7 @@ exports[`<HTMLView/> should handle additional text nodes between list items 1`] 
       style={
         Array [
           null,
-          Array [
-            Object {},
-          ],
+          Object {},
         ]
       }
     >
@@ -417,9 +389,7 @@ exports[`<HTMLView/> should not render extra linebreaks if configured not to 1`]
       style={
         Array [
           null,
-          Array [
-            Object {},
-          ],
+          Object {},
         ]
       }
     >
@@ -440,13 +410,10 @@ exports[`<HTMLView/> should not render extra linebreaks if configured not to 1`]
         style={
           Array [
             null,
-            Array [
-              Object {
-                "fontSize": 30,
-                "fontWeight": "500",
-              },
-              Object {},
-            ],
+            Object {
+              "fontSize": 30,
+              "fontWeight": "500",
+            },
           ]
         }
       >
@@ -460,9 +427,7 @@ exports[`<HTMLView/> should not render extra linebreaks if configured not to 1`]
       style={
         Array [
           null,
-          Array [
-            Object {},
-          ],
+          Object {},
         ]
       }
     >
@@ -483,10 +448,7 @@ exports[`<HTMLView/> should not render extra linebreaks if configured not to 1`]
         style={
           Array [
             null,
-            Array [
-              Object {},
-              Object {},
-            ],
+            Object {},
           ]
         }
       >
@@ -507,10 +469,7 @@ exports[`<HTMLView/> should not render extra linebreaks if configured not to 1`]
         style={
           Array [
             null,
-            Array [
-              Object {},
-              Object {},
-            ],
+            Object {},
           ]
         }
       >
@@ -526,9 +485,7 @@ exports[`<HTMLView/> should not render extra linebreaks if configured not to 1`]
       style={
         Array [
           null,
-          Array [
-            Object {},
-          ],
+          Object {},
         ]
       }
     >
@@ -624,13 +581,10 @@ exports[`<HTMLView/> should render an empty <Text/> element 1`] = `
         style={
           Array [
             null,
-            Array [
-              Object {
-                "color": "#007AFF",
-                "fontWeight": "500",
-              },
-              Object {},
-            ],
+            Object {
+              "color": "#007AFF",
+              "fontWeight": "500",
+            },
           ]
         }
       >
@@ -681,10 +635,7 @@ exports[`<HTMLView/> should render ol numbers 1`] = `
         style={
           Array [
             null,
-            Array [
-              Object {},
-              Object {},
-            ],
+            Object {},
           ]
         }
       >
@@ -722,10 +673,7 @@ exports[`<HTMLView/> should render ol numbers 1`] = `
         style={
           Array [
             null,
-            Array [
-              Object {},
-              Object {},
-            ],
+            Object {},
           ]
         }
       >
@@ -770,9 +718,7 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
       style={
         Array [
           null,
-          Array [
-            Object {},
-          ],
+          Object {},
         ]
       }
     >
@@ -793,10 +739,7 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
         style={
           Array [
             null,
-            Array [
-              Object {},
-              Object {},
-            ],
+            Object {},
           ]
         }
       >
@@ -817,14 +760,10 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
           style={
             Array [
               null,
-              Array [
-                Object {
-                  "fontSize": 30,
-                  "fontWeight": "500",
-                },
-                Object {},
-                Object {},
-              ],
+              Object {
+                "fontSize": 30,
+                "fontWeight": "500",
+              },
             ]
           }
         >
@@ -840,10 +779,7 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
         style={
           Array [
             null,
-            Array [
-              Object {},
-              Object {},
-            ],
+            Object {},
           ]
         }
       >
@@ -864,11 +800,7 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
           style={
             Array [
               null,
-              Array [
-                Object {},
-                Object {},
-                Object {},
-              ],
+              Object {},
             ]
           }
         >
@@ -889,14 +821,9 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
             style={
               Array [
                 null,
-                Array [
-                  Object {
-                    "fontStyle": "italic",
-                  },
-                  Object {},
-                  Object {},
-                  Object {},
-                ],
+                Object {
+                  "fontStyle": "italic",
+                },
               ]
             }
           >
@@ -918,17 +845,10 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
               style={
                 Array [
                   null,
-                  Array [
-                    Object {
-                      "fontWeight": "500",
-                    },
-                    Object {
-                      "fontStyle": "italic",
-                    },
-                    Object {},
-                    Object {},
-                    Object {},
-                  ],
+                  Object {
+                    "fontStyle": "italic",
+                    "fontWeight": "500",
+                  },
                 ]
               }
             >
@@ -948,10 +868,7 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
         style={
           Array [
             null,
-            Array [
-              Object {},
-              Object {},
-            ],
+            Object {},
           ]
         }
       >
@@ -972,11 +889,7 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
           style={
             Array [
               null,
-              Array [
-                Object {},
-                Object {},
-                Object {},
-              ],
+              Object {},
             ]
           }
         >
@@ -997,15 +910,10 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
             style={
               Array [
                 null,
-                Array [
-                  Object {
-                    "color": "#007AFF",
-                    "fontWeight": "500",
-                  },
-                  Object {},
-                  Object {},
-                  Object {},
-                ],
+                Object {
+                  "color": "#007AFF",
+                  "fontWeight": "500",
+                },
               ]
             }
           >
@@ -1019,11 +927,7 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
           style={
             Array [
               null,
-              Array [
-                Object {},
-                Object {},
-                Object {},
-              ],
+              Object {},
             ]
           }
         >
@@ -1041,10 +945,7 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
         style={
           Array [
             null,
-            Array [
-              Object {},
-              Object {},
-            ],
+            Object {},
           ]
         }
       >
@@ -1059,9 +960,7 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
       style={
         Array [
           null,
-          Array [
-            Object {},
-          ],
+          Object {},
         ]
       }
     >
@@ -1146,10 +1045,7 @@ exports[`<HTMLView/> should render ul bullets 1`] = `
         style={
           Array [
             null,
-            Array [
-              Object {},
-              Object {},
-            ],
+            Object {},
           ]
         }
       >
@@ -1187,10 +1083,7 @@ exports[`<HTMLView/> should render ul bullets 1`] = `
         style={
           Array [
             null,
-            Array [
-              Object {},
-              Object {},
-            ],
+            Object {},
           ]
         }
       >
