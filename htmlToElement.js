@@ -52,6 +52,7 @@ export default function htmlToElement(rawHtml, customOpts = {}, done) {
     if (!dom) return null;
 
     const renderNode = opts.customRenderer;
+    let orderedListCounter = 1;
 
     return dom.map((node, index, list) => {
       if (renderNode) {
@@ -88,9 +89,14 @@ export default function htmlToElement(rawHtml, customOpts = {}, done) {
         }
 
         let linkPressHandler = null;
+        let linkLongPressHandler = null;
         if (node.name === 'a' && node.attribs && node.attribs.href) {
           linkPressHandler = () =>
             opts.linkHandler(entities.decodeHTML(node.attribs.href));
+          if (opts.linkLongPressHandler) {
+            linkLongPressHandler = () =>
+              opts.linkLongPressHandler(entities.decodeHTML(node.attribs.href));
+          }
         }
 
         let linebreakBefore = null;
@@ -123,7 +129,7 @@ export default function htmlToElement(rawHtml, customOpts = {}, done) {
 
           if (parent.name === 'ol') {
             listItemPrefix = (<TextComponent style={[defaultStyle, customStyle]}>
-              {`${index + 1}. `}
+              {`${orderedListCounter++}. `}
             </TextComponent>);
           } else if (parent.name === 'ul') {
             listItemPrefix = (<TextComponent style={[defaultStyle, customStyle]}>
@@ -140,6 +146,7 @@ export default function htmlToElement(rawHtml, customOpts = {}, done) {
             {...opts.nodeComponentProps}
             key={index}
             onPress={linkPressHandler}
+            onLongPress={linkLongPressHandler}
           >
             {linebreakBefore}
             {listItemPrefix}
