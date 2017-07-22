@@ -124,10 +124,17 @@ export default function htmlToElement(rawHtml, customOpts = {}, done) {
 
         let listItemPrefix = null;
         if (node.name === 'li') {
+          const defaultStyle = opts.textComponentProps ? opts.textComponentProps.style : null;
+          const customStyle = inheritedStyle(parent);
+
           if (parent.name === 'ol') {
-            listItemPrefix = `${orderedListCounter++}. `;
+            listItemPrefix = (<TextComponent style={[defaultStyle, customStyle]}>
+              {`${orderedListCounter++}. `}
+            </TextComponent>);
           } else if (parent.name === 'ul') {
-            listItemPrefix = opts.bullet;
+            listItemPrefix = (<TextComponent style={[defaultStyle, customStyle]}>
+              {opts.bullet}
+            </TextComponent>);
           }
           linebreakAfter = opts.lineBreak;
         }
