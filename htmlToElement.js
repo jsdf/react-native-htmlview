@@ -88,9 +88,14 @@ export default function htmlToElement(rawHtml, customOpts = {}, done) {
         }
 
         let linkPressHandler = null;
+        let linkLongPressHandler = null;
         if (node.name === 'a' && node.attribs && node.attribs.href) {
           linkPressHandler = () =>
             opts.linkHandler(entities.decodeHTML(node.attribs.href));
+          if (opts.linkLongPressHandler) {
+            linkLongPressHandler = () =>
+              opts.linkLongPressHandler(entities.decodeHTML(node.attribs.href));
+          }
         }
 
         let linebreakBefore = null;
@@ -133,6 +138,7 @@ export default function htmlToElement(rawHtml, customOpts = {}, done) {
             {...opts.nodeComponentProps}
             key={index}
             onPress={linkPressHandler}
+            onLongPress={linkLongPressHandler}
           >
             {linebreakBefore}
             {listItemPrefix}
