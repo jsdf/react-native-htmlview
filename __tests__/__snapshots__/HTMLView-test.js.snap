@@ -240,6 +240,123 @@ exports[`<HTMLView/> can use custom node props 1`] = `
 </View>
 `;
 
+exports[`<HTMLView/> should handle additional text nodes between list items 1`] = `
+<View
+  style={undefined}
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    onLongPress={null}
+    onPress={null}
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          null,
+          Array [
+            Object {},
+          ],
+        ]
+      }
+    >
+      
+            
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      onLongPress={null}
+      onPress={null}
+    >
+      1. 
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            null,
+            Array [
+              Object {},
+              Object {},
+            ],
+          ]
+        }
+      >
+         a 
+      </Text>
+      
+      
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          null,
+          Array [
+            Object {},
+          ],
+        ]
+      }
+    >
+      
+            
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      onLongPress={null}
+      onPress={null}
+    >
+      2. 
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            null,
+            Array [
+              Object {},
+              Object {},
+            ],
+          ]
+        }
+      >
+         b 
+      </Text>
+      
+      
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          null,
+          Array [
+            Object {},
+          ],
+        ]
+      }
+    >
+      
+          
+    </Text>
+  </Text>
+</View>
+`;
+
 exports[`<HTMLView/> should not render extra linebreaks if configured not to 1`] = `
 <View
   style={undefined}
