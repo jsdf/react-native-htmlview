@@ -2,7 +2,7 @@ import React from 'react';
 
 import renderer from 'react-test-renderer';
 
-import {Text} from 'react-native';
+import {StyleSheet, Text} from 'react-native';
 
 import HTMLView from '../HTMLView';
 
@@ -67,6 +67,21 @@ describe('<HTMLView/>', () => {
 
     expect(
       renderer.create(<HTMLView value={htmlContent} />).toJSON()
+    ).toMatchSnapshot();
+  });
+
+  it('should render inherited styles correctly', () => {
+    const htmlContent = '<b>RED<u>BLUE<i>GREEN</i></u></b>';
+    const stylesheet = StyleSheet.create({
+      b: {color: 'red'},
+      u: {color: 'blue'},
+      i: {color: 'green'},
+    });
+
+    expect(
+      renderer
+        .create(<HTMLView value={htmlContent} stylesheet={stylesheet} />)
+        .toJSON()
     ).toMatchSnapshot();
   });
 

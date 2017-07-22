@@ -263,9 +263,7 @@ exports[`<HTMLView/> should handle additional text nodes between list items 1`] 
         style={
           Array [
             null,
-            Array [
-              Object {},
-            ],
+            Object {},
           ]
         }
       >
@@ -315,9 +313,7 @@ exports[`<HTMLView/> should handle additional text nodes between list items 1`] 
         style={
           Array [
             null,
-            Array [
-              Object {},
-            ],
+            Object {},
           ]
         }
       >
@@ -595,6 +591,82 @@ exports[`<HTMLView/> should render an empty <Text/> element 1`] = `
 </View>
 `;
 
+exports[`<HTMLView/> should render inherited styles correctly 1`] = `
+<View
+  style={undefined}
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    onLongPress={null}
+    onPress={null}
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          null,
+          Object {
+            "color": "red",
+          },
+        ]
+      }
+    >
+      RED
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      onLongPress={null}
+      onPress={null}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            null,
+            Object {
+              "color": "blue",
+            },
+          ]
+        }
+      >
+        BLUE
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        onLongPress={null}
+        onPress={null}
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              null,
+              Object {
+                "color": "green",
+              },
+            ]
+          }
+        >
+          GREEN
+        </Text>
+      </Text>
+    </Text>
+  </Text>
+</View>
+`;
+
 exports[`<HTMLView/> should render ol numbers 1`] = `
 <View
   style={undefined}
@@ -620,9 +692,7 @@ exports[`<HTMLView/> should render ol numbers 1`] = `
         style={
           Array [
             null,
-            Array [
-              Object {},
-            ],
+            Object {},
           ]
         }
       >
@@ -658,9 +728,7 @@ exports[`<HTMLView/> should render ol numbers 1`] = `
         style={
           Array [
             null,
-            Array [
-              Object {},
-            ],
+            Object {},
           ]
         }
       >
@@ -1030,9 +1098,7 @@ exports[`<HTMLView/> should render ul bullets 1`] = `
         style={
           Array [
             null,
-            Array [
-              Object {},
-            ],
+            Object {},
           ]
         }
       >
@@ -1068,9 +1134,7 @@ exports[`<HTMLView/> should render ul bullets 1`] = `
         style={
           Array [
             null,
-            Array [
-              Object {},
-            ],
+            Object {},
           ]
         }
       >

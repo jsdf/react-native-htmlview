@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text} from 'react-native';
+import {StyleSheet, Text} from 'react-native';
 import htmlparser from 'htmlparser2-without-node-native';
 import entities from 'entities';
 
@@ -44,7 +44,7 @@ export default function htmlToElement(rawHtml, customOpts = {}, done) {
 
   function inheritedStyle(parent) {
     if (!parent) return null;
-    const style = opts.styles[parent.name] || {};
+    const style = StyleSheet.flatten(opts.styles[parent.name]) || {};
     const parentStyle = inheritedStyle(parent.parent) || {};
     return {...parentStyle, ...style};
   }
