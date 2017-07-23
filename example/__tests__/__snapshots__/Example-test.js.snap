@@ -31,6 +31,7 @@ exports[`<Example/> should render 1`] = `
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
+        onLongPress={null}
         onPress={null}
         style={undefined}
       >
@@ -41,9 +42,7 @@ exports[`<Example/> should render 1`] = `
           style={
             Array [
               null,
-              Array [
-                Object {},
-              ],
+              Object {},
             ]
           }
         >
@@ -54,6 +53,7 @@ exports[`<Example/> should render 1`] = `
           accessible={true}
           allowFontScaling={true}
           ellipsizeMode="tail"
+          onLongPress={null}
           onPress={null}
           style={null}
         >
@@ -64,10 +64,7 @@ exports[`<Example/> should render 1`] = `
             style={
               Array [
                 null,
-                Array [
-                  Object {},
-                  Object {},
-                ],
+                Object {},
               ]
             }
           >
@@ -78,6 +75,7 @@ exports[`<Example/> should render 1`] = `
             accessible={true}
             allowFontScaling={true}
             ellipsizeMode="tail"
+            onLongPress={null}
             onPress={null}
             style={null}
           >
@@ -85,6 +83,7 @@ exports[`<Example/> should render 1`] = `
               accessible={true}
               allowFontScaling={true}
               ellipsizeMode="tail"
+              onLongPress={null}
               onPress={null}
               style={null}
             >
@@ -95,16 +94,10 @@ exports[`<Example/> should render 1`] = `
                 style={
                   Array [
                     null,
-                    Array [
-                      Object {
-                        "fontStyle": "italic",
-                      },
-                      Object {
-                        "fontWeight": "500",
-                      },
-                      Object {},
-                      Object {},
-                    ],
+                    Object {
+                      "fontStyle": "italic",
+                      "fontWeight": "500",
+                    },
                   ]
                 }
               >
@@ -119,10 +112,7 @@ exports[`<Example/> should render 1`] = `
             style={
               Array [
                 null,
-                Array [
-                  Object {},
-                  Object {},
-                ],
+                Object {},
               ]
             }
           >
@@ -133,6 +123,7 @@ exports[`<Example/> should render 1`] = `
             accessible={true}
             allowFontScaling={true}
             ellipsizeMode="tail"
+            onLongPress={null}
             onPress={null}
             style={null}
           >
@@ -143,11 +134,7 @@ exports[`<Example/> should render 1`] = `
               style={
                 Array [
                   null,
-                  Array [
-                    Object {},
-                    Object {},
-                    Object {},
-                  ],
+                  Object {},
                 ]
               }
             >
@@ -158,6 +145,7 @@ exports[`<Example/> should render 1`] = `
               accessible={true}
               allowFontScaling={true}
               ellipsizeMode="tail"
+              onLongPress={null}
               onPress={null}
               style={null}
             >
@@ -168,14 +156,9 @@ exports[`<Example/> should render 1`] = `
                 style={
                   Array [
                     null,
-                    Array [
-                      Object {
-                        "fontStyle": "italic",
-                      },
-                      Object {},
-                      Object {},
-                      Object {},
-                    ],
+                    Object {
+                      "fontStyle": "italic",
+                    },
                   ]
                 }
               >
@@ -187,6 +170,7 @@ exports[`<Example/> should render 1`] = `
                 accessible={true}
                 allowFontScaling={true}
                 ellipsizeMode="tail"
+                onLongPress={null}
                 onPress={null}
                 style={null}
               >
@@ -197,17 +181,10 @@ exports[`<Example/> should render 1`] = `
                   style={
                     Array [
                       null,
-                      Array [
-                        Object {
-                          "fontWeight": "500",
-                        },
-                        Object {
-                          "fontStyle": "italic",
-                        },
-                        Object {},
-                        Object {},
-                        Object {},
-                      ],
+                      Object {
+                        "fontStyle": "italic",
+                        "fontWeight": "500",
+                      },
                     ]
                   }
                 >
@@ -227,10 +204,7 @@ exports[`<Example/> should render 1`] = `
             style={
               Array [
                 null,
-                Array [
-                  Object {},
-                  Object {},
-                ],
+                Object {},
               ]
             }
           >
@@ -241,6 +215,7 @@ exports[`<Example/> should render 1`] = `
             accessible={true}
             allowFontScaling={true}
             ellipsizeMode="tail"
+            onLongPress={null}
             onPress={null}
             style={null}
           >
@@ -251,11 +226,7 @@ exports[`<Example/> should render 1`] = `
               style={
                 Array [
                   null,
-                  Array [
-                    Object {},
-                    Object {},
-                    Object {},
-                  ],
+                  Object {},
                 ]
               }
             >
@@ -266,6 +237,7 @@ exports[`<Example/> should render 1`] = `
               accessible={true}
               allowFontScaling={true}
               ellipsizeMode="tail"
+              onLongPress={null}
               onPress={[Function]}
               style={null}
             >
@@ -276,15 +248,10 @@ exports[`<Example/> should render 1`] = `
                 style={
                   Array [
                     null,
-                    Array [
-                      Object {
-                        "color": "#007AFF",
-                        "fontWeight": "500",
-                      },
-                      Object {},
-                      Object {},
-                      Object {},
-                    ],
+                    Object {
+                      "color": "#007AFF",
+                      "fontWeight": "500",
+                    },
                   ]
                 }
               >
@@ -298,11 +265,7 @@ exports[`<Example/> should render 1`] = `
               style={
                 Array [
                   null,
-                  Array [
-                    Object {},
-                    Object {},
-                    Object {},
-                  ],
+                  Object {},
                 ]
               }
             >
@@ -320,10 +283,7 @@ exports[`<Example/> should render 1`] = `
             style={
               Array [
                 null,
-                Array [
-                  Object {},
-                  Object {},
-                ],
+                Object {},
               ]
             }
           >
@@ -353,10 +313,7 @@ exports[`<Example/> should render 1`] = `
             style={
               Array [
                 null,
-                Array [
-                  Object {},
-                  Object {},
-                ],
+                Object {},
               ]
             }
           >
@@ -368,6 +325,7 @@ exports[`<Example/> should render 1`] = `
             accessible={true}
             allowFontScaling={true}
             ellipsizeMode="tail"
+            onLongPress={null}
             onPress={null}
             style={null}
           >
@@ -378,14 +336,10 @@ exports[`<Example/> should render 1`] = `
               style={
                 Array [
                   null,
-                  Array [
-                    Object {
-                      "fontSize": 36,
-                      "fontWeight": "500",
-                    },
-                    Object {},
-                    Object {},
-                  ],
+                  Object {
+                    "fontSize": 36,
+                    "fontWeight": "500",
+                  },
                 ]
               }
             >
@@ -401,10 +355,7 @@ exports[`<Example/> should render 1`] = `
             style={
               Array [
                 null,
-                Array [
-                  Object {},
-                  Object {},
-                ],
+                Object {},
               ]
             }
           >
@@ -415,6 +366,7 @@ exports[`<Example/> should render 1`] = `
             accessible={true}
             allowFontScaling={true}
             ellipsizeMode="tail"
+            onLongPress={null}
             onPress={null}
             style={null}
           >
@@ -425,14 +377,10 @@ exports[`<Example/> should render 1`] = `
               style={
                 Array [
                   null,
-                  Array [
-                    Object {
-                      "fontSize": 30,
-                      "fontWeight": "500",
-                    },
-                    Object {},
-                    Object {},
-                  ],
+                  Object {
+                    "fontSize": 30,
+                    "fontWeight": "500",
+                  },
                 ]
               }
             >
@@ -448,10 +396,7 @@ exports[`<Example/> should render 1`] = `
             style={
               Array [
                 null,
-                Array [
-                  Object {},
-                  Object {},
-                ],
+                Object {},
               ]
             }
           >
@@ -462,6 +407,7 @@ exports[`<Example/> should render 1`] = `
             accessible={true}
             allowFontScaling={true}
             ellipsizeMode="tail"
+            onLongPress={null}
             onPress={null}
             style={null}
           >
@@ -472,14 +418,10 @@ exports[`<Example/> should render 1`] = `
               style={
                 Array [
                   null,
-                  Array [
-                    Object {
-                      "fontSize": 24,
-                      "fontWeight": "500",
-                    },
-                    Object {},
-                    Object {},
-                  ],
+                  Object {
+                    "fontSize": 24,
+                    "fontWeight": "500",
+                  },
                 ]
               }
             >
@@ -495,10 +437,7 @@ exports[`<Example/> should render 1`] = `
             style={
               Array [
                 null,
-                Array [
-                  Object {},
-                  Object {},
-                ],
+                Object {},
               ]
             }
           >
@@ -509,6 +448,7 @@ exports[`<Example/> should render 1`] = `
             accessible={true}
             allowFontScaling={true}
             ellipsizeMode="tail"
+            onLongPress={null}
             onPress={null}
             style={null}
           >
@@ -519,14 +459,10 @@ exports[`<Example/> should render 1`] = `
               style={
                 Array [
                   null,
-                  Array [
-                    Object {
-                      "fontSize": 18,
-                      "fontWeight": "500",
-                    },
-                    Object {},
-                    Object {},
-                  ],
+                  Object {
+                    "fontSize": 18,
+                    "fontWeight": "500",
+                  },
                 ]
               }
             >
@@ -542,10 +478,7 @@ exports[`<Example/> should render 1`] = `
             style={
               Array [
                 null,
-                Array [
-                  Object {},
-                  Object {},
-                ],
+                Object {},
               ]
             }
           >
@@ -556,6 +489,7 @@ exports[`<Example/> should render 1`] = `
             accessible={true}
             allowFontScaling={true}
             ellipsizeMode="tail"
+            onLongPress={null}
             onPress={null}
             style={null}
           >
@@ -566,14 +500,10 @@ exports[`<Example/> should render 1`] = `
               style={
                 Array [
                   null,
-                  Array [
-                    Object {
-                      "fontSize": 14,
-                      "fontWeight": "500",
-                    },
-                    Object {},
-                    Object {},
-                  ],
+                  Object {
+                    "fontSize": 14,
+                    "fontWeight": "500",
+                  },
                 ]
               }
             >
@@ -589,10 +519,7 @@ exports[`<Example/> should render 1`] = `
             style={
               Array [
                 null,
-                Array [
-                  Object {},
-                  Object {},
-                ],
+                Object {},
               ]
             }
           >
@@ -603,6 +530,7 @@ exports[`<Example/> should render 1`] = `
             accessible={true}
             allowFontScaling={true}
             ellipsizeMode="tail"
+            onLongPress={null}
             onPress={null}
             style={null}
           >
@@ -613,14 +541,10 @@ exports[`<Example/> should render 1`] = `
               style={
                 Array [
                   null,
-                  Array [
-                    Object {
-                      "fontSize": 12,
-                      "fontWeight": "500",
-                    },
-                    Object {},
-                    Object {},
-                  ],
+                  Object {
+                    "fontSize": 12,
+                    "fontWeight": "500",
+                  },
                 ]
               }
             >
@@ -634,10 +558,7 @@ exports[`<Example/> should render 1`] = `
             style={
               Array [
                 null,
-                Array [
-                  Object {},
-                  Object {},
-                ],
+                Object {},
               ]
             }
           >
@@ -670,9 +591,7 @@ exports[`<Example/> should render 1`] = `
           style={
             Array [
               null,
-              Array [
-                Object {},
-              ],
+              Object {},
             ]
           }
         >
