@@ -239,6 +239,7 @@ exports[`<HTMLView/> should handle additional text nodes between list items 1`] 
     ellipsizeMode="tail"
     onLongPress={null}
     onPress={null}
+    style={undefined}
   >
     <Text
       accessible={true}
@@ -260,6 +261,7 @@ exports[`<HTMLView/> should handle additional text nodes between list items 1`] 
       ellipsizeMode="tail"
       onLongPress={null}
       onPress={null}
+      style={null}
     >
       <Text
         accessible={true}
@@ -310,6 +312,7 @@ exports[`<HTMLView/> should handle additional text nodes between list items 1`] 
       ellipsizeMode="tail"
       onLongPress={null}
       onPress={null}
+      style={null}
     >
       <Text
         accessible={true}
@@ -612,7 +615,11 @@ exports[`<HTMLView/> should render inherited styles correctly 1`] = `
     ellipsizeMode="tail"
     onLongPress={null}
     onPress={null}
-    style={undefined}
+    style={
+      Object {
+        "color": "red",
+      }
+    }
   >
     <Text
       accessible={true}
@@ -658,6 +665,7 @@ exports[`<HTMLView/> should render inherited styles correctly 1`] = `
         ellipsizeMode="tail"
         onLongPress={null}
         onPress={null}
+        style={null}
       >
         <Text
           accessible={true}
@@ -690,6 +698,7 @@ exports[`<HTMLView/> should render ol numbers 1`] = `
     ellipsizeMode="tail"
     onLongPress={null}
     onPress={null}
+    style={undefined}
   >
     <Text
       accessible={true}
@@ -697,6 +706,7 @@ exports[`<HTMLView/> should render ol numbers 1`] = `
       ellipsizeMode="tail"
       onLongPress={null}
       onPress={null}
+      style={null}
     >
       <Text
         accessible={true}
