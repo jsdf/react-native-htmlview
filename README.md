@@ -197,6 +197,7 @@ In addition to supplying a custom `renderNode` function, you can customize what 
   - fixed an ordered list numbering bug
   - added `onLinkLongPress` property
   - default and custom styles now apply correctly to `<li>` prefix
+  - fixed `code` font for Android (monospace)
   - Thanks to @JoeyBetlej, @isilher, @bky, @RobPando
 - 0.11.0
   - `style` prop passed via `textComponentProps` is now respected even if no wrapping element is present
