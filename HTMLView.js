@@ -6,7 +6,7 @@ import {Linking, Platform, StyleSheet, View} from 'react-native';
 const boldStyle = {fontWeight: '500'};
 const italicStyle = {fontStyle: 'italic'};
 const underlineStyle = {textDecorationLine: 'underline'};
-const codeStyle = {fontFamily: Platform.OS === 'ios' ? 'Menlo' : 'monospace' };
+const codeStyle = {fontFamily: Platform.OS === 'ios' ? 'Menlo' : 'monospace'};
 
 const baseStyles = StyleSheet.create({
   b: boldStyle,
