@@ -1,92 +1,153 @@
-import React, {Component, PropTypes} from 'react'
-import htmlToElement from './htmlToElement'
-import {
-  Linking,
-  StyleSheet,
-  Text,
-} from 'react-native'
+import React, {PureComponent} from 'react';
+import PropTypes from 'prop-types';
+import htmlToElement from './htmlToElement';
+import {Linking, StyleSheet, View} from 'react-native';
 
-const boldStyle = {fontWeight: '500'}
-const italicStyle = {fontStyle: 'italic'}
-const codeStyle = {fontFamily: 'Menlo'}
+const boldStyle = {fontWeight: '500'};
+const italicStyle = {fontStyle: 'italic'};
+const underlineStyle = {textDecorationLine: 'underline'};
+const codeStyle = {fontFamily: 'Menlo'};
 
 const baseStyles = StyleSheet.create({
   b: boldStyle,
   strong: boldStyle,
   i: italicStyle,
   em: italicStyle,
+  u: underlineStyle,
   pre: codeStyle,
   code: codeStyle,
   a: {
     fontWeight: '500',
     color: '#007AFF',
   },
-})
+  h1: {fontWeight: '500', fontSize: 36},
+  h2: {fontWeight: '500', fontSize: 30},
+  h3: {fontWeight: '500', fontSize: 24},
+  h4: {fontWeight: '500', fontSize: 18},
+  h5: {fontWeight: '500', fontSize: 14},
+  h6: {fontWeight: '500', fontSize: 12},
+});
 
-class HtmlView extends Component {
+const htmlToElementOptKeys = [
+  'lineBreak',
+  'paragraphBreak',
+  'bullet',
+  'TextComponent',
+  'textComponentProps',
+  'NodeComponent',
+  'nodeComponentProps',
+];
+
+class HtmlView extends PureComponent {
   constructor() {
-    super()
+    super();
     this.state = {
       element: null,
-    }
+    };
   }
 
   componentDidMount() {
-    this.mounted = true
-    this.startHtmlRender(this.props.value)
+    this.mounted = true;
+    this.startHtmlRender(this.props.value);
   }
 
   componentWillReceiveProps(nextProps) {
     if (this.props.value !== nextProps.value || this.props.stylesheet !== nextProps.stylesheet) {
-      this.startHtmlRender(nextProps.value, nextProps.stylesheet)
+      this.startHtmlRender(nextProps.value, nextProps.stylesheet);
     }
   }
 
   componentWillUnmount() {
-    this.mounted = false
+    this.mounted = false;
   }
 
   startHtmlRender(value, style) {
+    const {
+      addLineBreaks,
+      onLinkPress,
+      onLinkLongPress,
+      stylesheet,
+      renderNode,
+      onError,
+    } = this.props;
+
     if (!value) {
-      this.setState({element: null})
+      this.setState({element: null});
     }
 
     const opts = {
-      linkHandler: this.props.onLinkPress,
-      styles: Object.assign({}, baseStyles, this.props.stylesheet, style),
-      customRenderer: this.props.renderNode,
-    }
+      addLineBreaks,
+      linkHandler: onLinkPress,
+      linkLongPressHandler: onLinkLongPress,
+      styles: {...baseStyles, ...stylesheet, ...style},
+      customRenderer: renderNode,
+    };
+
+    htmlToElementOptKeys.forEach(key => {
+      if (typeof this.props[key] !== 'undefined') {
+        opts[key] = this.props[key];
+      }
+    });
 
     htmlToElement(value, opts, (err, element) => {
       if (err) {
-        this.props.onError(err)
+        onError(err);
       }
 
       if (this.mounted) {
-        this.setState({element})
+        this.setState({element});
       }
-    })
+    });
   }
 
   render() {
-    if (this.state.element) {
-      return <Text children={this.state.element} />
+    const {RootComponent, style} = this.props;
+    const {element} = this.state;
+    if (element) {
+      return (
+        <RootComponent
+          {...this.props.rootComponentProps}
+          style={style}
+        >
+          {element}
+        </RootComponent>
+      );
     }
-    return <Text />
+    return (
+      <RootComponent
+        {...this.props.rootComponentProps}
+        style={style}
+      />
+    );
   }
 }
 
 HtmlView.propTypes = {
-  value: PropTypes.string,
-  stylesheet: PropTypes.object,
-  onLinkPress: PropTypes.func,
+  addLineBreaks: PropTypes.bool,
+  bullet: PropTypes.string,
+  lineBreak: PropTypes.string,
+  NodeComponent: PropTypes.func,
+  nodeComponentProps: PropTypes.object,
   onError: PropTypes.func,
+  onLinkPress: PropTypes.func,
+  onLinkLongPress: PropTypes.func,
+  paragraphBreak: PropTypes.string,
   renderNode: PropTypes.func,
-}
+  RootComponent: PropTypes.func,
+  rootComponentProps: PropTypes.object,
+  style: View.propTypes.style,
+  stylesheet: PropTypes.object,
+  TextComponent: PropTypes.func,
+  textComponentProps: PropTypes.object,
+  value: PropTypes.string,
+};
 
 HtmlView.defaultProps = {
+  addLineBreaks: true,
   onLinkPress: url => Linking.openURL(url),
+  onLinkLongPress: null,
   onError: console.error.bind(console),
-}
+  RootComponent: View,
+};
 
-export default HtmlView
+export default HtmlView;
