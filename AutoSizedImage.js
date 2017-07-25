@@ -14,19 +14,19 @@ export default class AutoSizedImage extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      // set width 1 is for preventing the warning
+      // set width 0 is for preventing mipmapping in iOS
       // You must specify a width and height for the image %s
-      width: this.props.style.width || 1,
-      height: this.props.style.height || 1,
+      width: this.props.style.width || 0,
+      height: this.props.style.height || 0,
     };
   }
 
-  componentDidMount() {
+  async componentWillMount() {
     //avoid repaint if width/height is given
-    if (this.props.style.width || this.props.style.height) {
+    if (this.props.style.width && this.props.style.height) {
       return;
     }
-    Image.getSize(this.props.source.uri, (w, h) => {
+    await Image.getSize(this.props.source.uri, (w, h) => {
       this.setState({width: w, height: h});
     });
   }
