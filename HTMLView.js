@@ -1,7 +1,7 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import htmlToElement from './htmlToElement';
-import {Linking, Platform, StyleSheet, View} from 'react-native';
+import {Linking, Platform, StyleSheet, View, ViewPropTypes} from 'react-native';
 
 const boldStyle = {fontWeight: '500'};
 const italicStyle = {fontStyle: 'italic'};
@@ -135,7 +135,7 @@ HtmlView.propTypes = {
   renderNode: PropTypes.func,
   RootComponent: PropTypes.func,
   rootComponentProps: PropTypes.object,
-  style: View.propTypes.style,
+  style: ViewPropTypes.style,
   stylesheet: PropTypes.object,
   TextComponent: PropTypes.func,
   textComponentProps: PropTypes.object,

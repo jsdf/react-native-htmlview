@@ -16,6 +16,7 @@ exports[`<Example/> should render 1`] = `
       <Text
         accessible={true}
         allowFontScaling={true}
+        disabled={false}
         ellipsizeMode="tail"
         style={
           Array [
@@ -30,6 +31,7 @@ exports[`<Example/> should render 1`] = `
       <Text
         accessible={true}
         allowFontScaling={true}
+        disabled={false}
         ellipsizeMode="tail"
         onLongPress={null}
         onPress={null}
@@ -38,6 +40,7 @@ exports[`<Example/> should render 1`] = `
         <Text
           accessible={true}
           allowFontScaling={true}
+          disabled={false}
           ellipsizeMode="tail"
           style={
             Array [
@@ -52,6 +55,7 @@ exports[`<Example/> should render 1`] = `
         <Text
           accessible={true}
           allowFontScaling={true}
+          disabled={false}
           ellipsizeMode="tail"
           onLongPress={null}
           onPress={null}
@@ -60,6 +64,7 @@ exports[`<Example/> should render 1`] = `
           <Text
             accessible={true}
             allowFontScaling={true}
+            disabled={false}
             ellipsizeMode="tail"
             style={
               Array [
@@ -74,6 +79,7 @@ exports[`<Example/> should render 1`] = `
           <Text
             accessible={true}
             allowFontScaling={true}
+            disabled={false}
             ellipsizeMode="tail"
             onLongPress={null}
             onPress={null}
@@ -82,6 +88,7 @@ exports[`<Example/> should render 1`] = `
             <Text
               accessible={true}
               allowFontScaling={true}
+              disabled={false}
               ellipsizeMode="tail"
               onLongPress={null}
               onPress={null}
@@ -90,6 +97,7 @@ exports[`<Example/> should render 1`] = `
               <Text
                 accessible={true}
                 allowFontScaling={true}
+                disabled={false}
                 ellipsizeMode="tail"
                 style={
                   Array [
@@ -108,6 +116,7 @@ exports[`<Example/> should render 1`] = `
           <Text
             accessible={true}
             allowFontScaling={true}
+            disabled={false}
             ellipsizeMode="tail"
             style={
               Array [
@@ -122,6 +131,7 @@ exports[`<Example/> should render 1`] = `
           <Text
             accessible={true}
             allowFontScaling={true}
+            disabled={false}
             ellipsizeMode="tail"
             onLongPress={null}
             onPress={null}
@@ -130,6 +140,7 @@ exports[`<Example/> should render 1`] = `
             <Text
               accessible={true}
               allowFontScaling={true}
+              disabled={false}
               ellipsizeMode="tail"
               style={
                 Array [
@@ -144,6 +155,7 @@ exports[`<Example/> should render 1`] = `
             <Text
               accessible={true}
               allowFontScaling={true}
+              disabled={false}
               ellipsizeMode="tail"
               onLongPress={null}
               onPress={null}
@@ -152,6 +164,7 @@ exports[`<Example/> should render 1`] = `
               <Text
                 accessible={true}
                 allowFontScaling={true}
+                disabled={false}
                 ellipsizeMode="tail"
                 style={
                   Array [
@@ -169,6 +182,7 @@ exports[`<Example/> should render 1`] = `
               <Text
                 accessible={true}
                 allowFontScaling={true}
+                disabled={false}
                 ellipsizeMode="tail"
                 onLongPress={null}
                 onPress={null}
@@ -177,6 +191,7 @@ exports[`<Example/> should render 1`] = `
                 <Text
                   accessible={true}
                   allowFontScaling={true}
+                  disabled={false}
                   ellipsizeMode="tail"
                   style={
                     Array [
@@ -200,6 +215,7 @@ exports[`<Example/> should render 1`] = `
           <Text
             accessible={true}
             allowFontScaling={true}
+            disabled={false}
             ellipsizeMode="tail"
             style={
               Array [
@@ -214,6 +230,7 @@ exports[`<Example/> should render 1`] = `
           <Text
             accessible={true}
             allowFontScaling={true}
+            disabled={false}
             ellipsizeMode="tail"
             onLongPress={null}
             onPress={null}
@@ -222,6 +239,7 @@ exports[`<Example/> should render 1`] = `
             <Text
               accessible={true}
               allowFontScaling={true}
+              disabled={false}
               ellipsizeMode="tail"
               style={
                 Array [
@@ -236,6 +254,7 @@ exports[`<Example/> should render 1`] = `
             <Text
               accessible={true}
               allowFontScaling={true}
+              disabled={false}
               ellipsizeMode="tail"
               onLongPress={null}
               onPress={[Function]}
@@ -244,6 +263,7 @@ exports[`<Example/> should render 1`] = `
               <Text
                 accessible={true}
                 allowFontScaling={true}
+                disabled={false}
                 ellipsizeMode="tail"
                 style={
                   Array [
@@ -261,6 +281,7 @@ exports[`<Example/> should render 1`] = `
             <Text
               accessible={true}
               allowFontScaling={true}
+              disabled={false}
               ellipsizeMode="tail"
               style={
                 Array [
@@ -279,6 +300,7 @@ exports[`<Example/> should render 1`] = `
           <Text
             accessible={true}
             allowFontScaling={true}
+            disabled={false}
             ellipsizeMode="tail"
             style={
               Array [
@@ -309,6 +331,7 @@ exports[`<Example/> should render 1`] = `
           <Text
             accessible={true}
             allowFontScaling={true}
+            disabled={false}
             ellipsizeMode="tail"
             style={
               Array [
@@ -324,6 +347,7 @@ exports[`<Example/> should render 1`] = `
           <Text
             accessible={true}
             allowFontScaling={true}
+            disabled={false}
             ellipsizeMode="tail"
             onLongPress={null}
             onPress={null}
@@ -332,6 +356,7 @@ exports[`<Example/> should render 1`] = `
             <Text
               accessible={true}
               allowFontScaling={true}
+              disabled={false}
               ellipsizeMode="tail"
               style={
                 Array [
@@ -351,6 +376,7 @@ exports[`<Example/> should render 1`] = `
           <Text
             accessible={true}
             allowFontScaling={true}
+            disabled={false}
             ellipsizeMode="tail"
             style={
               Array [
@@ -365,6 +391,7 @@ exports[`<Example/> should render 1`] = `
           <Text
             accessible={true}
             allowFontScaling={true}
+            disabled={false}
             ellipsizeMode="tail"
             onLongPress={null}
             onPress={null}
@@ -373,6 +400,7 @@ exports[`<Example/> should render 1`] = `
             <Text
               accessible={true}
               allowFontScaling={true}
+              disabled={false}
               ellipsizeMode="tail"
               style={
                 Array [
@@ -392,6 +420,7 @@ exports[`<Example/> should render 1`] = `
           <Text
             accessible={true}
             allowFontScaling={true}
+            disabled={false}
             ellipsizeMode="tail"
             style={
               Array [
@@ -406,6 +435,7 @@ exports[`<Example/> should render 1`] = `
           <Text
             accessible={true}
             allowFontScaling={true}
+            disabled={false}
             ellipsizeMode="tail"
             onLongPress={null}
             onPress={null}
@@ -414,6 +444,7 @@ exports[`<Example/> should render 1`] = `
             <Text
               accessible={true}
               allowFontScaling={true}
+              disabled={false}
               ellipsizeMode="tail"
               style={
                 Array [
@@ -433,6 +464,7 @@ exports[`<Example/> should render 1`] = `
           <Text
             accessible={true}
             allowFontScaling={true}
+            disabled={false}
             ellipsizeMode="tail"
             style={
               Array [
@@ -447,6 +479,7 @@ exports[`<Example/> should render 1`] = `
           <Text
             accessible={true}
             allowFontScaling={true}
+            disabled={false}
             ellipsizeMode="tail"
             onLongPress={null}
             onPress={null}
@@ -455,6 +488,7 @@ exports[`<Example/> should render 1`] = `
             <Text
               accessible={true}
               allowFontScaling={true}
+              disabled={false}
               ellipsizeMode="tail"
               style={
                 Array [
@@ -474,6 +508,7 @@ exports[`<Example/> should render 1`] = `
           <Text
             accessible={true}
             allowFontScaling={true}
+            disabled={false}
             ellipsizeMode="tail"
             style={
               Array [
@@ -488,6 +523,7 @@ exports[`<Example/> should render 1`] = `
           <Text
             accessible={true}
             allowFontScaling={true}
+            disabled={false}
             ellipsizeMode="tail"
             onLongPress={null}
             onPress={null}
@@ -496,6 +532,7 @@ exports[`<Example/> should render 1`] = `
             <Text
               accessible={true}
               allowFontScaling={true}
+              disabled={false}
               ellipsizeMode="tail"
               style={
                 Array [
@@ -515,6 +552,7 @@ exports[`<Example/> should render 1`] = `
           <Text
             accessible={true}
             allowFontScaling={true}
+            disabled={false}
             ellipsizeMode="tail"
             style={
               Array [
@@ -529,6 +567,7 @@ exports[`<Example/> should render 1`] = `
           <Text
             accessible={true}
             allowFontScaling={true}
+            disabled={false}
             ellipsizeMode="tail"
             onLongPress={null}
             onPress={null}
@@ -537,6 +576,7 @@ exports[`<Example/> should render 1`] = `
             <Text
               accessible={true}
               allowFontScaling={true}
+              disabled={false}
               ellipsizeMode="tail"
               style={
                 Array [
@@ -554,6 +594,7 @@ exports[`<Example/> should render 1`] = `
           <Text
             accessible={true}
             allowFontScaling={true}
+            disabled={false}
             ellipsizeMode="tail"
             style={
               Array [
@@ -578,6 +619,7 @@ exports[`<Example/> should render 1`] = `
             <Text
               accessible={true}
               allowFontScaling={true}
+              disabled={false}
               ellipsizeMode="tail"
             >
               google.com
@@ -587,6 +629,7 @@ exports[`<Example/> should render 1`] = `
         <Text
           accessible={true}
           allowFontScaling={true}
+          disabled={false}
           ellipsizeMode="tail"
           style={
             Array [
@@ -602,6 +645,7 @@ exports[`<Example/> should render 1`] = `
       <Text
         accessible={true}
         allowFontScaling={true}
+        disabled={false}
         ellipsizeMode="tail"
         style={
           Array [
