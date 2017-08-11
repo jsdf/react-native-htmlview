@@ -50,14 +50,14 @@ class HtmlView extends PureComponent {
     this.mounted = true;
     InteractionManager.runAfterInteractions(() => {
       this.startHtmlRender(this.props.value);
-    })
+    });
   }
 
   componentWillReceiveProps(nextProps) {
     if (this.props.value !== nextProps.value || this.props.stylesheet !== nextProps.stylesheet) {
       InteractionManager.runAfterInteractions(() => {
         this.startHtmlRender(nextProps.value, nextProps.stylesheet);
-      })
+      });
     }
   }
 
