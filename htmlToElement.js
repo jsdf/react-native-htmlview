@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, Text} from 'react-native';
+import {StyleSheet, Text, Dimensions} from 'react-native';
 import htmlparser from 'htmlparser2-without-node-native';
 import entities from 'entities';
 
@@ -16,28 +16,36 @@ const defaultOpts = {
 };
 
 const Img = props => {
-  const width =
+  let widthAtt =
     parseInt(props.attribs['width'], 10) || parseInt(props.attribs['data-width'], 10) || 0;
   const height =
     parseInt(props.attribs['height'], 10) ||
     parseInt(props.attribs['data-height'], 10) ||
     0;
 
+  const { width } = Dimensions.get('window');
+
+  if (!widthAtt || widthAtt > (width - 20)) {
+    widthAtt = (width - 20);
+  }
+
+  console.log(!widthAtt || widthAtt > (width - 20));
+
   const imgStyle = {
-    width,
-    height,
+    width: widthAtt,
+    height: height || 200,
   };
 
   const source = {
     uri: props.attribs.src,
-    width,
+    width: widthAtt,
     height,
   };
 
   if (props.attribs.src) {
     return <AutoSizedImage source={source} style={imgStyle} />;
   } else {
-    return <Text>--</Text>
+    return <Text>-</Text>
   }
 };
 
