@@ -33,7 +33,12 @@ const Img = props => {
     width,
     height,
   };
-  return <AutoSizedImage source={source} style={imgStyle} />;
+
+  if (props.attribs.src) {
+    return <AutoSizedImage source={source} style={imgStyle} />;
+  } else {
+    return <Text>--</Text>
+  }
 };
 
 export default function htmlToElement(rawHtml, customOpts = {}, done) {
