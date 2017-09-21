@@ -1,13 +1,14 @@
 import React from 'react';
-import {StyleSheet, Text, Dimensions} from 'react-native';
+import {StyleSheet, Text, Dimensions, View} from 'react-native';
 import htmlparser from 'htmlparser2-without-node-native';
 import entities from 'entities';
 
 import AutoSizedImage from './AutoSizedImage';
+import colors from '../../app/style/color.style';
 
 const defaultOpts = {
   lineBreak: '\n',
-  paragraphBreak: '\n\n',
+  paragraphBreak: '\n',
   bullet: '\u2022 ',
   TextComponent: Text,
   textComponentProps: null,
@@ -28,8 +29,6 @@ const Img = props => {
   if (!widthAtt || widthAtt > (width - 20)) {
     widthAtt = (width - 20);
   }
-
-  console.log(!widthAtt || widthAtt > (width - 20));
 
   const imgStyle = {
     width: widthAtt,
@@ -85,6 +84,7 @@ export default function htmlToElement(rawHtml, customOpts = {}, done) {
       if (node.type === 'text') {
         const defaultStyle = opts.textComponentProps ? opts.textComponentProps.style : null;
         const customStyle = inheritedStyle(parent);
+        const isParentCaption = parent && parent.name === 'figcaption';
 
         return (
           <TextComponent
@@ -92,7 +92,7 @@ export default function htmlToElement(rawHtml, customOpts = {}, done) {
             key={index}
             style={[defaultStyle, customStyle]}
           >
-            {entities.decodeHTML(node.data)}
+            {entities.decodeHTML(isParentCaption ? (node.data && node.data.toUpperCase()) : node.data)}
           </TextComponent>
         );
       }
@@ -147,10 +147,16 @@ export default function htmlToElement(rawHtml, customOpts = {}, done) {
             </TextComponent>);
           } else if (parent.name === 'ul') {
             listItemPrefix = (<TextComponent style={[defaultStyle, customStyle]}>
-              {opts.bullet}
+              {/* <View style={inheritedStyle({name: 'bullet'})} /> */}
+              <TextComponent style={inheritedStyle({name: 'bullet'})}>{opts.bullet}</TextComponent>
             </TextComponent>);
           }
           linebreakAfter = opts.lineBreak;
+        }
+
+        let specialStyle = null;
+        if (node.name === 'blockquote') {
+          // listItemPrefix = <View style={inheritedStyle({name: 'bloquoteItem'})} />
         }
 
         const {NodeComponent, styles} = opts;
@@ -160,7 +166,9 @@ export default function htmlToElement(rawHtml, customOpts = {}, done) {
             {...opts.nodeComponentProps}
             key={index}
             onPress={linkPressHandler}
-            style={!node.parent ? styles[node.name] : null}
+            style={[
+              !node.parent ? styles[node.name] : null,
+            ]}
             onLongPress={linkLongPressHandler}
           >
             {linebreakBefore}
