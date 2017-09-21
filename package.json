@@ -47,6 +47,6 @@
   },
   "dependencies": {
     "entities": "^1.1.1",
-    "htmlparser2-without-node-native": "^3.9.0"
+    "htmlparser2-without-node-native": "^3.9.2"
   }
 }
