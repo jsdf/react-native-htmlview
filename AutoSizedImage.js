@@ -51,6 +51,6 @@ export default class AutoSizedImage extends PureComponent {
       source = Object.assign(source, this.props.source, finalSize);
     }
 
-    return <Image resizeMode={Image.resizeMode.contain} style={style} source={source} />;
+    return <Image style={style} source={source} />;
   }
 }
