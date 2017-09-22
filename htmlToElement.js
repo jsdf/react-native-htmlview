@@ -25,14 +25,18 @@ const Img = props => {
     0;
 
   const { width } = Dimensions.get('window');
+  const resizeMode = null;
 
-  if (!widthAtt || widthAtt > (width - 20)) {
+  if (!widthAtt) {
     widthAtt = (width - 20);
+    resizeMode: 'contain'
   }
 
   const imgStyle = {
     width: widthAtt,
+    maxWidth: (width - 20),
     height: height || 200,
+    resizeMode
   };
 
   const source = {
@@ -53,6 +57,18 @@ export default function htmlToElement(rawHtml, customOpts = {}, done) {
     ...defaultOpts,
     ...customOpts,
   };
+
+  function cleanLink(link) {
+    if (link) {
+      if (link.startsWith("'") || link.startsWith('"') || link.startsWith('”')) {
+        link = link.slice(1);
+      }
+      if (link.endsWith("'") || link.endsWith('"') || link.endsWith('”')) {
+        link = link.slice(0, link.length - 1);
+      }
+    }
+    return link;
+  }
 
   function inheritedStyle(parent) {
     if (!parent) return null;
@@ -105,11 +121,13 @@ export default function htmlToElement(rawHtml, customOpts = {}, done) {
         let linkPressHandler = null;
         let linkLongPressHandler = null;
         if (node.name === 'a' && node.attribs && node.attribs.href) {
+          const link = cleanLink(entities.decodeHTML(node.attribs.href));
+          console.log(link);
           linkPressHandler = () =>
-            opts.linkHandler(entities.decodeHTML(node.attribs.href));
+            opts.linkHandler(link);
           if (opts.linkLongPressHandler) {
             linkLongPressHandler = () =>
-              opts.linkLongPressHandler(entities.decodeHTML(node.attribs.href));
+              opts.linkLongPressHandler(link);
           }
         }
 
@@ -131,6 +149,9 @@ export default function htmlToElement(rawHtml, customOpts = {}, done) {
           case 'h3':
           case 'h4':
           case 'h5':
+          case 'h6':
+          case 'div':
+          case 'figure':
             linebreakAfter = opts.lineBreak;
             break;
           }
