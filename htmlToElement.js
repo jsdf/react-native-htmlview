@@ -101,12 +101,18 @@ export default function htmlToElement(rawHtml, customOpts = {}, done) {
         const defaultStyle = opts.textComponentProps ? opts.textComponentProps.style : null;
         const customStyle = inheritedStyle(parent);
         const isParentCaption = parent && parent.name === 'figcaption';
+        const isParentBlockquote = parent && parent.parent && parent.parent.name === 'blockquote';
+
+        let specialStyle = null;
+        if (isParentBlockquote) {
+          specialStyle = inheritedStyle({name: 'bloquoteItem'});
+        }
 
         return (
           <TextComponent
             {...opts.textComponentProps}
             key={index}
-            style={[defaultStyle, customStyle]}
+            style={[defaultStyle, customStyle, specialStyle]}
           >
             {entities.decodeHTML(isParentCaption ? (node.data && node.data.toUpperCase()) : node.data)}
           </TextComponent>
@@ -122,7 +128,6 @@ export default function htmlToElement(rawHtml, customOpts = {}, done) {
         let linkLongPressHandler = null;
         if (node.name === 'a' && node.attribs && node.attribs.href) {
           const link = cleanLink(entities.decodeHTML(node.attribs.href));
-          console.log(link);
           linkPressHandler = () =>
             opts.linkHandler(link);
           if (opts.linkLongPressHandler) {
@@ -178,6 +183,7 @@ export default function htmlToElement(rawHtml, customOpts = {}, done) {
         let specialStyle = null;
         if (node.name === 'blockquote') {
           // listItemPrefix = <View style={inheritedStyle({name: 'bloquoteItem'})} />
+          specialStyle = inheritedStyle({name: 'bloquoteItem'});
         }
 
         const {NodeComponent, styles} = opts;
@@ -189,6 +195,7 @@ export default function htmlToElement(rawHtml, customOpts = {}, done) {
             onPress={linkPressHandler}
             style={[
               !node.parent ? styles[node.name] : null,
+              specialStyle
             ]}
             onLongPress={linkLongPressHandler}
           >
