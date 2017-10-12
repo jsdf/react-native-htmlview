@@ -134,11 +134,7 @@ describe('<HTMLView/>', () => {
 
     function renderNode(node, index) {
       if (node.name == 'thing') {
-        return (
-          <Text key={index}>
-            {node.attribs.b}
-          </Text>
-        );
+        return <Text key={index}>{node.attribs.b}</Text>;
       }
     }
 

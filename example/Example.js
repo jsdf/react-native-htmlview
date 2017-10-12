@@ -6,9 +6,7 @@ function renderNode(node, index) {
   if (node.name == 'iframe') {
     return (
       <View key={index} style={{width: 200, height: 200}}>
-        <Text>
-          {node.attribs.src}
-        </Text>
+        <Text>{node.attribs.src}</Text>
       </View>
     );
   }

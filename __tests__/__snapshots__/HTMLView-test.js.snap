@@ -826,8 +826,6 @@ exports[`<HTMLView/> should render ol numbers 1`] = `
       >
          b 
       </Text>
-      
-      
     </Text>
   </Text>
 </View>
@@ -1274,8 +1272,6 @@ exports[`<HTMLView/> should render ul bullets 1`] = `
       >
          b 
       </Text>
-      
-      
     </Text>
   </Text>
 </View>
