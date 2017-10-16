@@ -125,6 +125,16 @@ describe('<HTMLView/>', () => {
     ).toMatchSnapshot();
   });
 
+  it('should not render extra linebreaks in list items if configured not to', () => {
+    const htmlContent = '<ul><li> a </li><li> b </li></ul>';
+
+    expect(
+      renderer
+        .create(<HTMLView value={htmlContent} addLineBreaks={false} />)
+        .toJSON()
+    ).toMatchSnapshot();
+  });
+
   it('can use a custom renderer', () => {
     const htmlContent = `
       <div>

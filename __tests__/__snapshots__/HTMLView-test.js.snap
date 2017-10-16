@@ -557,6 +557,99 @@ exports[`<HTMLView/> should not render extra linebreaks if configured not to 1`]
 </View>
 `;
 
+exports[`<HTMLView/> should not render extra linebreaks in list items if configured not to 1`] = `
+<View
+  style={undefined}
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    disabled={false}
+    ellipsizeMode="tail"
+    onLongPress={null}
+    onPress={null}
+    style={undefined}
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      disabled={false}
+      ellipsizeMode="tail"
+      onLongPress={null}
+      onPress={null}
+      style={null}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        disabled={false}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            null,
+            Object {},
+          ]
+        }
+      >
+        • 
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        disabled={false}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            null,
+            Object {},
+          ]
+        }
+      >
+         a 
+      </Text>
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      disabled={false}
+      ellipsizeMode="tail"
+      onLongPress={null}
+      onPress={null}
+      style={null}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        disabled={false}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            null,
+            Object {},
+          ]
+        }
+      >
+        • 
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        disabled={false}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            null,
+            Object {},
+          ]
+        }
+      >
+         b 
+      </Text>
+    </Text>
+  </Text>
+</View>
+`;
+
 exports[`<HTMLView/> should render an <Image /> with set width/height 1`] = `
 <View
   style={undefined}
@@ -826,8 +919,6 @@ exports[`<HTMLView/> should render ol numbers 1`] = `
       >
          b 
       </Text>
-      
-      
     </Text>
   </Text>
 </View>
@@ -1274,8 +1365,6 @@ exports[`<HTMLView/> should render ul bullets 1`] = `
       >
          b 
       </Text>
-      
-      
     </Text>
   </Text>
 </View>
