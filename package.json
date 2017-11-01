@@ -2,17 +2,22 @@
   "name": "react-native-htmlview",
   "version": "0.13.0",
   "description": "A component which renders HTML content as native views",
-  "main": "src/index.js",
+  "jsnext:main": "src/index.js",
+  "main": "lib/index.js",
   "scripts": {
     "lint": "eslint .",
     "lint-fix": "eslint . --fix",
-    "test": "yarn run format-lint && yarn run lint && yarn run jest",
+    "test":
+      "yarn run format-lint && yarn run lint && yarn run babel && yarn run jest",
     "format-lint":
       "prettier --list-different \"./**/*.js\"; if [ $? != 0 ]; then echo \"CODE FORMATTING: please run 'yarn run format' and commit the changes\"; exit 1; fi",
     "format": "prettier --write \"./**/*.js\" && eslint . --fix",
-    "jest": "jest"
+    "jest": "jest",
+    "babel": "babel src --out-dir lib --source-maps",
+    "prepublishOnly": "yarn run test"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-eslint": "^8.0.1",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.5.0",

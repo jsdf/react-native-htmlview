@@ -37,7 +37,6 @@ nbproject
 node_modules
 bower_components
 
-lib/
 example/output/
 
 main.jsbundle
