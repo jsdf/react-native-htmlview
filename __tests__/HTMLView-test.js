@@ -4,7 +4,7 @@ import renderer from 'react-test-renderer';
 
 import {StyleSheet, Text} from 'react-native';
 
-import HTMLView from '../HTMLView';
+import HTMLView from '../src/HTMLView';
 
 describe('<HTMLView/>', () => {
   it('should render an empty <Text/> element', () => {

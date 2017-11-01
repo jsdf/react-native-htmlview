@@ -1,7 +1,13 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import htmlToElement from './htmlToElement';
-import {Linking, Platform, StyleSheet, View, ViewPropTypes} from 'react-native';
+import {
+  Linking,
+  Platform,
+  StyleSheet,
+  View,
+  ViewPropTypes,
+} from 'react-native';
 
 const boldStyle = {fontWeight: '500'};
 const italicStyle = {fontStyle: 'italic'};
@@ -55,8 +61,16 @@ class HtmlView extends PureComponent {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (this.props.value !== nextProps.value || this.props.stylesheet !== nextProps.stylesheet || this.props.textComponentProps !== nextProps.textComponentProps) {
-      this.startHtmlRender(nextProps.value, nextProps.stylesheet, nextProps.textComponentProps);
+    if (
+      this.props.value !== nextProps.value ||
+      this.props.stylesheet !== nextProps.stylesheet ||
+      this.props.textComponentProps !== nextProps.textComponentProps
+    ) {
+      this.startHtmlRender(
+        nextProps.value,
+        nextProps.stylesheet,
+        nextProps.textComponentProps
+      );
     }
   }
 
@@ -112,20 +126,12 @@ class HtmlView extends PureComponent {
     const {element} = this.state;
     if (element) {
       return (
-        <RootComponent
-          {...this.props.rootComponentProps}
-          style={style}
-        >
+        <RootComponent {...this.props.rootComponentProps} style={style}>
           {element}
         </RootComponent>
       );
     }
-    return (
-      <RootComponent
-        {...this.props.rootComponentProps}
-        style={style}
-      />
-    );
+    return <RootComponent {...this.props.rootComponentProps} style={style} />;
   }
 }
 
