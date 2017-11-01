@@ -7,8 +7,7 @@
     "lint": "eslint .",
     "lint-fix": "eslint . --fix",
     "test": "yarn run format-lint && yarn run lint && yarn run jest",
-    "format-lint":
-      "prettier --list-different \"./**/*.js\"; if [ $? != 0 ]; then echo \"CODE FORMATTING: please run 'yarn run format' and commit the changes\"; exit 1; fi",
+    "format-lint": "prettier --list-different \"./**/*.js\"; if [ $? != 0 ]; then echo \"CODE FORMATTING: please run 'yarn run format' and commit the changes\"; exit 1; fi",
     "format": "prettier --write \"./**/*.js\" && eslint . --fix",
     "jest": "jest"
   },
@@ -17,6 +16,7 @@
     "babel-preset-es2015": "^6.16.0",
     "babel-preset-react": "^6.5.0",
     "eslint": "^4.10.0",
+    "eslint-config-prettier": "^2.6.0",
     "eslint-plugin-prettier": "^2.3.1",
     "eslint-plugin-react": "^7.4.0",
     "jest": "^19.0.2",
