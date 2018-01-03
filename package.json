@@ -19,11 +19,12 @@
     "eslint-plugin-react": "^7.1.0",
     "jest": "^19.0.2",
     "prettier": "^1.5.2",
-    "prop-types": "^15.5.10",
-    "react": "16.0.0-alpha.12",
-    "react-dom": "16.0.0-alpha.12",
-    "react-native": "0.46.3",
-    "react-test-renderer": "16.0.0-alpha.12"
+    "prop-types": "^15.5.10"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-dom": "*",
+    "react-native": "*"
   },
   "jest": {
     "preset": "react-native"
