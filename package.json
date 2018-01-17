@@ -25,7 +25,7 @@
     "react": "*",
     "react-dom": "*",
     "react-native": "*",
-    "react-test-renderer": "*",
+    "react-test-renderer": "*"
   },
   "jest": {
     "preset": "react-native"
