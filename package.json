@@ -24,7 +24,8 @@
   "peerDependencies": {
     "react": "*",
     "react-dom": "*",
-    "react-native": "*"
+    "react-native": "*",
+    "react-test-renderer": "*",
   },
   "jest": {
     "preset": "react-native"
