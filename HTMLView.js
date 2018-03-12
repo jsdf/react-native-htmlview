@@ -16,6 +16,7 @@ const baseStyles = StyleSheet.create({
   em: italicStyle,
   u: underlineStyle,
   s: strikethroughStyle,
+  strike: strikethroughStyle,
   pre: codeStyle,
   code: codeStyle,
   a: {
