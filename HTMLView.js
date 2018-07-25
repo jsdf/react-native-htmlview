@@ -154,7 +154,7 @@ HtmlView.defaultProps = {
   onLinkPress: url => Linking.openURL(url),
   onLinkLongPress: null,
   onError: console.error.bind(console),
-  RootComponent: View,
+  RootComponent: element => <View {...element} />, // eslint-disable-line react/display-name
 };
 
 export default HtmlView;
