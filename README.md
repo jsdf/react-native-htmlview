@@ -42,7 +42,7 @@ props:
 - `paragraphBreak`: text which appears after every `p` element
 - `lineBreak`: text which appears after text elements which create a new line (`br`, headings)
 - `addLineBreaks`: when explicitly `false`, effectively sets `paragraphBreak` and `lineBreak` to `null`
-- `NodeComponent`, `nodeComponentProps`, `RootComponent`, `rootComponentProps`, `TextComponent`, `textComponentProps`: see the heading **Customizing things even further** below.
+- `NodeComponent`, `nodeComponentProps`, `RootComponent`, `rootComponentProps`, `TextComponent`, `textComponentProps`: see [**Customizing things even further**](https://github.com/jsdf/react-native-htmlview#customizing-things-even-further) below.
 
 ### Example
 
