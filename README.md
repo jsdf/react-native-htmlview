@@ -189,6 +189,12 @@ For further understanding of the possiblities of the `renderNode` prop, read thr
 In addition to supplying a custom `renderNode` function, you can customize what is rendered by the built in `renderNode` function. Read through [htmlToElement.js](https://github.com/jsdf/react-native-htmlview/blob/master/htmlToElement.js) and note the usage of NodeComponent (for rendering HTML element nodes) and TextComponent (for rendering text strings in the HTML). Both of these components can be injected as the `NodeComponent` and `TextComponent` props to HTMLView, or alternatively they can be given extra props by passing an object as the `nodeComponentProps` and `textComponentProps` props. Finally you can also use the props `RootComponent` and `rootComponentProps` to customize the root wrapper `View` element that is rendered by the HTMLView in [HTMLView.js](https://github.com/jsdf/react-native-htmlview/blob/master/HTMLView.js).
 
 ### Changelog
+- 0.13.0
+  - fixed `Failed prop type` error on react-native@0.56 [#228](https://github.com/jsdf/react-native-htmlview/pull/228)
+  - added support for `<s>` tag (strikethrough text) [#210](https://github.com/jsdf/react-native-htmlview/pull/210)
+  - fix to re-render when `textComponentProps` changes [#188](https://github.com/jsdf/react-native-htmlview/pull/188)
+  - fixed line breaks for `<li>` elements [#166](https://github.com/jsdf/react-native-htmlview/pull/166)
+  - Thanks to @mdimovska, @alphasp, @waldyrious, @macgregorthomson
 - 0.12.1
   - use ViewPropTypes
   - fix an issue with htmlparser2-without-node-native and inline-requires
