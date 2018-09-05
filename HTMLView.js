@@ -51,7 +51,7 @@ class HtmlView extends PureComponent {
 
   componentDidMount() {
     this.mounted = true;
-    this.startHtmlRender(this.props.value);
+    this.startHtmlRender(this.props.value || '');
   }
 
   componentWillReceiveProps(nextProps) {
