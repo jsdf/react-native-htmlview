@@ -29,7 +29,7 @@ const Img = props => {
   };
 
   const source = {
-    uri: props.attribs.src,
+    uri: entities.decodeHTML(props.attribs.src),
     width,
     height,
   };
