@@ -165,7 +165,7 @@ export default function htmlToElement(rawHtml, customOpts = {}, done) {
   function domToElementWrapper(dom) {
   		const [ firstNode ] = dom;
   		return (
-  			<Text {...(firstNode.type === 'tag' ? opts.nodeComponentProps : opts.textComponentProps)}>
+  			<Text {...(firstNode && firstNode.type === 'tag' ? opts.nodeComponentProps : opts.textComponentProps)}>
   				{domToElement(dom)}
   			</Text>
   		);
