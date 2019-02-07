@@ -56,7 +56,7 @@ class HtmlView extends PureComponent {
 
   componentWillReceiveProps(nextProps) {
     if (this.props.value !== nextProps.value || this.props.stylesheet !== nextProps.stylesheet || this.props.textComponentProps !== nextProps.textComponentProps || this.props.nodeComponentProps !== nextProps.nodeComponentProps) {
-      this.startHtmlRender(nextProps.value, nextProps.stylesheet, nextProps.textComponentProps,nextProps.nodeComponentProps);
+      this.startHtmlRender(nextProps.value, nextProps.stylesheet, nextProps.textComponentProps, nextProps.nodeComponentProps);
     }
   }
 
@@ -64,7 +64,7 @@ class HtmlView extends PureComponent {
     this.mounted = false;
   }
 
-  startHtmlRender(value, style, textComponentProps) {
+  startHtmlRender(value, style, textComponentProps, nodeComponentProps) {
     const {
       addLineBreaks,
       onLinkPress,

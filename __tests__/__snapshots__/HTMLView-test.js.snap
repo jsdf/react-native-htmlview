@@ -9,25 +9,6 @@ exports[`<HTMLView/> can use a custom node class 1`] = `
     allowFontScaling={true}
     disabled={false}
     ellipsizeMode="tail"
-    style={
-      Array [
-        null,
-        null,
-      ]
-    }
-  >
-    
-          
-  </Text>
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    disabled={false}
-    ellipsizeMode="tail"
-    onLongPress={null}
-    onPress={null}
-    selectable={false}
-    style={undefined}
   >
     <Text
       accessible={true}
@@ -37,12 +18,12 @@ exports[`<HTMLView/> can use a custom node class 1`] = `
       style={
         Array [
           null,
-          Object {},
+          null,
         ]
       }
     >
       
-              
+            
     </Text>
     <Text
       accessible={true}
@@ -52,7 +33,7 @@ exports[`<HTMLView/> can use a custom node class 1`] = `
       onLongPress={null}
       onPress={null}
       selectable={false}
-      style={null}
+      style={undefined}
     >
       <Text
         accessible={true}
@@ -67,23 +48,49 @@ exports[`<HTMLView/> can use a custom node class 1`] = `
         }
       >
         
-              
+                
       </Text>
-    </Text>
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      disabled={false}
-      ellipsizeMode="tail"
-      style={
-        Array [
-          null,
-          Object {},
-        ]
-      }
-    >
-      
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        disabled={false}
+        ellipsizeMode="tail"
+        onLongPress={null}
+        onPress={null}
+        selectable={false}
+        style={null}
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          disabled={false}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              null,
+              Object {},
+            ]
+          }
+        >
           
+                
+        </Text>
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        disabled={false}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            null,
+            Object {},
+          ]
+        }
+      >
+        
+            
+      </Text>
     </Text>
   </Text>
 </View>
@@ -98,24 +105,6 @@ exports[`<HTMLView/> can use a custom renderer 1`] = `
     allowFontScaling={true}
     disabled={false}
     ellipsizeMode="tail"
-    style={
-      Array [
-        null,
-        null,
-      ]
-    }
-  >
-    
-          
-  </Text>
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    disabled={false}
-    ellipsizeMode="tail"
-    onLongPress={null}
-    onPress={null}
-    style={undefined}
   >
     <Text
       accessible={true}
@@ -125,81 +114,12 @@ exports[`<HTMLView/> can use a custom renderer 1`] = `
       style={
         Array [
           null,
-          Object {},
-        ]
-      }
-    >
-      
-              
-    </Text>
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      disabled={false}
-      ellipsizeMode="tail"
-    />
-  </Text>
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    disabled={false}
-    ellipsizeMode="tail"
-    style={
-      Array [
-        null,
-        null,
-      ]
-    }
-  >
-    
-        
-  </Text>
-</View>
-`;
-
-exports[`<HTMLView/> can use custom node props 1`] = `
-<View
-  style={undefined}
->
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    disabled={false}
-    ellipsizeMode="tail"
-    style={
-      Array [
-        null,
-        null,
-      ]
-    }
-  >
-    
-          
-  </Text>
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    disabled={false}
-    ellipsizeMode="tail"
-    onLongPress={null}
-    onPress={null}
-    selectable={false}
-    style={undefined}
-  >
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      disabled={false}
-      ellipsizeMode="tail"
-      style={
-        Array [
           null,
-          Object {},
         ]
       }
     >
       
-              
+            
     </Text>
     <Text
       accessible={true}
@@ -208,8 +128,7 @@ exports[`<HTMLView/> can use custom node props 1`] = `
       ellipsizeMode="tail"
       onLongPress={null}
       onPress={null}
-      selectable={false}
-      style={null}
+      style={undefined}
     >
       <Text
         accessible={true}
@@ -224,8 +143,14 @@ exports[`<HTMLView/> can use custom node props 1`] = `
         }
       >
         
-              
+                
       </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        disabled={false}
+        ellipsizeMode="tail"
+      />
     </Text>
     <Text
       accessible={true}
@@ -235,12 +160,108 @@ exports[`<HTMLView/> can use custom node props 1`] = `
       style={
         Array [
           null,
-          Object {},
+          null,
         ]
       }
     >
       
           
+    </Text>
+  </Text>
+</View>
+`;
+
+exports[`<HTMLView/> can use custom node props 1`] = `
+<View
+  style={undefined}
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    disabled={false}
+    ellipsizeMode="tail"
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      disabled={false}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          null,
+          null,
+        ]
+      }
+    >
+      
+            
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      disabled={false}
+      ellipsizeMode="tail"
+      onLongPress={null}
+      onPress={null}
+      selectable={false}
+      style={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        disabled={false}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            null,
+            Object {},
+          ]
+        }
+      >
+        
+                
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        disabled={false}
+        ellipsizeMode="tail"
+        onLongPress={null}
+        onPress={null}
+        selectable={false}
+        style={null}
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          disabled={false}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              null,
+              Object {},
+            ]
+          }
+        >
+          
+                
+        </Text>
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        disabled={false}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            null,
+            Object {},
+          ]
+        }
+      >
+        
+            
+      </Text>
     </Text>
   </Text>
 </View>
@@ -255,25 +276,7 @@ exports[`<HTMLView/> should handle additional text nodes between list items 1`] 
     allowFontScaling={true}
     disabled={false}
     ellipsizeMode="tail"
-    onLongPress={null}
-    onPress={null}
-    style={undefined}
   >
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      disabled={false}
-      ellipsizeMode="tail"
-      style={
-        Array [
-          null,
-          Object {},
-        ]
-      }
-    >
-      
-            
-    </Text>
     <Text
       accessible={true}
       allowFontScaling={true}
@@ -281,7 +284,7 @@ exports[`<HTMLView/> should handle additional text nodes between list items 1`] 
       ellipsizeMode="tail"
       onLongPress={null}
       onPress={null}
-      style={null}
+      style={undefined}
     >
       <Text
         accessible={true}
@@ -295,508 +298,8 @@ exports[`<HTMLView/> should handle additional text nodes between list items 1`] 
           ]
         }
       >
-        1. 
-      </Text>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        disabled={false}
-        ellipsizeMode="tail"
-        style={
-          Array [
-            null,
-            Object {},
-          ]
-        }
-      >
-         a 
-      </Text>
-      
-      
-    </Text>
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      disabled={false}
-      ellipsizeMode="tail"
-      style={
-        Array [
-          null,
-          Object {},
-        ]
-      }
-    >
-      
-            
-    </Text>
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      disabled={false}
-      ellipsizeMode="tail"
-      onLongPress={null}
-      onPress={null}
-      style={null}
-    >
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        disabled={false}
-        ellipsizeMode="tail"
-        style={
-          Array [
-            null,
-            Object {},
-          ]
-        }
-      >
-        2. 
-      </Text>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        disabled={false}
-        ellipsizeMode="tail"
-        style={
-          Array [
-            null,
-            Object {},
-          ]
-        }
-      >
-         b 
-      </Text>
-      
-      
-    </Text>
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      disabled={false}
-      ellipsizeMode="tail"
-      style={
-        Array [
-          null,
-          Object {},
-        ]
-      }
-    >
-      
-          
-    </Text>
-  </Text>
-</View>
-`;
-
-exports[`<HTMLView/> should not render extra linebreaks if configured not to 1`] = `
-<View
-  style={undefined}
->
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    disabled={false}
-    ellipsizeMode="tail"
-    style={
-      Array [
-        null,
-        null,
-      ]
-    }
-  >
-    
-          
-  </Text>
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    disabled={false}
-    ellipsizeMode="tail"
-    onLongPress={null}
-    onPress={null}
-    style={undefined}
-  >
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      disabled={false}
-      ellipsizeMode="tail"
-      style={
-        Array [
-          null,
-          Object {},
-        ]
-      }
-    >
-      
-                
-    </Text>
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      disabled={false}
-      ellipsizeMode="tail"
-      onLongPress={null}
-      onPress={null}
-      style={null}
-    >
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        disabled={false}
-        ellipsizeMode="tail"
-        style={
-          Array [
-            null,
-            Object {
-              "fontSize": 30,
-              "fontWeight": "500",
-            },
-          ]
-        }
-      >
-        Dwayne’s only companion at night was a Labrador retriever named Sparky.
-      </Text>
-    </Text>
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      disabled={false}
-      ellipsizeMode="tail"
-      style={
-        Array [
-          null,
-          Object {},
-        ]
-      }
-    >
-      
+        
               
-    </Text>
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      disabled={false}
-      ellipsizeMode="tail"
-      onLongPress={null}
-      onPress={null}
-      style={null}
-    >
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        disabled={false}
-        ellipsizeMode="tail"
-        style={
-          Array [
-            null,
-            Object {},
-          ]
-        }
-      >
-        
-                Sparky could not wag his tail-because of an automobile accident many years ago, so he had no way of telling other dogs how friendly he was.
-      </Text>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        disabled={false}
-        ellipsizeMode="tail"
-        onLongPress={null}
-        onPress={null}
-        style={null}
-      />
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        disabled={false}
-        ellipsizeMode="tail"
-        style={
-          Array [
-            null,
-            Object {},
-          ]
-        }
-      >
-        
-                He opened the door of the cage, something Bill couldn’t have done in a thousand years. Bill flew over to a windowsill.
-                
-      </Text>
-    </Text>
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      disabled={false}
-      ellipsizeMode="tail"
-      style={
-        Array [
-          null,
-          Object {},
-        ]
-      }
-    >
-      
-            
-    </Text>
-  </Text>
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    disabled={false}
-    ellipsizeMode="tail"
-    style={
-      Array [
-        null,
-        null,
-      ]
-    }
-  >
-    
-        
-  </Text>
-</View>
-`;
-
-exports[`<HTMLView/> should not render extra linebreaks in list items if configured not to 1`] = `
-<View
-  style={undefined}
->
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    disabled={false}
-    ellipsizeMode="tail"
-    onLongPress={null}
-    onPress={null}
-    style={undefined}
-  >
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      disabled={false}
-      ellipsizeMode="tail"
-      onLongPress={null}
-      onPress={null}
-      style={null}
-    >
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        disabled={false}
-        ellipsizeMode="tail"
-        style={
-          Array [
-            null,
-            Object {},
-          ]
-        }
-      >
-        • 
-      </Text>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        disabled={false}
-        ellipsizeMode="tail"
-        style={
-          Array [
-            null,
-            Object {},
-          ]
-        }
-      >
-         a 
-      </Text>
-    </Text>
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      disabled={false}
-      ellipsizeMode="tail"
-      onLongPress={null}
-      onPress={null}
-      style={null}
-    >
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        disabled={false}
-        ellipsizeMode="tail"
-        style={
-          Array [
-            null,
-            Object {},
-          ]
-        }
-      >
-        • 
-      </Text>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        disabled={false}
-        ellipsizeMode="tail"
-        style={
-          Array [
-            null,
-            Object {},
-          ]
-        }
-      >
-         b 
-      </Text>
-    </Text>
-  </Text>
-</View>
-`;
-
-exports[`<HTMLView/> should render an <Image /> with set width/height 1`] = `
-<View
-  style={undefined}
->
-  <Image
-    source={
-      Object {
-        "height": 58,
-        "uri": "https://facebook.github.io/react-native/img/header_logo.png",
-        "width": 66,
-      }
-    }
-    style={
-      Object {
-        "backgroundColor": "transparent",
-        "height": 58,
-        "width": 66,
-      }
-    }
-  />
-</View>
-`;
-
-exports[`<HTMLView/> should render an <Image />, with default width/height of 1 1`] = `
-<View
-  style={undefined}
->
-  <Image
-    source={
-      Object {
-        "height": 1,
-        "uri": "https://facebook.github.io/react-native/img/header_logo.png",
-        "width": 1,
-      }
-    }
-    style={
-      Object {
-        "backgroundColor": "transparent",
-        "height": 1,
-        "width": 1,
-      }
-    }
-  />
-</View>
-`;
-
-exports[`<HTMLView/> should render an empty <Text/> element 1`] = `
-<View
-  style={undefined}
->
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    disabled={false}
-    ellipsizeMode="tail"
-    onLongPress={null}
-    onPress={null}
-    style={undefined}
-  >
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      disabled={false}
-      ellipsizeMode="tail"
-      onLongPress={null}
-      onPress={[Function]}
-      style={null}
-    >
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        disabled={false}
-        ellipsizeMode="tail"
-        style={
-          Array [
-            null,
-            Object {
-              "color": "#007AFF",
-              "fontWeight": "500",
-            },
-          ]
-        }
-      >
-        &hearts nice job!
-      </Text>
-    </Text>
-  </Text>
-</View>
-`;
-
-exports[`<HTMLView/> should render inherited styles correctly 1`] = `
-<View
-  style={undefined}
->
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    disabled={false}
-    ellipsizeMode="tail"
-    onLongPress={null}
-    onPress={null}
-    style={
-      Object {
-        "color": "red",
-      }
-    }
-  >
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      disabled={false}
-      ellipsizeMode="tail"
-      style={
-        Array [
-          null,
-          Object {
-            "color": "red",
-          },
-        ]
-      }
-    >
-      RED
-    </Text>
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      disabled={false}
-      ellipsizeMode="tail"
-      onLongPress={null}
-      onPress={null}
-      style={null}
-    >
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        disabled={false}
-        ellipsizeMode="tail"
-        style={
-          Array [
-            null,
-            Object {
-              "color": "blue",
-            },
-          ]
-        }
-      >
-        BLUE
       </Text>
       <Text
         accessible={true}
@@ -815,21 +318,105 @@ exports[`<HTMLView/> should render inherited styles correctly 1`] = `
           style={
             Array [
               null,
-              Object {
-                "color": "green",
-              },
+              Object {},
             ]
           }
         >
-          GREEN
+          1. 
         </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          disabled={false}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              null,
+              Object {},
+            ]
+          }
+        >
+           a 
+        </Text>
+        
+        
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        disabled={false}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            null,
+            Object {},
+          ]
+        }
+      >
+        
+              
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        disabled={false}
+        ellipsizeMode="tail"
+        onLongPress={null}
+        onPress={null}
+        style={null}
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          disabled={false}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              null,
+              Object {},
+            ]
+          }
+        >
+          2. 
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          disabled={false}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              null,
+              Object {},
+            ]
+          }
+        >
+           b 
+        </Text>
+        
+        
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        disabled={false}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            null,
+            Object {},
+          ]
+        }
+      >
+        
+            
       </Text>
     </Text>
   </Text>
 </View>
 `;
 
-exports[`<HTMLView/> should render ol numbers 1`] = `
+exports[`<HTMLView/> should not render extra linebreaks if configured not to 1`] = `
 <View
   style={undefined}
 >
@@ -838,119 +425,6 @@ exports[`<HTMLView/> should render ol numbers 1`] = `
     allowFontScaling={true}
     disabled={false}
     ellipsizeMode="tail"
-    onLongPress={null}
-    onPress={null}
-    style={undefined}
-  >
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      disabled={false}
-      ellipsizeMode="tail"
-      onLongPress={null}
-      onPress={null}
-      style={null}
-    >
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        disabled={false}
-        ellipsizeMode="tail"
-        style={
-          Array [
-            null,
-            Object {},
-          ]
-        }
-      >
-        1. 
-      </Text>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        disabled={false}
-        ellipsizeMode="tail"
-        style={
-          Array [
-            null,
-            Object {},
-          ]
-        }
-      >
-         a 
-      </Text>
-      
-      
-    </Text>
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      disabled={false}
-      ellipsizeMode="tail"
-      onLongPress={null}
-      onPress={null}
-      style={null}
-    >
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        disabled={false}
-        ellipsizeMode="tail"
-        style={
-          Array [
-            null,
-            Object {},
-          ]
-        }
-      >
-        2. 
-      </Text>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        disabled={false}
-        ellipsizeMode="tail"
-        style={
-          Array [
-            null,
-            Object {},
-          ]
-        }
-      >
-         b 
-      </Text>
-    </Text>
-  </Text>
-</View>
-`;
-
-exports[`<HTMLView/> should render shoddy html including headings, links, bold, italic 1`] = `
-<View
-  style={undefined}
->
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    disabled={false}
-    ellipsizeMode="tail"
-    style={
-      Array [
-        null,
-        null,
-      ]
-    }
-  >
-    
-          
-  </Text>
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    disabled={false}
-    ellipsizeMode="tail"
-    onLongPress={null}
-    onPress={null}
-    style={undefined}
   >
     <Text
       accessible={true}
@@ -960,12 +434,12 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
       style={
         Array [
           null,
-          Object {},
+          null,
         ]
       }
     >
       
-              
+            
     </Text>
     <Text
       accessible={true}
@@ -974,7 +448,7 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
       ellipsizeMode="tail"
       onLongPress={null}
       onPress={null}
-      style={null}
+      style={undefined}
     >
       <Text
         accessible={true}
@@ -1015,10 +489,8 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
             ]
           }
         >
-          &gt; Dwayne’s only companion at night was a Labrador retriever named Sparky.
+          Dwayne’s only companion at night was a Labrador retriever named Sparky.
         </Text>
-        
-        
       </Text>
       <Text
         accessible={true}
@@ -1044,6 +516,593 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
         onPress={null}
         style={null}
       >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          disabled={false}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              null,
+              Object {},
+            ]
+          }
+        >
+          
+                  Sparky could not wag his tail-because of an automobile accident many years ago, so he had no way of telling other dogs how friendly he was.
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          disabled={false}
+          ellipsizeMode="tail"
+          onLongPress={null}
+          onPress={null}
+          style={null}
+        />
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          disabled={false}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              null,
+              Object {},
+            ]
+          }
+        >
+          
+                  He opened the door of the cage, something Bill couldn’t have done in a thousand years. Bill flew over to a windowsill.
+                  
+        </Text>
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        disabled={false}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            null,
+            Object {},
+          ]
+        }
+      >
+        
+              
+      </Text>
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      disabled={false}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          null,
+          null,
+        ]
+      }
+    >
+      
+          
+    </Text>
+  </Text>
+</View>
+`;
+
+exports[`<HTMLView/> should not render extra linebreaks in list items if configured not to 1`] = `
+<View
+  style={undefined}
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    disabled={false}
+    ellipsizeMode="tail"
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      disabled={false}
+      ellipsizeMode="tail"
+      onLongPress={null}
+      onPress={null}
+      style={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        disabled={false}
+        ellipsizeMode="tail"
+        onLongPress={null}
+        onPress={null}
+        style={null}
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          disabled={false}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              null,
+              Object {},
+            ]
+          }
+        >
+          • 
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          disabled={false}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              null,
+              Object {},
+            ]
+          }
+        >
+           a 
+        </Text>
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        disabled={false}
+        ellipsizeMode="tail"
+        onLongPress={null}
+        onPress={null}
+        style={null}
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          disabled={false}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              null,
+              Object {},
+            ]
+          }
+        >
+          • 
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          disabled={false}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              null,
+              Object {},
+            ]
+          }
+        >
+           b 
+        </Text>
+      </Text>
+    </Text>
+  </Text>
+</View>
+`;
+
+exports[`<HTMLView/> should render an <Image /> with set width/height 1`] = `
+<View
+  style={undefined}
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    disabled={false}
+    ellipsizeMode="tail"
+  >
+    <Image
+      source={
+        Object {
+          "height": 58,
+          "uri": "https://facebook.github.io/react-native/img/header_logo.png",
+          "width": 66,
+        }
+      }
+      style={
+        Object {
+          "backgroundColor": "transparent",
+          "height": 58,
+          "width": 66,
+        }
+      }
+    />
+  </Text>
+</View>
+`;
+
+exports[`<HTMLView/> should render an <Image />, with default width/height of 1 1`] = `
+<View
+  style={undefined}
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    disabled={false}
+    ellipsizeMode="tail"
+  >
+    <Image
+      source={
+        Object {
+          "height": 1,
+          "uri": "https://facebook.github.io/react-native/img/header_logo.png",
+          "width": 1,
+        }
+      }
+      style={
+        Object {
+          "backgroundColor": "transparent",
+          "height": 1,
+          "width": 1,
+        }
+      }
+    />
+  </Text>
+</View>
+`;
+
+exports[`<HTMLView/> should render an empty <Text/> element 1`] = `
+<View
+  style={undefined}
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    disabled={false}
+    ellipsizeMode="tail"
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      disabled={false}
+      ellipsizeMode="tail"
+      onLongPress={null}
+      onPress={null}
+      style={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        disabled={false}
+        ellipsizeMode="tail"
+        onLongPress={null}
+        onPress={[Function]}
+        style={null}
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          disabled={false}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              null,
+              Object {
+                "color": "#007AFF",
+                "fontWeight": "500",
+              },
+            ]
+          }
+        >
+          &hearts nice job!
+        </Text>
+      </Text>
+    </Text>
+  </Text>
+</View>
+`;
+
+exports[`<HTMLView/> should render inherited styles correctly 1`] = `
+<View
+  style={undefined}
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    disabled={false}
+    ellipsizeMode="tail"
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      disabled={false}
+      ellipsizeMode="tail"
+      onLongPress={null}
+      onPress={null}
+      style={
+        Object {
+          "color": "red",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        disabled={false}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            null,
+            Object {
+              "color": "red",
+            },
+          ]
+        }
+      >
+        RED
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        disabled={false}
+        ellipsizeMode="tail"
+        onLongPress={null}
+        onPress={null}
+        style={null}
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          disabled={false}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              null,
+              Object {
+                "color": "blue",
+              },
+            ]
+          }
+        >
+          BLUE
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          disabled={false}
+          ellipsizeMode="tail"
+          onLongPress={null}
+          onPress={null}
+          style={null}
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            disabled={false}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                null,
+                Object {
+                  "color": "green",
+                },
+              ]
+            }
+          >
+            GREEN
+          </Text>
+        </Text>
+      </Text>
+    </Text>
+  </Text>
+</View>
+`;
+
+exports[`<HTMLView/> should render ol numbers 1`] = `
+<View
+  style={undefined}
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    disabled={false}
+    ellipsizeMode="tail"
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      disabled={false}
+      ellipsizeMode="tail"
+      onLongPress={null}
+      onPress={null}
+      style={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        disabled={false}
+        ellipsizeMode="tail"
+        onLongPress={null}
+        onPress={null}
+        style={null}
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          disabled={false}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              null,
+              Object {},
+            ]
+          }
+        >
+          1. 
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          disabled={false}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              null,
+              Object {},
+            ]
+          }
+        >
+           a 
+        </Text>
+        
+        
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        disabled={false}
+        ellipsizeMode="tail"
+        onLongPress={null}
+        onPress={null}
+        style={null}
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          disabled={false}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              null,
+              Object {},
+            ]
+          }
+        >
+          2. 
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          disabled={false}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              null,
+              Object {},
+            ]
+          }
+        >
+           b 
+        </Text>
+      </Text>
+    </Text>
+  </Text>
+</View>
+`;
+
+exports[`<HTMLView/> should render shoddy html including headings, links, bold, italic 1`] = `
+<View
+  style={undefined}
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    disabled={false}
+    ellipsizeMode="tail"
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      disabled={false}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          null,
+          null,
+        ]
+      }
+    >
+      
+            
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      disabled={false}
+      ellipsizeMode="tail"
+      onLongPress={null}
+      onPress={null}
+      style={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        disabled={false}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            null,
+            Object {},
+          ]
+        }
+      >
+        
+                
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        disabled={false}
+        ellipsizeMode="tail"
+        onLongPress={null}
+        onPress={null}
+        style={null}
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          disabled={false}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              null,
+              Object {},
+            ]
+          }
+        >
+          
+                    
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          disabled={false}
+          ellipsizeMode="tail"
+          onLongPress={null}
+          onPress={null}
+          style={null}
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            disabled={false}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                null,
+                Object {
+                  "fontSize": 30,
+                  "fontWeight": "500",
+                },
+              ]
+            }
+          >
+            &gt; Dwayne’s only companion at night was a Labrador retriever named Sparky.
+          </Text>
+          
+          
+        </Text>
         <Text
           accessible={true}
           allowFontScaling={true}
@@ -1076,14 +1135,11 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
             style={
               Array [
                 null,
-                Object {
-                  "fontStyle": "italic",
-                },
+                Object {},
               ]
             }
           >
-            Sparky could not wag his tail-because of an automobile accident many years ago, so he had no way of telling other dogs how friendly he was.
-                    He opened the door of the cage, something Bill couldn’t have done in a thousand years. Bill flew over to a windowsill.
+            
                     
           </Text>
           <Text
@@ -1105,19 +1161,147 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
                   null,
                   Object {
                     "fontStyle": "italic",
+                  },
+                ]
+              }
+            >
+              Sparky could not wag his tail-because of an automobile accident many years ago, so he had no way of telling other dogs how friendly he was.
+                      He opened the door of the cage, something Bill couldn’t have done in a thousand years. Bill flew over to a windowsill.
+                      
+            </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              disabled={false}
+              ellipsizeMode="tail"
+              onLongPress={null}
+              onPress={null}
+              style={null}
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                disabled={false}
+                ellipsizeMode="tail"
+                style={
+                  Array [
+                    null,
+                    Object {
+                      "fontStyle": "italic",
+                      "fontWeight": "500",
+                    },
+                  ]
+                }
+              >
+                The undippable flag was a beauty, and the anthem and the vacant motto might not have mattered much, if it weren’t for this: a lot of citizens were so ignored and cheated and insulted that they thought they might be in the wrong country, or even on the wrong planet, that some terrible mistake had been made.
+                        
+              </Text>
+            </Text>
+          </Text>
+          
+          
+          
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          disabled={false}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              null,
+              Object {},
+            ]
+          }
+        >
+          
+                  
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          disabled={false}
+          ellipsizeMode="tail"
+          onLongPress={null}
+          onPress={null}
+          style={null}
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            disabled={false}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                null,
+                Object {},
+              ]
+            }
+          >
+            
+                      [1] 
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            disabled={false}
+            ellipsizeMode="tail"
+            onLongPress={null}
+            onPress={[Function]}
+            style={null}
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              disabled={false}
+              ellipsizeMode="tail"
+              style={
+                Array [
+                  null,
+                  Object {
+                    "color": "#007AFF",
                     "fontWeight": "500",
                   },
                 ]
               }
             >
-              The undippable flag was a beauty, and the anthem and the vacant motto might not have mattered much, if it weren’t for this: a lot of citizens were so ignored and cheated and insulted that they thought they might be in the wrong country, or even on the wrong planet, that some terrible mistake had been made.
-                      
+              https://code.facebook.com/posts/1505962329687926/flow-a-new-...
             </Text>
           </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            disabled={false}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                null,
+                Object {},
+              ]
+            }
+          >
+            
+                    
+          </Text>
+          
+          
+          
         </Text>
-        
-        
-        
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          disabled={false}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              null,
+              Object {},
+            ]
+          }
+        >
+          
+                
+        </Text>
       </Text>
       <Text
         accessible={true}
@@ -1132,7 +1316,114 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
         }
       >
         
-                
+            
+      </Text>
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      disabled={false}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          null,
+          null,
+        ]
+      }
+    >
+      
+          
+    </Text>
+  </Text>
+</View>
+`;
+
+exports[`<HTMLView/> should render text in a (nested) <Text/> element 1`] = `
+<View
+  style={undefined}
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    disabled={false}
+    ellipsizeMode="tail"
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      disabled={false}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          null,
+          null,
+        ]
+      }
+    >
+      This is some text
+    </Text>
+  </Text>
+</View>
+`;
+
+exports[`<HTMLView/> should render ul bullets 1`] = `
+<View
+  style={undefined}
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    disabled={false}
+    ellipsizeMode="tail"
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      disabled={false}
+      ellipsizeMode="tail"
+      onLongPress={null}
+      onPress={null}
+      style={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        disabled={false}
+        ellipsizeMode="tail"
+        onLongPress={null}
+        onPress={null}
+        style={null}
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          disabled={false}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              null,
+              Object {},
+            ]
+          }
+        >
+          • 
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          disabled={false}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              null,
+              Object {},
+            ]
+          }
+        >
+           a 
+        </Text>
+        
+        
       </Text>
       <Text
         accessible={true}
@@ -1155,35 +1446,7 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
             ]
           }
         >
-          
-                    [1] 
-        </Text>
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          disabled={false}
-          ellipsizeMode="tail"
-          onLongPress={null}
-          onPress={[Function]}
-          style={null}
-        >
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            disabled={false}
-            ellipsizeMode="tail"
-            style={
-              Array [
-                null,
-                Object {
-                  "color": "#007AFF",
-                  "fontWeight": "500",
-                },
-              ]
-            }
-          >
-            https://code.facebook.com/posts/1505962329687926/flow-a-new-...
-          </Text>
+          • 
         </Text>
         <Text
           accessible={true}
@@ -1197,173 +1460,8 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
             ]
           }
         >
-          
-                  
+           b 
         </Text>
-        
-        
-        
-      </Text>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        disabled={false}
-        ellipsizeMode="tail"
-        style={
-          Array [
-            null,
-            Object {},
-          ]
-        }
-      >
-        
-              
-      </Text>
-    </Text>
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      disabled={false}
-      ellipsizeMode="tail"
-      style={
-        Array [
-          null,
-          Object {},
-        ]
-      }
-    >
-      
-          
-    </Text>
-  </Text>
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    disabled={false}
-    ellipsizeMode="tail"
-    style={
-      Array [
-        null,
-        null,
-      ]
-    }
-  >
-    
-        
-  </Text>
-</View>
-`;
-
-exports[`<HTMLView/> should render text in a (nested) <Text/> element 1`] = `
-<View
-  style={undefined}
->
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    disabled={false}
-    ellipsizeMode="tail"
-    style={
-      Array [
-        null,
-        null,
-      ]
-    }
-  >
-    This is some text
-  </Text>
-</View>
-`;
-
-exports[`<HTMLView/> should render ul bullets 1`] = `
-<View
-  style={undefined}
->
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    disabled={false}
-    ellipsizeMode="tail"
-    onLongPress={null}
-    onPress={null}
-    style={undefined}
-  >
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      disabled={false}
-      ellipsizeMode="tail"
-      onLongPress={null}
-      onPress={null}
-      style={null}
-    >
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        disabled={false}
-        ellipsizeMode="tail"
-        style={
-          Array [
-            null,
-            Object {},
-          ]
-        }
-      >
-        • 
-      </Text>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        disabled={false}
-        ellipsizeMode="tail"
-        style={
-          Array [
-            null,
-            Object {},
-          ]
-        }
-      >
-         a 
-      </Text>
-      
-      
-    </Text>
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      disabled={false}
-      ellipsizeMode="tail"
-      onLongPress={null}
-      onPress={null}
-      style={null}
-    >
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        disabled={false}
-        ellipsizeMode="tail"
-        style={
-          Array [
-            null,
-            Object {},
-          ]
-        }
-      >
-        • 
-      </Text>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        disabled={false}
-        ellipsizeMode="tail"
-        style={
-          Array [
-            null,
-            Object {},
-          ]
-        }
-      >
-         b 
       </Text>
     </Text>
   </Text>

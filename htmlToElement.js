@@ -163,13 +163,13 @@ export default function htmlToElement(rawHtml, customOpts = {}, done) {
   }
 
   function domToElementWrapper(dom) {
-  		const [ firstNode ] = dom;
-  		return (
-  			<Text {...(firstNode && firstNode.type === 'tag' ? opts.nodeComponentProps : opts.textComponentProps)}>
-  				{domToElement(dom)}
-  			</Text>
-  		);
-  	}
+    const [firstNode] = dom;
+    return (
+      <Text {...(firstNode && firstNode.type === 'tag' ? opts.nodeComponentProps : opts.textComponentProps)}>
+        {domToElement(dom)}
+      </Text>
+    );
+  }
 
   const handler = new htmlparser.DomHandler(function(err, dom) {
     if (err) done(err);
