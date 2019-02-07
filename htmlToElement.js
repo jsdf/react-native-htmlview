@@ -162,9 +162,18 @@ export default function htmlToElement(rawHtml, customOpts = {}, done) {
     });
   }
 
+  function domToElementWrapper(dom) {
+  		const [ firstNode ] = dom;
+  		return (
+  			<Text {...(firstNode.type === 'tag' ? opts.nodeComponentProps : opts.textComponentProps)}>
+  				{domToElement(dom)}
+  			</Text>
+  		);
+  	}
+
   const handler = new htmlparser.DomHandler(function(err, dom) {
     if (err) done(err);
-    done(null, domToElement(dom));
+    done(null, domToElementWrapper(dom));
   });
   const parser = new htmlparser.Parser(handler);
   parser.write(rawHtml);
