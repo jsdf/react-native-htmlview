@@ -6,8 +6,6 @@ import Example from '../Example';
 
 describe('<Example/>', () => {
   it('should render', () => {
-    expect(
-      renderer.create(<Example />).toJSON()
-    ).toMatchSnapshot();
+    expect(renderer.create(<Example />).toJSON()).toMatchSnapshot();
   });
 });

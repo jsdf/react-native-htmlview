@@ -4,7 +4,7 @@ import renderer from 'react-test-renderer';
 
 import {StyleSheet, Text} from 'react-native';
 
-import HTMLView from '../HTMLView';
+import HTMLView from '../lib';
 
 describe('<HTMLView/>', () => {
   it('should render an empty <Text/> element', () => {
@@ -144,11 +144,7 @@ describe('<HTMLView/>', () => {
 
     function renderNode(node, index) {
       if (node.name == 'thing') {
-        return (
-          <Text key={index}>
-            {node.attribs.b}
-          </Text>
-        );
+        return <Text key={index}>{node.attribs.b}</Text>;
       }
     }
 

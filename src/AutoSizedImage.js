@@ -1,8 +1,5 @@
 import React, {PureComponent} from 'react';
-import {
-  Image,
-  Dimensions,
-} from 'react-native';
+import {Image, Dimensions} from 'react-native';
 
 const {width} = Dimensions.get('window');
 
