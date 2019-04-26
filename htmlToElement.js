@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, Text} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 import htmlparser from 'htmlparser2-without-node-native';
 import entities from 'entities';
 
@@ -11,7 +11,7 @@ const defaultOpts = {
   bullet: '\u2022 ',
   TextComponent: Text,
   textComponentProps: null,
-  NodeComponent: Text,
+  NodeComponent: View,
   nodeComponentProps: null,
 };
 
@@ -69,7 +69,7 @@ export default function htmlToElement(rawHtml, customOpts = {}, done) {
 
       const {TextComponent} = opts;
 
-      if (node.type === 'text') {
+      if (node.type === 'text' || !node.children) {
         const defaultStyle = opts.textComponentProps ? opts.textComponentProps.style : null;
         const customStyle = inheritedStyle(parent);
 
