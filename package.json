@@ -9,6 +9,7 @@
     "test": "yarn run format-lint && yarn run lint && yarn run jest",
     "format-lint": "./format.sh --list-different; if [ $? != 0 ]; then echo \"CODE FORMATTING: please run 'yarn run format' and commit the changes\"; exit 1; fi",
     "format": "./format.sh --write && eslint . --fix",
+    "release": "npm publish .; git push && git push --tags # yarn publish is often broken",
     "jest": "jest"
   },
   "devDependencies": {
