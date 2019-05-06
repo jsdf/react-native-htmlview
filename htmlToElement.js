@@ -152,10 +152,10 @@ export default function htmlToElement(rawHtml, customOpts = {}, done) {
             style={!node.parent ? styles[node.name] : null}
             onLongPress={linkLongPressHandler}
           >
-            <Text>{linebreakBefore}</Text>
+            {linebreakBefore && <Text>{linebreakBefore}</Text>}
             {listItemPrefix}
             {domToElement(node.children, node)}
-            <Text>{linebreakAfter}</Text>
+            {linebreakAfter && <Text>{linebreakAfter}</Text>}
           </NodeComponent>
         );
       }
