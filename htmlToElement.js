@@ -17,7 +17,9 @@ const defaultOpts = {
 
 const Img = props => {
   const width =
-    parseInt(props.attribs['width'], 10) || parseInt(props.attribs['data-width'], 10) || 0;
+    parseInt(props.attribs['width'], 10) ||
+    parseInt(props.attribs['data-width'], 10) ||
+    0;
   const height =
     parseInt(props.attribs['height'], 10) ||
     parseInt(props.attribs['data-height'], 10) ||
@@ -46,6 +48,7 @@ export default function htmlToElement(rawHtml, customOpts = {}, done) {
     if (!parent) return null;
     const style = StyleSheet.flatten(opts.styles[parent.name]) || {};
     const parentStyle = inheritedStyle(parent.parent) || {};
+
     return {...parentStyle, ...style};
   }
 
@@ -57,20 +60,16 @@ export default function htmlToElement(rawHtml, customOpts = {}, done) {
 
     return dom.map((node, index, list) => {
       if (renderNode) {
-        const rendered = renderNode(
-          node,
-          index,
-          list,
-          parent,
-          domToElement
-        );
+        const rendered = renderNode(node, index, list, parent, domToElement);
         if (rendered || rendered === null) return rendered;
       }
 
       const {TextComponent} = opts;
 
       if (node.type === 'text') {
-        const defaultStyle = opts.textComponentProps ? opts.textComponentProps.style : null;
+        const defaultStyle = opts.textComponentProps
+          ? opts.textComponentProps.style
+          : null;
         const customStyle = inheritedStyle(parent);
 
         return (
@@ -104,38 +103,48 @@ export default function htmlToElement(rawHtml, customOpts = {}, done) {
         let linebreakAfter = null;
         if (opts.addLineBreaks) {
           switch (node.name) {
-          case 'pre':
-            linebreakBefore = opts.lineBreak;
-            break;
-          case 'p':
-            if (index < list.length - 1) {
-              linebreakAfter = opts.paragraphBreak;
-            }
-            break;
-          case 'br':
-          case 'h1':
-          case 'h2':
-          case 'h3':
-          case 'h4':
-          case 'h5':
-            linebreakAfter = opts.lineBreak;
-            break;
+            case 'pre':
+              linebreakBefore = opts.lineBreak;
+              break;
+            case 'p':
+              if (index < list.length - 1) {
+                linebreakAfter = opts.paragraphBreak;
+              }
+              break;
+            case 'br':
+            case 'h1':
+            case 'h2':
+            case 'h3':
+            case 'h4':
+            case 'h5':
+              linebreakAfter = opts.lineBreak;
+              break;
           }
         }
 
         let listItemPrefix = null;
         if (node.name === 'li') {
-          const defaultStyle = opts.textComponentProps ? opts.textComponentProps.style : null;
+          const defaultStyle = opts.textComponentProps
+            ? opts.textComponentProps.style
+            : null;
           const customStyle = inheritedStyle(parent);
 
           if (parent.name === 'ol') {
-            listItemPrefix = (<TextComponent style={[defaultStyle, customStyle]}>
-              {`${orderedListCounter++}. `}
-            </TextComponent>);
+            let listNumbering = orderedListCounter++;
+            if (parent.attribs.start) {
+              listNumbering = parent.attribs.start;
+            }
+            listItemPrefix = (
+              <TextComponent style={[defaultStyle, customStyle]}>
+                {`${listNumbering}. `}
+              </TextComponent>
+            );
           } else if (parent.name === 'ul') {
-            listItemPrefix = (<TextComponent style={[defaultStyle, customStyle]}>
-              {opts.bullet}
-            </TextComponent>);
+            listItemPrefix = (
+              <TextComponent style={[defaultStyle, customStyle]}>
+                {opts.bullet}
+              </TextComponent>
+            );
           }
           if (opts.addLineBreaks && index < list.length - 1) {
             linebreakAfter = opts.lineBreak;
@@ -143,13 +152,12 @@ export default function htmlToElement(rawHtml, customOpts = {}, done) {
         }
 
         const {NodeComponent, styles} = opts;
-
         return (
           <NodeComponent
             {...opts.nodeComponentProps}
             key={index}
             onPress={linkPressHandler}
-            style={!node.parent ? styles[node.name] : null}
+            style={[styles[node.name], node.parent && styles[node.parent.name]]}
             onLongPress={linkLongPressHandler}
           >
             {linebreakBefore}
