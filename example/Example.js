@@ -46,6 +46,11 @@ export default class App extends React.Component {
     return (
       <ScrollView style={styles.container}>
         <HTMLView value={htmlContent} renderNode={renderNode} />
+          <HTMLView value={htmlContent}
+                    stylesheet={htmlStyle}
+                    addLineBreaks={false}
+                    textComponentProps={{style:{color:'#777893',fontSize:13,fontFamily:'PingFangSC-Light'}}}
+          />
       </ScrollView>
     );
   }
@@ -56,4 +61,25 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
   },
+});
+
+const htmlStyle = StyleSheet.create({
+    b: {
+        color:'#777893',
+        fontSize: 13,
+        lineHeight:16,
+        fontFamily:'PingFangSC-Light',
+    },
+    p: {
+        color: '#777893',
+        fontSize: 13,
+        lineHeight:16,
+        fontFamily:'PingFangSC-Light',
+    },
+    li: {
+        color: '#777893',
+        fontSize: 13,
+        lineHeight:16,
+        fontFamily:'PingFangSC-Light',
+    },
 });
