@@ -54,9 +54,9 @@ class HtmlView extends PureComponent {
     this.startHtmlRender(this.props.value);
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (this.props.value !== nextProps.value || this.props.stylesheet !== nextProps.stylesheet || this.props.textComponentProps !== nextProps.textComponentProps || this.props.nodeComponentProps !== nextProps.nodeComponentProps) {
-      this.startHtmlRender(nextProps.value, nextProps.stylesheet, nextProps.textComponentProps, nextProps.nodeComponentProps);
+  componentDidUpdate(prevProps) {
+    if (this.props.value !== prevProps.value || this.props.stylesheet !== prevProps.stylesheet || this.props.textComponentProps !== prevProps.textComponentProps || this.props.nodeComponentProps !== prevProps.nodeComponentProps) {
+      this.startHtmlRender(this.props.value, this.props.stylesheet, this.props.textComponentProps, this.props.nodeComponentProps);
     }
   }
 
