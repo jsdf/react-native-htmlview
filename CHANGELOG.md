@@ -1,3 +1,6 @@
+- 0.15.0
+  - replace deprecated componentWillReceiveProps method with componentDidUpdate [#263](https://github.com/jsdf/react-native-htmlview/pull/263)
+  - Thanks to @helloyou2012
 - 0.14.0
   - fix to re-render when `nodeComponentProps` changes [#241](https://github.com/jsdf/react-native-htmlview/pull/241)
   - Thanks to @minjaes01
