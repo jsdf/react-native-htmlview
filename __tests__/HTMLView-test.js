@@ -70,6 +70,20 @@ describe('<HTMLView/>', () => {
     ).toMatchSnapshot();
   });
 
+  it('should render an <Image /> with set width/height using padding', () => {
+    const imgSrc =
+      'https://facebook.github.io/react-native/img/header_logo.png';
+    const htmlContent = `<img src="${imgSrc}" width="6600" height="5800"/>`;
+
+    // should resize to 650, see default width: https://github.com/facebook/react-native/blob/master/jest/setup.js
+
+    expect(
+      renderer
+        .create(<HTMLView value={htmlContent} autoSizedImagePadding={100} />)
+        .toJSON()
+    ).toMatchSnapshot();
+  });
+
   it('should render inherited styles correctly', () => {
     const htmlContent = '<b>RED<u>BLUE<i>GREEN</i></u></b>';
     const stylesheet = StyleSheet.create({
