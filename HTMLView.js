@@ -75,8 +75,6 @@ class HtmlView extends PureComponent {
       onError,
     } = this.props;
 
-    console.log(this.props);
-
     if (!value) {
       this.setState({element: null});
     }

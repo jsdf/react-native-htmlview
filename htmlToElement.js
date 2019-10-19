@@ -87,7 +87,6 @@ export default function htmlToElement(rawHtml, customOpts = {}, done) {
 
       if (node.type === 'tag') {
         if (node.name === 'img') {
-          console.log ('opts,', opts.autoSizedImagePadding);
           return <Img key={index} attribs={node.attribs} padding={opts.autoSizedImagePadding}/>;
         }
 
