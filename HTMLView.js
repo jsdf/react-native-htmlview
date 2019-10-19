@@ -67,6 +67,7 @@ class HtmlView extends PureComponent {
   startHtmlRender(value, style, textComponentProps, nodeComponentProps) {
     const {
       addLineBreaks,
+      autoSizedImagePadding,
       onLinkPress,
       onLinkLongPress,
       stylesheet,
@@ -74,12 +75,15 @@ class HtmlView extends PureComponent {
       onError,
     } = this.props;
 
+    console.log(this.props);
+
     if (!value) {
       this.setState({element: null});
     }
 
     const opts = {
       addLineBreaks,
+      autoSizedImagePadding,
       linkHandler: onLinkPress,
       linkLongPressHandler: onLinkLongPress,
       styles: {...baseStyles, ...stylesheet, ...style},
@@ -135,6 +139,7 @@ class HtmlView extends PureComponent {
 
 HtmlView.propTypes = {
   addLineBreaks: PropTypes.bool,
+  autoSizedImagePadding: PropTypes.number,
   bullet: PropTypes.string,
   lineBreak: PropTypes.string,
   NodeComponent: PropTypes.func,
@@ -155,6 +160,7 @@ HtmlView.propTypes = {
 
 HtmlView.defaultProps = {
   addLineBreaks: true,
+  autoSizedImagePadding: 0,
   onLinkPress: url => Linking.openURL(url),
   onLinkLongPress: null,
   onError: console.error.bind(console),

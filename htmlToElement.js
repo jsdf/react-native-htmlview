@@ -33,7 +33,7 @@ const Img = props => {
     width,
     height,
   };
-  return <AutoSizedImage source={source} style={imgStyle} />;
+  return <AutoSizedImage source={source} style={imgStyle} padding={props.padding}/>;
 };
 
 export default function htmlToElement(rawHtml, customOpts = {}, done) {
@@ -41,6 +41,7 @@ export default function htmlToElement(rawHtml, customOpts = {}, done) {
     ...defaultOpts,
     ...customOpts,
   };
+
 
   function inheritedStyle(parent) {
     if (!parent) return null;
@@ -86,7 +87,8 @@ export default function htmlToElement(rawHtml, customOpts = {}, done) {
 
       if (node.type === 'tag') {
         if (node.name === 'img') {
-          return <Img key={index} attribs={node.attribs} />;
+          console.log ('opts,', opts.autoSizedImagePadding);
+          return <Img key={index} attribs={node.attribs} padding={opts.autoSizedImagePadding}/>;
         }
 
         let linkPressHandler = null;

@@ -42,6 +42,7 @@ props:
 - `paragraphBreak`: text which appears after every `p` element
 - `lineBreak`: text which appears after text elements which create a new line (`br`, headings)
 - `addLineBreaks`: when explicitly `false`, effectively sets `paragraphBreak` and `lineBreak` to `null`
+- `autoSizedImagePadding`: by default images will be resized to the width of the users' screen, if your view has padding you can set the padding here. Set the total padding, so `40` if your view has `20` on both sides.
 - `NodeComponent`, `nodeComponentProps`, `RootComponent`, `rootComponentProps`, `TextComponent`, `textComponentProps`: see [**Customizing things even further**](https://github.com/jsdf/react-native-htmlview#customizing-things-even-further) below.
 
 ### Example
