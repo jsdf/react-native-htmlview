@@ -47,7 +47,7 @@ export default class AutoSizedImage extends PureComponent {
       baseStyle,
       this.props.style,
       this.state,
-      finalSize,
+      finalSize
     );
     let source = {};
     if (!finalSize.width || !finalSize.height) {
