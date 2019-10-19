@@ -502,16 +502,16 @@ exports[`<HTMLView/> should render an <Image /> with set width/height using padd
   <Image
     source={
       Object {
-        "height": 58,
+        "height": 571.2121212121211,
         "uri": "https://facebook.github.io/react-native/img/header_logo.png",
-        "width": 66,
+        "width": 650,
       }
     }
     style={
       Object {
         "backgroundColor": "transparent",
-        "height": 58,
-        "width": 66,
+        "height": 571.2121212121211,
+        "width": 650,
       }
     }
   />
