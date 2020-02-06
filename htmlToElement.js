@@ -104,6 +104,7 @@ export default function htmlToElement(rawHtml, customOpts = {}, done) {
         let linebreakAfter = null;
         if (opts.addLineBreaks) {
           switch (node.name) {
+          case 'ul':
           case 'pre':
             linebreakBefore = opts.lineBreak;
             break;
