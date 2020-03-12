@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import htmlToElement from './htmlToElement';
 import {Linking, Platform, StyleSheet, View, ViewPropTypes} from 'react-native';
 
-const boldStyle = {fontWeight: '500'};
+const boldStyle = {fontWeight: 'bold'};
 const italicStyle = {fontStyle: 'italic'};
 const underlineStyle = {textDecorationLine: 'underline'};
 const strikethroughStyle = {textDecorationLine: 'line-through'};
