@@ -120,7 +120,7 @@ class HtmlView extends PureComponent {
           {...this.props.rootComponentProps}
           style={style}
         >
-          {numberOfLines ? element : <Text numberOfLines={numberOfLines} ellipsizeMode="tail">{element}</Text>}
+          {numberOfLines === 0 ? element : <Text numberOfLines={numberOfLines} ellipsizeMode="tail">{element}</Text>}
         </RootComponent>
       );
     }
@@ -160,6 +160,7 @@ HtmlView.defaultProps = {
   onLinkLongPress: null,
   onError: console.error.bind(console),
   RootComponent: element => <View {...element} />, // eslint-disable-line react/display-name
+  numberOfLines: 0
 };
 
 export default HtmlView;
