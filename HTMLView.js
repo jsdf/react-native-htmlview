@@ -120,7 +120,7 @@ class HtmlView extends PureComponent {
           {...this.props.rootComponentProps}
           style={style}
         >
-          {numberOfLines === 0 ? <Text style={this.props.textStyle}>{element}</Text> : <Text style={this.props.textStyle} numberOfLines={numberOfLines} ellipsizeMode="tail">{element}</Text>}
+          {numberOfLines === 0 ? <Text selectable style={this.props.textStyle}>{element}</Text> : <Text selectable style={this.props.textStyle} numberOfLines={numberOfLines} ellipsizeMode="tail">{element}</Text>}
         </RootComponent>
       );
     }
