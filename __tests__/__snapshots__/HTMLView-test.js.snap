@@ -306,7 +306,7 @@ exports[`<HTMLView/> should not render extra linebreaks if configured not to 1`]
             null,
             Object {
               "fontSize": 30,
-              "fontWeight": "500",
+              "fontWeight": "bold",
             },
           ]
         }
@@ -464,7 +464,7 @@ exports[`<HTMLView/> should render a <Text/> element 1`] = `
             null,
             Object {
               "color": "#007AFF",
-              "fontWeight": "500",
+              "fontWeight": "bold",
             },
           ]
         }
@@ -700,7 +700,7 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
               null,
               Object {
                 "fontSize": 30,
-                "fontWeight": "500",
+                "fontWeight": "bold",
               },
             ]
           }
@@ -767,7 +767,7 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
                   null,
                   Object {
                     "fontStyle": "italic",
-                    "fontWeight": "500",
+                    "fontWeight": "bold",
                   },
                 ]
               }
@@ -819,7 +819,7 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
                 null,
                 Object {
                   "color": "#007AFF",
-                  "fontWeight": "500",
+                  "fontWeight": "bold",
                 },
               ]
             }
