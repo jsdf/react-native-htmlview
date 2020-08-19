@@ -7,7 +7,7 @@ import {StyleSheet, Text} from 'react-native';
 import HTMLView from '../HTMLView';
 
 describe('<HTMLView/>', () => {
-  it('should render an empty <Text/> element', () => {
+  it('should render a <Text/> element', () => {
     const htmlContent = '<p><a href="http://jsdf.co">&hearts nice job!</a></p>';
 
     expect(
@@ -144,11 +144,7 @@ describe('<HTMLView/>', () => {
 
     function renderNode(node, index) {
       if (node.name == 'thing') {
-        return (
-          <Text key={index}>
-            {node.attribs.b}
-          </Text>
-        );
+        return <Text key={index}>{node.attribs.b}</Text>;
       }
     }
 

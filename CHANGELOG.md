@@ -1,0 +1,48 @@
+- 0.16.0
+  - fixed bold tags not working in recent versions of React Native [#290](https://github.com/jsdf/react-native-htmlview/pull/290)
+  - fixed error thrown when `<li>` elements don't have a parent [#273](https://github.com/jsdf/react-native-htmlview/pull/273)
+  - Thanks to @misaeldossantos, @lukejsimonetti
+- 0.15.0
+  - replace deprecated componentWillReceiveProps method with componentDidUpdate [#263](https://github.com/jsdf/react-native-htmlview/pull/263)
+  - Thanks to @helloyou2012
+- 0.14.0
+  - fix to re-render when `nodeComponentProps` changes [#241](https://github.com/jsdf/react-native-htmlview/pull/241)
+  - Thanks to @minjaes01
+- 0.13.0
+  - fixed `Failed prop type` error on react-native@0.56 [#228](https://github.com/jsdf/react-native-htmlview/pull/228)
+  - added support for `<s>` tag (strikethrough text) [#210](https://github.com/jsdf/react-native-htmlview/pull/210)
+  - fix to re-render when `textComponentProps` changes [#188](https://github.com/jsdf/react-native-htmlview/pull/188)
+  - fixed line breaks for `<li>` elements [#166](https://github.com/jsdf/react-native-htmlview/pull/166)
+  - Thanks to @mdimovska, @alphasp, @waldyrious, @macgregorthomson
+- 0.12.1
+  - use ViewPropTypes
+  - fix an issue with htmlparser2-without-node-native and inline-requires
+  - Thanks to @nikolaik and @douglasjunior
+- 0.12.0
+  - inherited styles are now applied in the correct order
+  - fixed an issue where the style array was unnecessarily complex and included multiple empty objects
+  - changes to the stylesheet will now trigger a re-render
+  - `textAlign` works correctly in most cases
+  - fixed an ordered list numbering bug
+  - added `onLinkLongPress` property
+  - default and custom styles now apply correctly to `<li>` prefix
+  - fixed `code` font for Android (monospace)
+  - Thanks to @JoeyBetlej, @isilher, @bky, @RobPando
+- 0.11.0
+  - `style` prop passed via `textComponentProps` is now respected even if no wrapping element is present
+  - underline style
+  - line break after `li`
+  - nested elements (`<b><i>...</i></b>`) work properly
+  - use `PureComponent`
+  - sundry refactoring
+  - Thanks to @michalraska, @tywhang, @isilher, @douglasjunior, @shashkovdanil
+- 0.10.0
+  - added props: `bullet`, `paragraphBreak`, `lineBreak`, `NodeComponent`, `nodeComponentProps`, `RootComponent`, `rootComponentProps`, `TextComponent`, `textComponentProps`
+- 0.9.0
+  - exposed `styles` prop
+  - exposed `defaultRenderer` in `renderNode` (@brandonreavis, @koenpunt)
+  - added `addLineBreaks` (@jmacedoit)
+- 0.7.0 - fixed for recent versions of react-native
+- 0.6.0 - onLinkPress fix (@damusnet), headers now only have one single line break (@crysfel)
+- 0.5.0 - react-native 0.25 compat (@damusnet)
+- 0.4.0 - re-renders properly when html content changes
