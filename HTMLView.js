@@ -1,7 +1,11 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import htmlToElement from './htmlToElement';
-import {Linking, Platform, StyleSheet, View, ViewPropTypes} from 'react-native';
+import {Linking, Platform, StyleSheet, View, ViewPropTypes as RNViewPropTypes} from 'react-native';
+
+const ViewPropTypes = typeof document !== 'undefined' || Platform.OS === 'web'
+  ? PropTypes.shape({style: PropTypes.object})
+  : RNViewPropTypes || View.propTypes;
 
 const boldStyle = {fontWeight: 'bold'};
 const italicStyle = {fontStyle: 'italic'};
