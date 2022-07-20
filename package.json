@@ -40,6 +40,7 @@
     "url": "git://github.com/jsdf/react-native-htmlview.git"
   },
   "dependencies": {
+    "deprecated-react-native-prop-types": "^2.3.0",
     "entities": "^1.1.1",
     "htmlparser2-without-node-native": "^3.9.2"
   }
