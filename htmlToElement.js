@@ -129,7 +129,9 @@ export default function htmlToElement(rawHtml, customOpts = {}, done) {
           const defaultStyle = opts.textComponentProps ? opts.textComponentProps.style : null;
           const customStyle = inheritedStyle(parent);
 
-          if (parent.name === 'ol') {
+          if(!parent){
+            listItemPrefix = null;
+          } else if (parent.name === 'ol') {
             listItemPrefix = (<TextComponent style={[defaultStyle, customStyle]}>
               {`${orderedListCounter++}. `}
             </TextComponent>);

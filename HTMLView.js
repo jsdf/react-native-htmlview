@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import htmlToElement from './htmlToElement';
 import {Linking, Platform, StyleSheet, View, ViewPropTypes} from 'react-native';
 
-const boldStyle = {fontWeight: '500'};
+const boldStyle = {fontWeight: 'bold'};
 const italicStyle = {fontStyle: 'italic'};
 const underlineStyle = {textDecorationLine: 'underline'};
 const strikethroughStyle = {textDecorationLine: 'line-through'};
@@ -20,15 +20,15 @@ const baseStyles = StyleSheet.create({
   pre: codeStyle,
   code: codeStyle,
   a: {
-    fontWeight: '500',
+    fontWeight: 'bold',
     color: '#007AFF',
   },
-  h1: {fontWeight: '500', fontSize: 36},
-  h2: {fontWeight: '500', fontSize: 30},
-  h3: {fontWeight: '500', fontSize: 24},
-  h4: {fontWeight: '500', fontSize: 18},
-  h5: {fontWeight: '500', fontSize: 14},
-  h6: {fontWeight: '500', fontSize: 12},
+  h1: {fontWeight: 'bold', fontSize: 36},
+  h2: {fontWeight: 'bold', fontSize: 30},
+  h3: {fontWeight: 'bold', fontSize: 24},
+  h4: {fontWeight: 'bold', fontSize: 18},
+  h5: {fontWeight: 'bold', fontSize: 14},
+  h6: {fontWeight: 'bold', fontSize: 12},
 });
 
 const htmlToElementOptKeys = [
