@@ -1,3 +1,5 @@
+- 0.17
+  - Updated library of ViewProps to use deprecated prop-types from React Native.
 - 0.16.0
   - fixed bold tags not working in recent versions of React Native [#290](https://github.com/jsdf/react-native-htmlview/pull/290)
   - fixed error thrown when `<li>` elements don't have a parent [#273](https://github.com/jsdf/react-native-htmlview/pull/273)
