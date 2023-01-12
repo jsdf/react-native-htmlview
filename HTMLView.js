@@ -2,8 +2,7 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import htmlToElement from './htmlToElement';
 import {Linking, Platform, StyleSheet, View } from 'react-native';
-import { import { ImagePropTypes, TextPropTypes } from 'deprecated-react-native-prop-types';
- } from 'deprecated-react-native-prop-types';
+import { ViewPropTypes } from 'deprecated-react-native-prop-types';
 
 
 const boldStyle = {fontWeight: 'bold'};
