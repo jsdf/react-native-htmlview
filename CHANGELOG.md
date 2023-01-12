@@ -1,3 +1,5 @@
+- 0.17.0
+  - Update library to use deprecated prop
 - 0.16.0
   - fixed bold tags not working in recent versions of React Native [#290](https://github.com/jsdf/react-native-htmlview/pull/290)
   - fixed error thrown when `<li>` elements don't have a parent [#273](https://github.com/jsdf/react-native-htmlview/pull/273)
