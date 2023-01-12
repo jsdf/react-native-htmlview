@@ -13,12 +13,12 @@
   "devDependencies": {
     "@babel/runtime": "^7.5.5",
     "babel-preset-expo": "^5.0.0",
+    "deprecated-react-native-prop-types": "^4.0.0",
     "jest": "^24.8.0",
     "prettier": "^1.18.2",
     "react": "16.5.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-31.0.0.tar.gz",
-    "react-test-renderer": "16.5.0",
-    "deprecated-react-native-prop-types": "^4.0.0"
+    "react-test-renderer": "16.5.0"
   },
   "jest": {
     "preset": "react-native"
