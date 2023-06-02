@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, Text} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 import htmlparser from 'htmlparser2-without-node-native';
 import entities from 'entities';
 
@@ -74,11 +74,32 @@ export default function htmlToElement(rawHtml, customOpts = {}, done) {
         const defaultStyle = opts.textComponentProps ? opts.textComponentProps.style : null;
         const customStyle = inheritedStyle(parent);
 
+        let additionalStyles = {};
+
+        if ((node.parent && node.parent.name === 'span') || (node.parent && node.parent.parent && node.parent.parent.name === 'span')) {
+          let attribs = node.parent.attribs;
+
+          if (node.parent.parent && ! attribs.style) {
+            attribs = node.parent.parent.attribs;
+          }
+
+          if (attribs.style) {
+            if (attribs.style.indexOf('color:') > -1) {
+
+              let re = /color: (.*);/g;
+
+              let array = re.exec(attribs.style);
+
+              additionalStyles = {color: array[1]};
+            }
+          }
+        }
+
         return (
           <TextComponent
             {...opts.textComponentProps}
             key={index}
-            style={[defaultStyle, customStyle]}
+            style={[defaultStyle, customStyle, additionalStyles]}
           >
             {entities.decodeHTML(node.data)}
           </TextComponent>
@@ -86,6 +107,10 @@ export default function htmlToElement(rawHtml, customOpts = {}, done) {
       }
 
       if (node.type === 'tag') {
+        if (node.name === 'br') {
+          return (<Text>{'\n'}</Text>);
+        }
+
         if (node.name === 'img') {
           return <Img key={index} attribs={node.attribs} padding={opts.autoSizedImagePadding}/>;
         }
@@ -137,15 +162,42 @@ export default function htmlToElement(rawHtml, customOpts = {}, done) {
             </TextComponent>);
           } else if (parent.name === 'ul') {
             listItemPrefix = (<TextComponent style={[defaultStyle, customStyle]}>
-              {opts.bullet}
+              -
             </TextComponent>);
           }
-          if (opts.addLineBreaks && index < list.length - 1) {
-            linebreakAfter = opts.lineBreak;
-          }
+          // if (opts.addLineBreaks && index < list.length - 1) {
+            linebreakAfter = '\n';
+          // }
+
+          return (
+              <View
+                  {...opts.nodeComponentProps}
+                  key={index}
+                  onPress={linkPressHandler}
+                  onLongPress={linkLongPressHandler}
+                  style={{ display: 'flex', flexDirection: 'row', marginTop: 5 }}
+              >
+                <View style={{width: 15}}>{listItemPrefix}</View>
+                <Text style={{paddingRight: 15}}>{domToElement(node.children, node)}</Text>
+              </View>
+          );
         }
 
         const {NodeComponent, styles} = opts;
+
+        if (node.name === 'ul' || node.name === 'ol') {
+          return (
+              <View
+                  {...opts.nodeComponentProps}
+                  key={index}
+                  onPress={linkPressHandler}
+                  style={!node.parent ? styles[node.name] : null}
+                  onLongPress={linkLongPressHandler}
+              >
+                {domToElement(node.children, node)}
+              </View>
+          )
+        }
 
         return (
           <NodeComponent
