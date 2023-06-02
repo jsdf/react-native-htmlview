@@ -497,6 +497,27 @@ exports[`<HTMLView/> should render an <Image /> with set width/height 1`] = `
 </View>
 `;
 
+exports[`<HTMLView/> should render an <Image /> with set width/height using padding 1`] = `
+<View>
+  <Image
+    source={
+      Object {
+        "height": 571.2121212121211,
+        "uri": "https://facebook.github.io/react-native/img/header_logo.png",
+        "width": 650,
+      }
+    }
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "height": 571.2121212121211,
+        "width": 650,
+      }
+    }
+  />
+</View>
+`;
+
 exports[`<HTMLView/> should render an <Image />, with default width/height of 1 1`] = `
 <View>
   <Image

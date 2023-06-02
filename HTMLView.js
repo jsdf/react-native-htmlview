@@ -1,7 +1,8 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import htmlToElement from './htmlToElement';
-import {Linking, Platform, StyleSheet, View, ViewPropTypes} from 'react-native';
+import {Linking, Platform, StyleSheet, View} from 'react-native';
+import {ViewPropTypes} from 'deprecated-react-native-prop-types'
 
 const boldStyle = {fontWeight: 'bold'};
 const italicStyle = {fontStyle: 'italic'};
@@ -67,6 +68,7 @@ class HtmlView extends PureComponent {
   startHtmlRender(value, style, textComponentProps, nodeComponentProps) {
     const {
       addLineBreaks,
+      autoSizedImagePadding,
       onLinkPress,
       onLinkLongPress,
       stylesheet,
@@ -80,6 +82,7 @@ class HtmlView extends PureComponent {
 
     const opts = {
       addLineBreaks,
+      autoSizedImagePadding,
       linkHandler: onLinkPress,
       linkLongPressHandler: onLinkLongPress,
       styles: {...baseStyles, ...stylesheet, ...style},
@@ -135,6 +138,7 @@ class HtmlView extends PureComponent {
 
 HtmlView.propTypes = {
   addLineBreaks: PropTypes.bool,
+  autoSizedImagePadding: PropTypes.number,
   bullet: PropTypes.string,
   lineBreak: PropTypes.string,
   NodeComponent: PropTypes.func,
@@ -155,6 +159,7 @@ HtmlView.propTypes = {
 
 HtmlView.defaultProps = {
   addLineBreaks: true,
+  autoSizedImagePadding: 0,
   onLinkPress: url => Linking.openURL(url),
   onLinkLongPress: null,
   onError: console.error.bind(console),

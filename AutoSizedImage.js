@@ -33,11 +33,15 @@ export default class AutoSizedImage extends PureComponent {
 
   render() {
     const finalSize = {};
-    if (this.state.width > width) {
-      finalSize.width = width;
-      const ratio = width / this.state.width;
+    const padding = this.props.padding;
+    const maxWidth = width - padding;
+
+    if (this.state.width > maxWidth) {
+      finalSize.width = maxWidth;
+      const ratio = maxWidth / this.state.width;
       finalSize.height = this.state.height * ratio;
     }
+
     const style = Object.assign(
       baseStyle,
       this.props.style,
