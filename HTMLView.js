@@ -1,13 +1,14 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import htmlToElement from './htmlToElement';
-import {Linking, Platform, StyleSheet, View, ViewPropTypes} from 'react-native';
+import { Linking, Platform, StyleSheet, View } from 'react-native';
+import { ViewPropTypes } from 'deprecated-react-native-prop-types';
 
-const boldStyle = {fontWeight: 'bold'};
-const italicStyle = {fontStyle: 'italic'};
-const underlineStyle = {textDecorationLine: 'underline'};
-const strikethroughStyle = {textDecorationLine: 'line-through'};
-const codeStyle = {fontFamily: Platform.OS === 'ios' ? 'Menlo' : 'monospace'};
+const boldStyle = { fontWeight: 'bold' };
+const italicStyle = { fontStyle: 'italic' };
+const underlineStyle = { textDecorationLine: 'underline' };
+const strikethroughStyle = { textDecorationLine: 'line-through' };
+const codeStyle = { fontFamily: Platform.OS === 'ios' ? 'Menlo' : 'monospace' };
 
 const baseStyles = StyleSheet.create({
   b: boldStyle,
@@ -23,12 +24,12 @@ const baseStyles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#007AFF',
   },
-  h1: {fontWeight: 'bold', fontSize: 36},
-  h2: {fontWeight: 'bold', fontSize: 30},
-  h3: {fontWeight: 'bold', fontSize: 24},
-  h4: {fontWeight: 'bold', fontSize: 18},
-  h5: {fontWeight: 'bold', fontSize: 14},
-  h6: {fontWeight: 'bold', fontSize: 12},
+  h1: { fontWeight: 'bold', fontSize: 36 },
+  h2: { fontWeight: 'bold', fontSize: 30 },
+  h3: { fontWeight: 'bold', fontSize: 24 },
+  h4: { fontWeight: 'bold', fontSize: 18 },
+  h5: { fontWeight: 'bold', fontSize: 14 },
+  h6: { fontWeight: 'bold', fontSize: 12 },
 });
 
 const htmlToElementOptKeys = [
@@ -75,14 +76,14 @@ class HtmlView extends PureComponent {
     } = this.props;
 
     if (!value) {
-      this.setState({element: null});
+      this.setState({ element: null });
     }
 
     const opts = {
       addLineBreaks,
       linkHandler: onLinkPress,
       linkLongPressHandler: onLinkLongPress,
-      styles: {...baseStyles, ...stylesheet, ...style},
+      styles: { ...baseStyles, ...stylesheet, ...style },
       customRenderer: renderNode,
     };
 
@@ -106,14 +107,14 @@ class HtmlView extends PureComponent {
       }
 
       if (this.mounted) {
-        this.setState({element});
+        this.setState({ element });
       }
     });
   }
 
   render() {
-    const {RootComponent, style} = this.props;
-    const {element} = this.state;
+    const { RootComponent, style } = this.props;
+    const { element } = this.state;
     if (element) {
       return (
         <RootComponent
