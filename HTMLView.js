@@ -55,8 +55,18 @@ class HtmlView extends PureComponent {
   }
 
   componentDidUpdate(prevProps) {
-    if (this.props.value !== prevProps.value || this.props.stylesheet !== prevProps.stylesheet || this.props.textComponentProps !== prevProps.textComponentProps || this.props.nodeComponentProps !== prevProps.nodeComponentProps) {
-      this.startHtmlRender(this.props.value, this.props.stylesheet, this.props.textComponentProps, this.props.nodeComponentProps);
+    if (
+      this.props.value !== prevProps.value ||
+      this.props.stylesheet !== prevProps.stylesheet ||
+      this.props.textComponentProps !== prevProps.textComponentProps ||
+      this.props.nodeComponentProps !== prevProps.nodeComponentProps
+    ) {
+      this.startHtmlRender(
+        this.props.value,
+        this.props.stylesheet,
+        this.props.textComponentProps,
+        this.props.nodeComponentProps
+      );
     }
   }
 
@@ -116,20 +126,12 @@ class HtmlView extends PureComponent {
     const {element} = this.state;
     if (element) {
       return (
-        <RootComponent
-          {...this.props.rootComponentProps}
-          style={style}
-        >
+        <RootComponent {...this.props.rootComponentProps} style={style}>
           {element}
         </RootComponent>
       );
     }
-    return (
-      <RootComponent
-        {...this.props.rootComponentProps}
-        style={style}
-      />
-    );
+    return <RootComponent {...this.props.rootComponentProps} style={style} />;
   }
 }
 
