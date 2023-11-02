@@ -17,6 +17,6 @@ jobs:
           name: Run tests
 
 workflows:
-  build:
+  test:
     jobs:
-      - build
+      - test
