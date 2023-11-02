@@ -4,7 +4,7 @@ exports[`<HTMLView/> can use a custom node class 1`] = `
 <View>
   <Text
     style={
-      Array [
+      [
         null,
         null,
       ]
@@ -20,9 +20,9 @@ exports[`<HTMLView/> can use a custom node class 1`] = `
   >
     <Text
       style={
-        Array [
+        [
           null,
-          Object {},
+          {},
         ]
       }
     >
@@ -37,9 +37,9 @@ exports[`<HTMLView/> can use a custom node class 1`] = `
     >
       <Text
         style={
-          Array [
+          [
             null,
-            Object {},
+            {},
           ]
         }
       >
@@ -49,9 +49,9 @@ exports[`<HTMLView/> can use a custom node class 1`] = `
     </Text>
     <Text
       style={
-        Array [
+        [
           null,
-          Object {},
+          {},
         ]
       }
     >
@@ -66,7 +66,7 @@ exports[`<HTMLView/> can use a custom renderer 1`] = `
 <View>
   <Text
     style={
-      Array [
+      [
         null,
         null,
       ]
@@ -81,9 +81,9 @@ exports[`<HTMLView/> can use a custom renderer 1`] = `
   >
     <Text
       style={
-        Array [
+        [
           null,
-          Object {},
+          {},
         ]
       }
     >
@@ -94,7 +94,7 @@ exports[`<HTMLView/> can use a custom renderer 1`] = `
   </Text>
   <Text
     style={
-      Array [
+      [
         null,
         null,
       ]
@@ -110,7 +110,7 @@ exports[`<HTMLView/> can use custom node props 1`] = `
 <View>
   <Text
     style={
-      Array [
+      [
         null,
         null,
       ]
@@ -126,9 +126,9 @@ exports[`<HTMLView/> can use custom node props 1`] = `
   >
     <Text
       style={
-        Array [
+        [
           null,
-          Object {},
+          {},
         ]
       }
     >
@@ -143,9 +143,9 @@ exports[`<HTMLView/> can use custom node props 1`] = `
     >
       <Text
         style={
-          Array [
+          [
             null,
-            Object {},
+            {},
           ]
         }
       >
@@ -155,9 +155,9 @@ exports[`<HTMLView/> can use custom node props 1`] = `
     </Text>
     <Text
       style={
-        Array [
+        [
           null,
-          Object {},
+          {},
         ]
       }
     >
@@ -176,9 +176,9 @@ exports[`<HTMLView/> should handle additional text nodes between list items 1`] 
   >
     <Text
       style={
-        Array [
+        [
           null,
-          Object {},
+          {},
         ]
       }
     >
@@ -192,9 +192,9 @@ exports[`<HTMLView/> should handle additional text nodes between list items 1`] 
     >
       <Text
         style={
-          Array [
+          [
             null,
-            Object {},
+            {},
           ]
         }
       >
@@ -202,9 +202,9 @@ exports[`<HTMLView/> should handle additional text nodes between list items 1`] 
       </Text>
       <Text
         style={
-          Array [
+          [
             null,
-            Object {},
+            {},
           ]
         }
       >
@@ -215,9 +215,9 @@ exports[`<HTMLView/> should handle additional text nodes between list items 1`] 
     </Text>
     <Text
       style={
-        Array [
+        [
           null,
-          Object {},
+          {},
         ]
       }
     >
@@ -231,9 +231,9 @@ exports[`<HTMLView/> should handle additional text nodes between list items 1`] 
     >
       <Text
         style={
-          Array [
+          [
             null,
-            Object {},
+            {},
           ]
         }
       >
@@ -241,9 +241,9 @@ exports[`<HTMLView/> should handle additional text nodes between list items 1`] 
       </Text>
       <Text
         style={
-          Array [
+          [
             null,
-            Object {},
+            {},
           ]
         }
       >
@@ -254,9 +254,9 @@ exports[`<HTMLView/> should handle additional text nodes between list items 1`] 
     </Text>
     <Text
       style={
-        Array [
+        [
           null,
-          Object {},
+          {},
         ]
       }
     >
@@ -271,7 +271,7 @@ exports[`<HTMLView/> should not render extra linebreaks if configured not to 1`]
 <View>
   <Text
     style={
-      Array [
+      [
         null,
         null,
       ]
@@ -286,9 +286,9 @@ exports[`<HTMLView/> should not render extra linebreaks if configured not to 1`]
   >
     <Text
       style={
-        Array [
+        [
           null,
-          Object {},
+          {},
         ]
       }
     >
@@ -302,9 +302,9 @@ exports[`<HTMLView/> should not render extra linebreaks if configured not to 1`]
     >
       <Text
         style={
-          Array [
+          [
             null,
-            Object {
+            {
               "fontSize": 30,
               "fontWeight": "bold",
             },
@@ -316,9 +316,9 @@ exports[`<HTMLView/> should not render extra linebreaks if configured not to 1`]
     </Text>
     <Text
       style={
-        Array [
+        [
           null,
-          Object {},
+          {},
         ]
       }
     >
@@ -332,9 +332,9 @@ exports[`<HTMLView/> should not render extra linebreaks if configured not to 1`]
     >
       <Text
         style={
-          Array [
+          [
             null,
-            Object {},
+            {},
           ]
         }
       >
@@ -348,9 +348,9 @@ exports[`<HTMLView/> should not render extra linebreaks if configured not to 1`]
       />
       <Text
         style={
-          Array [
+          [
             null,
-            Object {},
+            {},
           ]
         }
       >
@@ -361,9 +361,9 @@ exports[`<HTMLView/> should not render extra linebreaks if configured not to 1`]
     </Text>
     <Text
       style={
-        Array [
+        [
           null,
-          Object {},
+          {},
         ]
       }
     >
@@ -373,7 +373,7 @@ exports[`<HTMLView/> should not render extra linebreaks if configured not to 1`]
   </Text>
   <Text
     style={
-      Array [
+      [
         null,
         null,
       ]
@@ -398,9 +398,9 @@ exports[`<HTMLView/> should not render extra linebreaks in list items if configu
     >
       <Text
         style={
-          Array [
+          [
             null,
-            Object {},
+            {},
           ]
         }
       >
@@ -408,9 +408,9 @@ exports[`<HTMLView/> should not render extra linebreaks in list items if configu
       </Text>
       <Text
         style={
-          Array [
+          [
             null,
-            Object {},
+            {},
           ]
         }
       >
@@ -424,9 +424,9 @@ exports[`<HTMLView/> should not render extra linebreaks in list items if configu
     >
       <Text
         style={
-          Array [
+          [
             null,
-            Object {},
+            {},
           ]
         }
       >
@@ -434,9 +434,9 @@ exports[`<HTMLView/> should not render extra linebreaks in list items if configu
       </Text>
       <Text
         style={
-          Array [
+          [
             null,
-            Object {},
+            {},
           ]
         }
       >
@@ -460,9 +460,9 @@ exports[`<HTMLView/> should render a <Text/> element 1`] = `
     >
       <Text
         style={
-          Array [
+          [
             null,
-            Object {
+            {
               "color": "#007AFF",
               "fontWeight": "bold",
             },
@@ -480,14 +480,14 @@ exports[`<HTMLView/> should render an <Image /> with set width/height 1`] = `
 <View>
   <Image
     source={
-      Object {
+      {
         "height": 58,
         "uri": "https://facebook.github.io/react-native/img/header_logo.png",
         "width": 66,
       }
     }
     style={
-      Object {
+      {
         "backgroundColor": "transparent",
         "height": 58,
         "width": 66,
@@ -501,14 +501,14 @@ exports[`<HTMLView/> should render an <Image />, with default width/height of 1 
 <View>
   <Image
     source={
-      Object {
+      {
         "height": 1,
         "uri": "https://facebook.github.io/react-native/img/header_logo.png",
         "width": 1,
       }
     }
     style={
-      Object {
+      {
         "backgroundColor": "transparent",
         "height": 1,
         "width": 1,
@@ -524,16 +524,16 @@ exports[`<HTMLView/> should render inherited styles correctly 1`] = `
     onLongPress={null}
     onPress={null}
     style={
-      Object {
+      {
         "color": "red",
       }
     }
   >
     <Text
       style={
-        Array [
+        [
           null,
-          Object {
+          {
             "color": "red",
           },
         ]
@@ -548,9 +548,9 @@ exports[`<HTMLView/> should render inherited styles correctly 1`] = `
     >
       <Text
         style={
-          Array [
+          [
             null,
-            Object {
+            {
               "color": "blue",
             },
           ]
@@ -565,9 +565,9 @@ exports[`<HTMLView/> should render inherited styles correctly 1`] = `
       >
         <Text
           style={
-            Array [
+            [
               null,
-              Object {
+              {
                 "color": "green",
               },
             ]
@@ -594,9 +594,9 @@ exports[`<HTMLView/> should render ol numbers 1`] = `
     >
       <Text
         style={
-          Array [
+          [
             null,
-            Object {},
+            {},
           ]
         }
       >
@@ -604,9 +604,9 @@ exports[`<HTMLView/> should render ol numbers 1`] = `
       </Text>
       <Text
         style={
-          Array [
+          [
             null,
-            Object {},
+            {},
           ]
         }
       >
@@ -622,9 +622,9 @@ exports[`<HTMLView/> should render ol numbers 1`] = `
     >
       <Text
         style={
-          Array [
+          [
             null,
-            Object {},
+            {},
           ]
         }
       >
@@ -632,9 +632,9 @@ exports[`<HTMLView/> should render ol numbers 1`] = `
       </Text>
       <Text
         style={
-          Array [
+          [
             null,
-            Object {},
+            {},
           ]
         }
       >
@@ -649,7 +649,7 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
 <View>
   <Text
     style={
-      Array [
+      [
         null,
         null,
       ]
@@ -664,9 +664,9 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
   >
     <Text
       style={
-        Array [
+        [
           null,
-          Object {},
+          {},
         ]
       }
     >
@@ -680,9 +680,9 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
     >
       <Text
         style={
-          Array [
+          [
             null,
-            Object {},
+            {},
           ]
         }
       >
@@ -696,9 +696,9 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
       >
         <Text
           style={
-            Array [
+            [
               null,
-              Object {
+              {
                 "fontSize": 30,
                 "fontWeight": "bold",
               },
@@ -712,9 +712,9 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
       </Text>
       <Text
         style={
-          Array [
+          [
             null,
-            Object {},
+            {},
           ]
         }
       >
@@ -728,9 +728,9 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
       >
         <Text
           style={
-            Array [
+            [
               null,
-              Object {},
+              {},
             ]
           }
         >
@@ -744,9 +744,9 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
         >
           <Text
             style={
-              Array [
+              [
                 null,
-                Object {
+                {
                   "fontStyle": "italic",
                 },
               ]
@@ -763,9 +763,9 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
           >
             <Text
               style={
-                Array [
+                [
                   null,
-                  Object {
+                  {
                     "fontStyle": "italic",
                     "fontWeight": "bold",
                   },
@@ -783,9 +783,9 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
       </Text>
       <Text
         style={
-          Array [
+          [
             null,
-            Object {},
+            {},
           ]
         }
       >
@@ -799,9 +799,9 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
       >
         <Text
           style={
-            Array [
+            [
               null,
-              Object {},
+              {},
             ]
           }
         >
@@ -815,9 +815,9 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
         >
           <Text
             style={
-              Array [
+              [
                 null,
-                Object {
+                {
                   "color": "#007AFF",
                   "fontWeight": "bold",
                 },
@@ -829,9 +829,9 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
         </Text>
         <Text
           style={
-            Array [
+            [
               null,
-              Object {},
+              {},
             ]
           }
         >
@@ -844,9 +844,9 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
       </Text>
       <Text
         style={
-          Array [
+          [
             null,
-            Object {},
+            {},
           ]
         }
       >
@@ -856,9 +856,9 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
     </Text>
     <Text
       style={
-        Array [
+        [
           null,
-          Object {},
+          {},
         ]
       }
     >
@@ -868,7 +868,7 @@ exports[`<HTMLView/> should render shoddy html including headings, links, bold, 
   </Text>
   <Text
     style={
-      Array [
+      [
         null,
         null,
       ]
@@ -884,7 +884,7 @@ exports[`<HTMLView/> should render text in a (nested) <Text/> element 1`] = `
 <View>
   <Text
     style={
-      Array [
+      [
         null,
         null,
       ]
@@ -908,9 +908,9 @@ exports[`<HTMLView/> should render ul bullets 1`] = `
     >
       <Text
         style={
-          Array [
+          [
             null,
-            Object {},
+            {},
           ]
         }
       >
@@ -918,9 +918,9 @@ exports[`<HTMLView/> should render ul bullets 1`] = `
       </Text>
       <Text
         style={
-          Array [
+          [
             null,
-            Object {},
+            {},
           ]
         }
       >
@@ -936,9 +936,9 @@ exports[`<HTMLView/> should render ul bullets 1`] = `
     >
       <Text
         style={
-          Array [
+          [
             null,
-            Object {},
+            {},
           ]
         }
       >
@@ -946,9 +946,9 @@ exports[`<HTMLView/> should render ul bullets 1`] = `
       </Text>
       <Text
         style={
-          Array [
+          [
             null,
-            Object {},
+            {},
           ]
         }
       >

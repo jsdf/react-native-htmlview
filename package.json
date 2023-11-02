@@ -14,10 +14,11 @@
     "@babel/runtime": "^7.5.5",
     "babel-preset-expo": "^5.0.0",
     "jest": "^24.8.0",
+    "jest-expo": "^49.0.0",
     "prettier": "^1.18.2",
-    "react": "16.5.0",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-31.0.0.tar.gz",
-    "react-test-renderer": "16.5.0"
+    "react": "18.2.0",
+    "react-native": "^0.72.6",
+    "react-test-renderer": "18.2.0"
   },
   "jest": {
     "preset": "react-native"
