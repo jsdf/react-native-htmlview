@@ -4,7 +4,8 @@
 #
 version: 2.1
 orbs:
-  node: circleci/node@5.1.0jobs:
+  node: circleci/node@5.1.0
+jobs:
   test:
     executor: node/default # use the default executor defined within the orb
     steps:
