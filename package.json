@@ -1,13 +1,13 @@
 {
   "name": "react-native-htmlview",
-  "version": "0.16.0",
+  "version": "0.17.0",
   "description": "A component which renders HTML content as native views",
   "main": "index.js",
   "scripts": {
-    "test": "yarn run lint && yarn run jest",
-    "lint": "./format.sh --list-different; if [ $? != 0 ]; then echo \"CODE FORMATTING: please run 'yarn format' and commit the changes\"; exit 1; fi",
+    "test": "npm run lint && npm run jest",
+    "lint": "./format.sh --list-different; if [ $? != 0 ]; then echo \"CODE FORMATTING: please run 'npm run format' and commit the changes\"; exit 1; fi",
     "format": "./format.sh --write",
-    "release": "npm publish .; git push && git push --tags # yarn publish is often broken",
+    "release": "npm publish .; git push && git push --tags # npm publish is often broken",
     "jest": "jest"
   },
   "devDependencies": {
