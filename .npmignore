@@ -1,3 +1,7 @@
 __tests__
 test
+example
+.yarnclean
 .babelrc
+.travis.yml
+.circleci
